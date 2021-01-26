@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+<meta name="description" content="Computational thinking 솔루션 구현 솔루션 실행 및 평가  what is python?  A programing language Made by guido van possum 1989 특징 인터프리터 : 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다.  객">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL 210126">
+<meta property="og:url" content="https://nomankey.github.io/2021/01/26/210126/index.html">
+<meta property="og:site_name" content="CK&#39;s Blog">
+<meta property="og:description" content="Computational thinking 솔루션 구현 솔루션 실행 및 평가  what is python?  A programing language Made by guido van possum 1989 특징 인터프리터 : 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다.  객">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-26T13:00:29.210Z">
+<meta property="article:modified_time" content="2021-01-26T13:00:29.210Z">
+<meta property="article:author" content="Nomankey">
+<meta property="article:tag" content="TIL">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://nomankey.github.io/2021/01/26/210126/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>TIL 210126 | CK's Blog</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">CK's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Same Dev Different Day</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Computational-thinking"><span class="nav-number">1.</span> <span class="nav-text">Computational thinking</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#what-is-python"><span class="nav-number">2.</span> <span class="nav-text">what is python?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%ED%8A%B9%EC%A7%95"><span class="nav-number">3.</span> <span class="nav-text">특징</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#what-can-python-do"><span class="nav-number">4.</span> <span class="nav-text">what can python do?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#coding-pythonic"><span class="nav-number"></span> <span class="nav-text">coding pythonic</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Layout"><span class="nav-number">1.</span> <span class="nav-text">Layout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#variables"><span class="nav-number">2.</span> <span class="nav-text">variables</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#naming"><span class="nav-number">3.</span> <span class="nav-text">naming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#syntax"><span class="nav-number">4.</span> <span class="nav-text">syntax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#data-type"><span class="nav-number">5.</span> <span class="nav-text">data type</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#floating-point"><span class="nav-number">6.</span> <span class="nav-text">floating point</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#type-casting"><span class="nav-number">7.</span> <span class="nav-text">type casting</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#input"><span class="nav-number">8.</span> <span class="nav-text">input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string"><span class="nav-number">9.</span> <span class="nav-text">string</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string-functions"><span class="nav-number">10.</span> <span class="nav-text">string functions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string-validator"><span class="nav-number">11.</span> <span class="nav-text">string validator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string-formatting"><span class="nav-number">12.</span> <span class="nav-text">string formatting</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nomankey</p>
+  <div class="site-description" itemprop="description">Developer</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/210126/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          TIL 210126
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-26 22:00:29" itemprop="dateCreated datePublished" datetime="2021-01-26T22:00:29+09:00">2021-01-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h4 id="Computational-thinking"><a href="#Computational-thinking" class="headerlink" title="Computational thinking"></a>Computational thinking</h4><ul>
+<li>솔루션 구현</li>
+<li>솔루션 실행 및 평가</li>
+</ul>
+<h4 id="what-is-python"><a href="#what-is-python" class="headerlink" title="what is python?"></a>what is python?</h4><p>  A programing language Made by guido van possum 1989</p>
+<h4 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h4><ul>
+<li>인터프리터 : 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다. </li>
+<li>객체지향: 프로그래밍에서 필요한 데이터를 추상화시켜 상태와 행위를 가진 객체를 만들고 그 객체들 간의 유기적인 상호작용을 통해 로직을 구성하는 프로그래밍 방법이다.</li>
+<li>동적 타이핑: 정적 타이핑과 달리 자료형을 컴파일이 아닌 런타임 시 결정하는 것으로, 자료형의 명시 없이 변수명만 가지로 선언 및 값을 전달하는 것이 가능하다.</li>
+<li>엄격한 문법</li>
+</ul>
+<h4 id="what-can-python-do"><a href="#what-can-python-do" class="headerlink" title="what can python do?"></a>what can python do?</h4><ul>
+<li>System programming</li>
+<li>Web programming</li>
+<li>Data analysis</li>
+</ul>
+<h3 id="coding-pythonic"><a href="#coding-pythonic" class="headerlink" title="coding pythonic"></a>coding pythonic</h3><h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h4><ul>
+<li>들여쓰기: 공백 4칸 or tab</li>
+<li>한 줄은 79자 ~ 120자</li>
+<li>클래스 정의와 최상위 함수는 두 줄을 띄움</li>
+<li>클래스 내 메소드는 한 줄 띄움<h4 id="variables"><a href="#variables" class="headerlink" title="variables"></a>variables</h4></li>
+<li>_variable: 내부적으로 사용되는 변수</li>
+<li>print_: 파이썬 키워드와 충돌 방지</li>
+</ul>
+<h4 id="naming"><a href="#naming" class="headerlink" title="naming"></a>naming</h4><ul>
+<li>클래스 이름은 CamelCase</li>
+<li>함수, 변수, 메소드 이름은 snake_case</li>
+</ul>
+<h4 id="syntax"><a href="#syntax" class="headerlink" title="syntax"></a>syntax</h4><pre><code>문법, 구조, 또는 언어 문장내에 있는 구성요소의 순서</code></pre>
+<h4 id="data-type"><a href="#data-type" class="headerlink" title="data type"></a>data type</h4><ul>
+<li>int</li>
+<li>float</li>
+<li>long(0b, 0o, 0x)</li>
+<li>string</li>
+<li>boolean</li>
+<li>list, tuple, range</li>
+<li>set</li>
+<li>dictionary</li>
+</ul>
+<h4 id="floating-point"><a href="#floating-point" class="headerlink" title="floating point"></a>floating point</h4><ul>
+<li>컴퓨터는 실수를 2진수 부동소수점(floating point)을 활용한다.</li>
+<li>0,1!!</li>
+<li>0.1 + 0.2! = 0.3 -&gt; round(0.1+0.2, 1) == round(0.3, 1)</li>
+<li>314.625 = 100111010.101 (2) = 1.001110101 x 2^8</li>
+</ul>
+<h4 id="type-casting"><a href="#type-casting" class="headerlink" title="type casting"></a>type casting</h4><pre><code>float(3) -&gt; int to float int(3.6) -&gt; float to int str(1) -&gt; int to string int(’12’) -&gt; string to int</code></pre>
+<h4 id="input"><a href="#input" class="headerlink" title="input"></a>input</h4><pre><code>name = input(‘what is your name?  ‘)
+print(‘hi’, name)</code></pre>
+<h4 id="string"><a href="#string" class="headerlink" title="string"></a>string</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">some_string &#x3D; ‘python’</span><br><span class="line">len(some_string)</span><br><span class="line"></span><br><span class="line">some_string[3:5] &#x3D; &quot;ho&quot;</span><br><span class="line">some_string[1:5:2] &#x3D; &quot;yh&quot;</span><br><span class="line">some_string[::] &#x3D; some_string[0:len(some_string):1]</span><br><span class="line">some_string[::-1] &#x3D; some_string[-1:-len(some_string):-1]</span><br><span class="line">some_string[::-1] &#x3D; &quot;nohtyp&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="string-functions"><a href="#string-functions" class="headerlink" title="string functions"></a>string functions</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func &#x3D; &quot;python is easy programming language&quot;</span><br><span class="line">func.count(&#39;p&#39;)</span><br><span class="line"></span><br><span class="line">func.find(&#39;p&#39;)</span><br><span class="line"></span><br><span class="line">comma &#x3D; &quot;,&quot;</span><br><span class="line">func &#x3D; comma.join(&#39;python&#39;)</span><br><span class="line"></span><br><span class="line">func.split(&#39;,&#39;)</span><br><span class="line"></span><br><span class="line">python_is_easy &#x3D; &quot;python is easy&quot;</span><br><span class="line">python_is_easy.split()</span><br><span class="line"></span><br><span class="line">python_is_easy.replace(&quot;python&quot;, &quot;golang&quot;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>the split(): method  splits a string into a list</li>
+<li>the join(): method takes all items in an iterable and joins them into one string</li>
+<li>Iterable is any Python object capable of returning its members one at a time, permitting it to be iterated over in a for-loop</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">some_string &#x3D; &quot;,,,Fastcampus...&quot;</span><br><span class="line">some_string.strip(&quot;,&quot;)</span><br><span class="line">some_string.strip(&quot;.&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="string-validator"><a href="#string-validator" class="headerlink" title="string validator"></a>string validator</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str.isalnum()</span><br><span class="line">str.isalpha()</span><br><span class="line">str.isdigit()</span><br><span class="line">str.islower()</span><br><span class="line">str.isupper()</span><br></pre></td></tr></table></figure>
+<h4 id="string-formatting"><a href="#string-formatting" class="headerlink" title="string formatting"></a>string formatting</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;I have a &#123;&#125;, I have an &#123;&#125;.&quot;.format(&quot;pen&quot;, &quot;apple&quot;))</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/TIL/" rel="tag"># TIL</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/26/til/210126/" rel="prev" title="2101026">
+                  <i class="fa fa-chevron-left"></i> 2101026
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nomankey</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
