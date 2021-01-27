@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,241 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/27/til/210127/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/27/til/210127/" class="post-title-link" itemprop="url">post</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-27 22:19:11" itemprop="dateCreated datePublished" datetime="2021-01-27T22:19:11+09:00">2021-01-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/27/210126-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/27/210126-1/" class="post-title-link" itemprop="url">TIL 210126-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-27 11:34:08" itemprop="dateCreated datePublished" datetime="2021-01-27T11:34:08+09:00">2021-01-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="List-Tuple"><a href="#List-Tuple" class="headerlink" title="List, Tuple"></a>List, Tuple</h3><p>List<br>animals = [‘’, ‘’, ‘’]<br>Tuple<br>animals= (‘’, ‘’, ‘’)</p>
+<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><ul>
+<li>List 는 선언과 동시에 값을 채워 넣을 수 있다.</li>
+<li>요소를 추가할 수 있다 (.append())</li>
+<li>특정한 위치에 원하는 값을 추가할 수 있다. lang.insert(1, “c”) print(lang)</li>
+<li>특정 요소를 삭제할 수도 있다. lang.remove(“golang”) print(lang)</li>
+<li>리스트에 있던 값을 빼낼 수도 있다. java = lang.pop(2) print(lang) print(java)</li>
+<li>리스트를 정렬. numbers = [2, 1, 4, 3] print(numbers)  /t  numbers.sort() print(numbers)</li>
+<li>리스트를 역순으로 출력. numbers = [2, 1, 4, 3] numbers.reverse() print(numbers)</li>
+<li>특정 값의 위치 출력. index_of_two = numbers.index(2) print(index_of_two)</li>
+<li>리스트끼리 더할 때는 extend. numbers += [5, 6] print(numbers) numbers.extend([7, 8]) print(numbers)</li>
+</ul>
+<h3 id="Membership-Operator"><a href="#Membership-Operator" class="headerlink" title="Membership Operator"></a>Membership Operator</h3><p>in - ‘cat’ in [‘fox’, ‘dog’, ‘cat’] =&gt; True<br>not in - ‘wolf’ not in [‘fox’, ‘dog’, ‘cat’] =&gt; True</p>
+<h3 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h3><ul>
+<li>괄호를 사용해서 선언한다. tuple1 = (1, 2, 3, 4)</li>
+<li>삭제나 추가가 불가능.</li>
+<li>tuple끼리 더하거나 반복은 가능. tuple2 = (5, 6) print(tuple1 + tuple2)  /t  print(tuple1 * 3)</li>
+<li>값을 편하게 바꿀 수 있다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; y</span><br><span class="line">y &#x3D; x (x)</span><br><span class="line"></span><br><span class="line">temp &#x3D; x</span><br><span class="line">x &#x3D; y</span><br><span class="line">y &#x3D; temp</span><br><span class="line"></span><br><span class="line">(x,y) &#x3D; (y,x)</span><br></pre></td></tr></table></figure></li>
+<li>함수에서 하나 이상의 값을 반환할때 사용한다<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def quot_and_rem(x,y):</span><br><span class="line">    quot &#x3D; x &#x2F;&#x2F; y</span><br><span class="line">    rem &#x3D; x % y</span><br><span class="line">    return (quot, rem)</span><br><span class="line">    </span><br><span class="line">(quot, rem) &#x3D; quot_and_rem(3,10)</span><br></pre></td></tr></table></figure>
+<h3 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h3></li>
+<li>매핑타입의 묶음 자료형이다.</li>
+<li>Key와 value로 구성되어 있다.</li>
+<li>Hash table 을 이용하여 구현 -&gt; 일정한 속도 -&gt; 키의 수가 맞지 않아도 일정한 탐색속도 유지</li>
+</ul>
+<h4 id="dictionary-선언"><a href="#dictionary-선언" class="headerlink" title="dictionary 선언"></a>dictionary 선언</h4><p>dict1 = {} print(dict1)<br>dict2 = {‘ja’:0, ‘chuk’:1, ‘in’:2}<br>dict3 = dict(ja=0,chuk=1,in=2)<br>dict4 = dict([(‘ja’,0), (‘chuk’,1),(‘in’,2)])</p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><ul>
+<li>집합 연산을 쉽게 하기 위해 만들어졌다.</li>
+<li>순서 없음</li>
+<li>중복 없음<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ppap &#x3D; &#123;&#39;pen&#39;, &#39;apple&#39;, &#39;pineapple&#39;, &#39;pen&#39;&#125;</span><br><span class="line">print(ppap)</span><br><span class="line">&#39;apple&#39; in ppap</span><br><span class="line">&#39;applepen&#39; in papp</span><br><span class="line">pineapple &#x3D; set(&#39;pineapple&#39;)</span><br><span class="line">pineapple</span><br></pre></td></tr></table></figure></li>
+<li>A ∪ B == A | B A ∩ B == A &amp; B A - B == A - B A Δ B == A ^ B</li>
+</ul>
+<h3 id="pseudocode"><a href="#pseudocode" class="headerlink" title="pseudocode"></a>pseudocode</h3><p>프로그램이나 알고리즘이 수행할 내용을 인간이 이해할 수 있는 언어로 표현하는 것</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/27/210127/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/27/210127/" class="post-title-link" itemprop="url">TIL 210127</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-01-27 00:00:00 / Modified: 22:21:21" itemprop="dateCreated datePublished" datetime="2021-01-27T00:00:00+09:00">2021-01-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="function"><a href="#function" class="headerlink" title="function"></a>function</h3><ul>
+<li>프로그래밍에서의 함수는 입력값을 내부에서 어떤 처리를 통해 결과값을 출력하는 것</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def awe_sum(a,b):</span><br><span class="line">	result &#x3D; a + b</span><br><span class="line">    return result</span><br><span class="line"></span><br><span class="line">a &#x3D; 2</span><br><span class="line">b &#x3D; 3</span><br><span class="line">print(awe_sum(a,b))</span><br></pre></td></tr></table></figure>
+<h4 id="function-without-input"><a href="#function-without-input" class="headerlink" title="function without input"></a>function without input</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def print_hello():</span><br><span class="line">    return &quot;hello&quot;</span><br><span class="line"></span><br><span class="line">result_hello &#x3D; print_hello()</span><br><span class="line">print(result_hello)</span><br></pre></td></tr></table></figure>
+<h4 id="function-without-return"><a href="#function-without-return" class="headerlink" title="function without return"></a>function without return</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def func_wo_return(a):</span><br><span class="line">    print(&quot;This is function without return for &quot; + str(a) + &quot; times.&quot;)</span><br><span class="line"></span><br><span class="line">func_wo_return()</span><br></pre></td></tr></table></figure>
+<h4 id="function-with-multiple-return"><a href="#function-with-multiple-return" class="headerlink" title="function with multiple return"></a>function with multiple return</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def mul_return(a):</span><br><span class="line">	b &#x3D; a + 1</span><br><span class="line">		return a, b</span><br></pre></td></tr></table></figure>
+<h4 id="parameter-with-initialize"><a href="#parameter-with-initialize" class="headerlink" title="parameter with initialize"></a>parameter with initialize</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def say_hello(name&#x3D;&quot;Fool&quot;, nick&#x3D;True):</span><br><span class="line">	print(&quot;Hi, &quot;, name)</span><br><span class="line">	if nick &#x3D;&#x3D; True:</span><br><span class="line">		print(&quot;But, you are Fool&quot;)</span><br><span class="line">	else:</span><br><span class="line">		print(&quot;Oh, you are not Fool&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="arbitrary-arguments"><a href="#arbitrary-arguments" class="headerlink" title="arbitrary arguments"></a>arbitrary arguments</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def print_(*value):</span><br><span class="line">    print(value, type(value))</span><br><span class="line">    for s in value:</span><br><span class="line">        print(s, end&#x3D;&#39; &#39;)</span><br><span class="line">    print(&#39;\n&#39;)</span><br></pre></td></tr></table></figure>
+<h4 id="keyword-arguments"><a href="#keyword-arguments" class="headerlink" title="keyword arguments"></a>keyword arguments</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def get_user_info(user_name, real_name, **kwargs): </span><br><span class="line">    print(user_name)</span><br><span class="line">    print(real_name)</span><br><span class="line">    print(kwargs, type(kwargs))</span><br></pre></td></tr></table></figure>
+<h5 id="domain-function-using-keyword-arguments"><a href="#domain-function-using-keyword-arguments" class="headerlink" title="domain function using keyword arguments"></a>domain function using keyword arguments</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def complete_uri(hosthome, protocol &#x3D;&#39;https&#39;,**query):</span><br><span class="line">    &#39;&#39;&#39;</span><br><span class="line">    return complete url with querystring.</span><br><span class="line">    querystring starts with ?</span><br><span class="line">    and keywords are splited by &amp;</span><br><span class="line">    &#39;&#39;&#39;</span><br><span class="line">    url &#x3D; &#39;&#123;&#125;:&#x2F;&#x2F;&#123;&#125;&#x2F;admin.html&#39;.format(protocol, hosthome)</span><br><span class="line">    if not query:</span><br><span class="line">        return url</span><br><span class="line">    else:</span><br><span class="line">        query_string &#x3D; &#39;?&#39;</span><br><span class="line">        for k, v in query.items():</span><br><span class="line">            query_string +&#x3D; &#39;&#123;&#125;&#x3D;&#123;&#125;&amp;&#39;.format(k, v)</span><br><span class="line">        query_string &#x3D; query_string[:-1]</span><br><span class="line">    print(url)</span><br><span class="line">    print(query_string)</span><br><span class="line">    return url + query_string</span><br></pre></td></tr></table></figure>
+<h4 id="variable-outside-function"><a href="#variable-outside-function" class="headerlink" title="variable outside function"></a>variable outside function</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;hello&quot;</span><br><span class="line">def glob_test(a):</span><br><span class="line">	a +&#x3D; &quot;world&quot;</span><br><span class="line">	return a</span><br><span class="line"></span><br><span class="line">glob_test(a)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+<h3 id="recursive"><a href="#recursive" class="headerlink" title="recursive"></a>recursive</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">times_to_curse &#x3D; int(input(&#39;How many times do you want to curse? &#39;))</span><br><span class="line">print(times_to_curse, type(times_to_curse))</span><br><span class="line"></span><br><span class="line">def recurse_to_beast(num):</span><br><span class="line">    print(&#39;Abracadabra&#39;)</span><br><span class="line">    print(&#39;Curse has no effect. &#123;&#125; times left&#39;.format(num - 1))</span><br><span class="line">    if num &#x3D;&#x3D; 1:</span><br><span class="line">        return &#39;Beast is now dead&#39;</span><br><span class="line">    return recurse_to_beast(num - 1)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -595,101 +830,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/210126-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/210126-1/" class="post-title-link" itemprop="url">TIL 210126-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 22:07:04" itemprop="dateCreated datePublished" datetime="2021-01-26T22:07:04+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="List-Tuple"><a href="#List-Tuple" class="headerlink" title="List, Tuple"></a>List, Tuple</h3><p>List<br>animals = [‘’, ‘’, ‘’]<br>Tuple<br>animals= (‘’, ‘’, ‘’)</p>
-<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><ul>
-<li>List 는 선언과 동시에 값을 채워 넣을 수 있다.</li>
-<li>요소를 추가할 수 있다 (.append())</li>
-<li>특정한 위치에 원하는 값을 추가할 수 있다. lang.insert(1, “c”) print(lang)</li>
-<li>특정 요소를 삭제할 수도 있다. lang.remove(“golang”) print(lang)</li>
-<li>리스트에 있던 값을 빼낼 수도 있다. java = lang.pop(2) print(lang) print(java)</li>
-<li>리스트를 정렬. numbers = [2, 1, 4, 3] print(numbers)  /t  numbers.sort() print(numbers)</li>
-<li>리스트를 역순으로 출력. numbers = [2, 1, 4, 3] numbers.reverse() print(numbers)</li>
-<li>특정 값의 위치 출력. index_of_two = numbers.index(2) print(index_of_two)</li>
-<li>리스트끼리 더할 때는 extend. numbers += [5, 6] print(numbers) numbers.extend([7, 8]) print(numbers)</li>
-</ul>
-<h3 id="Membership-Operator"><a href="#Membership-Operator" class="headerlink" title="Membership Operator"></a>Membership Operator</h3><p>in - ‘cat’ in [‘fox’, ‘dog’, ‘cat’] =&gt; True<br>not in - ‘wolf’ not in [‘fox’, ‘dog’, ‘cat’] =&gt; True</p>
-<h3 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h3><ul>
-<li>괄호를 사용해서 선언한다. tuple1 = (1, 2, 3, 4)</li>
-<li>삭제나 추가가 불가능.</li>
-<li>tuple끼리 더하거나 반복은 가능. tuple2 = (5, 6) print(tuple1 + tuple2)  /t  print(tuple1 * 3)</li>
-<li>값을 편하게 바꿀 수 있다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; y</span><br><span class="line">y &#x3D; x (x)</span><br><span class="line"></span><br><span class="line">temp &#x3D; x</span><br><span class="line">x &#x3D; y</span><br><span class="line">y &#x3D; temp</span><br><span class="line"></span><br><span class="line">(x,y) &#x3D; (y,x)</span><br></pre></td></tr></table></figure></li>
-<li>함수에서 하나 이상의 값을 반환할때 사용한다<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def quot_and_rem(x,y):</span><br><span class="line">    quot &#x3D; x &#x2F;&#x2F; y</span><br><span class="line">    rem &#x3D; x % y</span><br><span class="line">    return (quot, rem)</span><br><span class="line">    </span><br><span class="line">(quot, rem) &#x3D; quot_and_rem(3,10)</span><br></pre></td></tr></table></figure>
-<h3 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h3></li>
-<li>매핑타입의 묶음 자료형이다.</li>
-<li>Key와 value로 구성되어 있다.</li>
-<li>Hash table 을 이용하여 구현 -&gt; 일정한 속도 -&gt; 키의 수가 맞지 않아도 일정한 탐색속도 유지</li>
-</ul>
-<h4 id="dictionary-선언"><a href="#dictionary-선언" class="headerlink" title="dictionary 선언"></a>dictionary 선언</h4><p>dict1 = {} print(dict1)<br>dict2 = {‘ja’:0, ‘chuk’:1, ‘in’:2}<br>dict3 = dict(ja=0,chuk=1,in=2)<br>dict4 = dict([(‘ja’,0), (‘chuk’,1),(‘in’,2)])</p>
-<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><ul>
-<li>집합 연산을 쉽게 하기 위해 만들어졌다.</li>
-<li>순서 없음</li>
-<li>중복 없음<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ppap &#x3D; &#123;&#39;pen&#39;, &#39;apple&#39;, &#39;pineapple&#39;, &#39;pen&#39;&#125;</span><br><span class="line">print(ppap)</span><br><span class="line">&#39;apple&#39; in ppap</span><br><span class="line">&#39;applepen&#39; in papp</span><br><span class="line">pineapple &#x3D; set(&#39;pineapple&#39;)</span><br><span class="line">pineapple</span><br></pre></td></tr></table></figure></li>
-<li>A ∪ B == A | B A ∩ B == A &amp; B A - B == A - B A Δ B == A ^ B</li>
-</ul>
-<h3 id="pseudocode"><a href="#pseudocode" class="headerlink" title="pseudocode"></a>pseudocode</h3><p>프로그램이나 알고리즘이 수행할 내용을 인간이 이해할 수 있는 언어로 표현하는 것</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/til/210126-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -715,190 +855,6 @@
       <span class="post-meta-item-text">Posted on</span>
 
       <time title="Created: 2021-01-26 22:05:50" itemprop="dateCreated datePublished" datetime="2021-01-26T22:05:50+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/210126/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/210126/" class="post-title-link" itemprop="url">TIL 210126</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 22:00:29" itemprop="dateCreated datePublished" datetime="2021-01-26T22:00:29+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="Computational-thinking"><a href="#Computational-thinking" class="headerlink" title="Computational thinking"></a>Computational thinking</h4><ul>
-<li>솔루션 구현</li>
-<li>솔루션 실행 및 평가</li>
-</ul>
-<h4 id="what-is-python"><a href="#what-is-python" class="headerlink" title="what is python?"></a>what is python?</h4><p>  A programing language Made by guido van possum 1989</p>
-<h4 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h4><ul>
-<li>인터프리터 : 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경을 말한다. 원시 코드를 기계어로 번역하는 컴파일러와 대비된다. </li>
-<li>객체지향: 프로그래밍에서 필요한 데이터를 추상화시켜 상태와 행위를 가진 객체를 만들고 그 객체들 간의 유기적인 상호작용을 통해 로직을 구성하는 프로그래밍 방법이다.</li>
-<li>동적 타이핑: 정적 타이핑과 달리 자료형을 컴파일이 아닌 런타임 시 결정하는 것으로, 자료형의 명시 없이 변수명만 가지로 선언 및 값을 전달하는 것이 가능하다.</li>
-<li>엄격한 문법</li>
-</ul>
-<h4 id="what-can-python-do"><a href="#what-can-python-do" class="headerlink" title="what can python do?"></a>what can python do?</h4><ul>
-<li>System programming</li>
-<li>Web programming</li>
-<li>Data analysis</li>
-</ul>
-<h3 id="coding-pythonic"><a href="#coding-pythonic" class="headerlink" title="coding pythonic"></a>coding pythonic</h3><h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h4><ul>
-<li>들여쓰기: 공백 4칸 or tab</li>
-<li>한 줄은 79자 ~ 120자</li>
-<li>클래스 정의와 최상위 함수는 두 줄을 띄움</li>
-<li>클래스 내 메소드는 한 줄 띄움<h4 id="variables"><a href="#variables" class="headerlink" title="variables"></a>variables</h4></li>
-<li>_variable: 내부적으로 사용되는 변수</li>
-<li>print_: 파이썬 키워드와 충돌 방지</li>
-</ul>
-<h4 id="naming"><a href="#naming" class="headerlink" title="naming"></a>naming</h4><ul>
-<li>클래스 이름은 CamelCase</li>
-<li>함수, 변수, 메소드 이름은 snake_case</li>
-</ul>
-<h4 id="syntax"><a href="#syntax" class="headerlink" title="syntax"></a>syntax</h4><pre><code>문법, 구조, 또는 언어 문장내에 있는 구성요소의 순서</code></pre>
-<h4 id="data-type"><a href="#data-type" class="headerlink" title="data type"></a>data type</h4><ul>
-<li>int</li>
-<li>float</li>
-<li>long(0b, 0o, 0x)</li>
-<li>string</li>
-<li>boolean</li>
-<li>list, tuple, range</li>
-<li>set</li>
-<li>dictionary</li>
-</ul>
-<h4 id="floating-point"><a href="#floating-point" class="headerlink" title="floating point"></a>floating point</h4><ul>
-<li>컴퓨터는 실수를 2진수 부동소수점(floating point)을 활용한다.</li>
-<li>0,1!!</li>
-<li>0.1 + 0.2! = 0.3 -&gt; round(0.1+0.2, 1) == round(0.3, 1)</li>
-<li>314.625 = 100111010.101 (2) = 1.001110101 x 2^8</li>
-</ul>
-<h4 id="type-casting"><a href="#type-casting" class="headerlink" title="type casting"></a>type casting</h4><pre><code>float(3) -&gt; int to float int(3.6) -&gt; float to int str(1) -&gt; int to string int(’12’) -&gt; string to int</code></pre>
-<h4 id="input"><a href="#input" class="headerlink" title="input"></a>input</h4><pre><code>name = input(‘what is your name?  ‘)
-print(‘hi’, name)</code></pre>
-<h4 id="string"><a href="#string" class="headerlink" title="string"></a>string</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">some_string &#x3D; ‘python’</span><br><span class="line">len(some_string)</span><br><span class="line"></span><br><span class="line">some_string[3:5] &#x3D; &quot;ho&quot;</span><br><span class="line">some_string[1:5:2] &#x3D; &quot;yh&quot;</span><br><span class="line">some_string[::] &#x3D; some_string[0:len(some_string):1]</span><br><span class="line">some_string[::-1] &#x3D; some_string[-1:-len(some_string):-1]</span><br><span class="line">some_string[::-1] &#x3D; &quot;nohtyp&quot;</span><br></pre></td></tr></table></figure>
-<h4 id="string-functions"><a href="#string-functions" class="headerlink" title="string functions"></a>string functions</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func &#x3D; &quot;python is easy programming language&quot;</span><br><span class="line">func.count(&#39;p&#39;)</span><br><span class="line"></span><br><span class="line">func.find(&#39;p&#39;)</span><br><span class="line"></span><br><span class="line">comma &#x3D; &quot;,&quot;</span><br><span class="line">func &#x3D; comma.join(&#39;python&#39;)</span><br><span class="line"></span><br><span class="line">func.split(&#39;,&#39;)</span><br><span class="line"></span><br><span class="line">python_is_easy &#x3D; &quot;python is easy&quot;</span><br><span class="line">python_is_easy.split()</span><br><span class="line"></span><br><span class="line">python_is_easy.replace(&quot;python&quot;, &quot;golang&quot;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>the split(): method  splits a string into a list</li>
-<li>the join(): method takes all items in an iterable and joins them into one string</li>
-<li>Iterable is any Python object capable of returning its members one at a time, permitting it to be iterated over in a for-loop</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">some_string &#x3D; &quot;,,,Fastcampus...&quot;</span><br><span class="line">some_string.strip(&quot;,&quot;)</span><br><span class="line">some_string.strip(&quot;.&quot;)</span><br></pre></td></tr></table></figure>
-<h4 id="string-validator"><a href="#string-validator" class="headerlink" title="string validator"></a>string validator</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str.isalnum()</span><br><span class="line">str.isalpha()</span><br><span class="line">str.isdigit()</span><br><span class="line">str.islower()</span><br><span class="line">str.isupper()</span><br></pre></td></tr></table></figure>
-<h4 id="string-formatting"><a href="#string-formatting" class="headerlink" title="string formatting"></a>string formatting</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;I have a &#123;&#125;, I have an &#123;&#125;.&quot;.format(&quot;pen&quot;, &quot;apple&quot;))</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/til/210126/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/til/210126/" class="post-title-link" itemprop="url">2101026</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 21:53:18" itemprop="dateCreated datePublished" datetime="2021-01-26T21:53:18+09:00">2021-01-26</time>
     </span>
 
   
