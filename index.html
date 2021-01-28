@@ -1,307 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Head tag -->
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Developer">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nomankey">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="CK&#39;s Blog"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Developer" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CK&#39;s Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    
+        <meta name="twitter:card" content="summary" />
+    
+    
+    
+
+    <!-- Title -->
+    
+    <title>CK&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
+    <!-- Google Analytics -->
+    
 
 
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
-  </script>
-<meta name="description" content="Developer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CK&#39;s Blog">
-<meta property="og:url" content="https://nomankey.github.io/index.html">
-<meta property="og:site_name" content="CK&#39;s Blog">
-<meta property="og:description" content="Developer">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Nomankey">
-<meta name="twitter:card" content="summary">
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
-<link rel="canonical" href="https://nomankey.github.io/">
+<body>
 
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-<title>CK's Blog</title>
-  
-
-
-
-
-  <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
     </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">CK's Blog</h1>
-      <i class="logo-line"></i>
-    </a>
-      <p class="site-subtitle" itemprop="description">Same Dev Different Day</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
 </div>
 
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
 
+<div class="container">
 
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
 
-
-
-
-</div>
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Nomankey</p>
-  <div class="site-description" itemprop="description">Developer</div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">18</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
+            <h1 id="main-title" class="title">CK's Blog</h1>
+        
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
+</header>
 
+        <section class="main">
+            
+                
+<div class="post">
 
-    </header>
-
-    
-  <div class="back-to-top" role="button">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/27/til/210127/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/27/til/210127/" class="post-title-link" itemprop="url">post</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-27 22:19:11" itemprop="dateCreated datePublished" datetime="2021-01-27T22:19:11+09:00">2021-01-27</time>
-    </span>
-
-  
-</div>
-
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/28/til/210128/">
+                TIL 210128
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-28</span>
+            
+            
+            
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
     </div>
 
     
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/27/210126-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/27/210126-1/" class="post-title-link" itemprop="url">TIL 210126-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-27 11:34:08" itemprop="dateCreated datePublished" datetime="2021-01-27T11:34:08+09:00">2021-01-27</time>
-    </span>
-
-  
-</div>
+        <div class="content">
+            <h1 id="TIL-210128"><a href="#TIL-210128" class="headerlink" title="TIL 210128"></a>TIL 210128</h1><h3 id="Fibonacci-Sequence"><a href="#Fibonacci-Sequence" class="headerlink" title="Fibonacci Sequence"></a>Fibonacci Sequence</h3><h4 id="recursive"><a href="#recursive" class="headerlink" title="recursive"></a>recursive</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def fibo(n):</span><br><span class="line">	if n &lt; 2:</span><br><span class="line">		return n</span><br><span class="line">	else:</span><br><span class="line">		return fibo(n -1) + fibo(n-2)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="iterative"><a href="#iterative" class="headerlink" title="iterative"></a>iterative</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def fibs(n):                                                                                                 </span><br><span class="line">    fibs &#x3D; [0, 1, 1]                                                                                           </span><br><span class="line">    for f in range(2, n):                                                                                      </span><br><span class="line">        fibs.append(fibs[-1] + fibs[-2])                                                                         </span><br><span class="line">    return fibs[n]</span><br></pre></td></tr></table></figure>
+<h4 id="formula"><a href="#formula" class="headerlink" title="formula"></a>formula</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from math import sqrt</span><br><span class="line"></span><br><span class="line">def binet(n):</span><br><span class="line">    return int(((1+sqrt(5))**n - (1-sqrt(5))**n) &#x2F; (2**n*sqrt(5)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Factorial"><a href="#Factorial" class="headerlink" title="Factorial"></a>Factorial</h3><h4 id="recursive-1"><a href="#recursive-1" class="headerlink" title="recursive"></a>recursive</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def factorial_r(num):</span><br><span class="line">    if num &lt; 3:</span><br><span class="line">        return num</span><br><span class="line">    return num*factorial_r(num-1)</span><br></pre></td></tr></table></figure>
+<h4 id="iterative-1"><a href="#iterative-1" class="headerlink" title="iterative"></a>iterative</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def factorial_i(num):</span><br><span class="line">    result &#x3D; 1</span><br><span class="line">    for i in range(1, num+1):</span><br><span class="line">        result *&#x3D; i</span><br><span class="line">    return result</span><br></pre></td></tr></table></figure>
 
         </div>
-      </header>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/27/til/210127/">
+                post
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-27</span>
+            
+            
+            
+        </div>
+    </div>
 
     
+        <div class="content">
+            
+        </div>
     
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/27/210126-1/">
+                TIL 210126-1
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-27</span>
+            
+            
+            
+        </div>
+    </div>
+
     
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="List-Tuple"><a href="#List-Tuple" class="headerlink" title="List, Tuple"></a>List, Tuple</h3><p>List<br>animals = [‘’, ‘’, ‘’]<br>Tuple<br>animals= (‘’, ‘’, ‘’)</p>
+        <div class="content">
+            <h3 id="List-Tuple"><a href="#List-Tuple" class="headerlink" title="List, Tuple"></a>List, Tuple</h3><p>List<br>animals = [‘’, ‘’, ‘’]<br>Tuple<br>animals= (‘’, ‘’, ‘’)</p>
 <h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><ul>
 <li>List 는 선언과 동시에 값을 채워 넣을 수 있다.</li>
 <li>요소를 추가할 수 있다 (.append())</li>
@@ -334,70 +261,32 @@
 </ul>
 <h3 id="pseudocode"><a href="#pseudocode" class="headerlink" title="pseudocode"></a>pseudocode</h3><p>프로그램이나 알고리즘이 수행할 내용을 인간이 이해할 수 있는 언어로 표현하는 것</p>
 
-      
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/27/210127/">
+                TIL 210127
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-27</span>
+            
+            
+            
+        </div>
     </div>
 
     
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/27/210127/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/27/210127/" class="post-title-link" itemprop="url">TIL 210127</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-01-27 00:00:00 / Modified: 22:21:21" itemprop="dateCreated datePublished" datetime="2021-01-27T00:00:00+09:00">2021-01-27</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="function"><a href="#function" class="headerlink" title="function"></a>function</h3><ul>
+        <div class="content">
+            <h3 id="function"><a href="#function" class="headerlink" title="function"></a>function</h3><ul>
 <li>프로그래밍에서의 함수는 입력값을 내부에서 어떤 처리를 통해 결과값을 출력하는 것</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def awe_sum(a,b):</span><br><span class="line">	result &#x3D; a + b</span><br><span class="line">    return result</span><br><span class="line"></span><br><span class="line">a &#x3D; 2</span><br><span class="line">b &#x3D; 3</span><br><span class="line">print(awe_sum(a,b))</span><br></pre></td></tr></table></figure>
@@ -411,322 +300,137 @@
 <h4 id="variable-outside-function"><a href="#variable-outside-function" class="headerlink" title="variable outside function"></a>variable outside function</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;hello&quot;</span><br><span class="line">def glob_test(a):</span><br><span class="line">	a +&#x3D; &quot;world&quot;</span><br><span class="line">	return a</span><br><span class="line"></span><br><span class="line">glob_test(a)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
 <h3 id="recursive"><a href="#recursive" class="headerlink" title="recursive"></a>recursive</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">times_to_curse &#x3D; int(input(&#39;How many times do you want to curse? &#39;))</span><br><span class="line">print(times_to_curse, type(times_to_curse))</span><br><span class="line"></span><br><span class="line">def recurse_to_beast(num):</span><br><span class="line">    print(&#39;Abracadabra&#39;)</span><br><span class="line">    print(&#39;Curse has no effect. &#123;&#125; times left&#39;.format(num - 1))</span><br><span class="line">    if num &#x3D;&#x3D; 1:</span><br><span class="line">        return &#39;Beast is now dead&#39;</span><br><span class="line">    return recurse_to_beast(num - 1)</span><br></pre></td></tr></table></figure>
 
-      
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/26/em/">
+                Ethiopian Multiplication
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-26</span>
+            
+            
+            
+        </div>
     </div>
 
     
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/em/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/em/" class="post-title-link" itemprop="url">Ethiopian Multiplication</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 23:54:23" itemprop="dateCreated datePublished" datetime="2021-01-26T23:54:23+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
+        <div class="content">
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">result &#x3D; 0</span><br><span class="line"></span><br><span class="line">num_1 &#x3D; int(input(&#39;Enter dividing number:  &#39;))</span><br><span class="line">num_2 &#x3D; int(input(&#39;Enter multiplying number:  &#39;))</span><br><span class="line"></span><br><span class="line">while num_1 &gt; 0:</span><br><span class="line">    print(num_1, num_2)</span><br><span class="line">    if num_1 % 2 &#x3D;&#x3D; 1:</span><br><span class="line">        result +&#x3D; num_2</span><br><span class="line">    num_1 &#x2F;&#x2F;&#x3D; 2</span><br><span class="line">    num_2 *&#x3D; 2</span><br><span class="line">print (result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
         </div>
-      </header>
+    
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">result &#x3D; 0</span><br><span class="line"></span><br><span class="line">num_1 &#x3D; int(input(&#39;Enter dividing number:  &#39;))</span><br><span class="line">num_2 &#x3D; int(input(&#39;Enter multiplying number:  &#39;))</span><br><span class="line"></span><br><span class="line">while num_1 &gt; 0:</span><br><span class="line">    print(num_1, num_2)</span><br><span class="line">    if num_1 % 2 &#x3D;&#x3D; 1:</span><br><span class="line">        result +&#x3D; num_2</span><br><span class="line">    num_1 &#x2F;&#x2F;&#x3D; 2</span><br><span class="line">    num_2 *&#x3D; 2</span><br><span class="line">print (result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div>
+            
+                
+<div class="post">
 
-      
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/26/em/em/">
+                post
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-26</span>
+            
+            
+            
+        </div>
     </div>
 
     
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/em/em/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/em/em/" class="post-title-link" itemprop="url">post</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 23:52:38" itemprop="dateCreated datePublished" datetime="2021-01-26T23:52:38+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
+        <div class="content">
+            
         </div>
-      </header>
+    
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/26/mhp/">
+                Monty Hall Problem
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-26</span>
+            
+            
+            
+        </div>
     </div>
 
     
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/mhp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/mhp/" class="post-title-link" itemprop="url">Monty Hall Problem</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 22:15:08" itemprop="dateCreated datePublished" datetime="2021-01-26T22:15:08+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
+        <div class="content">
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">stay_vic &#x3D; 0</span><br><span class="line">change_vic &#x3D; 0</span><br><span class="line"></span><br><span class="line">quiz_door &#x3D; [0, 0, 1]</span><br><span class="line">prize &#x3D; 1</span><br><span class="line"></span><br><span class="line">trial &#x3D; 1000</span><br><span class="line">while trial &gt; 0:</span><br><span class="line">    show_door &#x3D; [0, 1]</span><br><span class="line">    guess &#x3D; random.choice(quiz_door)</span><br><span class="line">    show_door.remove(guess) ##question 변수를 두지 말것</span><br><span class="line">    guess_2 &#x3D; random.choice(show_door)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    if guess &#x3D;&#x3D; prize:</span><br><span class="line">        stay_vic +&#x3D; 1</span><br><span class="line">    elif guess_2 &#x3D;&#x3D; prize:</span><br><span class="line">        change_vic +&#x3D; 1</span><br><span class="line">    trial -&#x3D; 1</span><br><span class="line">else:</span><br><span class="line">    print(&#39;If you DO NOT change the victory percentage is: &#39;,stay_vic&#x2F;10,&#39;%&#39;)</span><br><span class="line">    print(&#39;If you DO change the victory percentage is: &#39;,change_vic&#x2F;10,&#39;%&#39;)</span><br></pre></td></tr></table></figure>
         </div>
-      </header>
+    
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">stay_vic &#x3D; 0</span><br><span class="line">change_vic &#x3D; 0</span><br><span class="line"></span><br><span class="line">quiz_door &#x3D; [0, 0, 1]</span><br><span class="line">prize &#x3D; 1</span><br><span class="line"></span><br><span class="line">trial &#x3D; 1000</span><br><span class="line">while trial &gt; 0:</span><br><span class="line">    show_door &#x3D; [0, 1]</span><br><span class="line">    guess &#x3D; random.choice(quiz_door)</span><br><span class="line">    show_door.remove(guess) ##question 변수를 두지 말것</span><br><span class="line">    guess_2 &#x3D; random.choice(show_door)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    if guess &#x3D;&#x3D; prize:</span><br><span class="line">        stay_vic +&#x3D; 1</span><br><span class="line">    elif guess_2 &#x3D;&#x3D; prize:</span><br><span class="line">        change_vic +&#x3D; 1</span><br><span class="line">    trial -&#x3D; 1</span><br><span class="line">else:</span><br><span class="line">    print(&#39;If you DO NOT change the victory percentage is: &#39;,stay_vic&#x2F;10,&#39;%&#39;)</span><br><span class="line">    print(&#39;If you DO change the victory percentage is: &#39;,change_vic&#x2F;10,&#39;%&#39;)</span><br></pre></td></tr></table></figure>
-      
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/26/mhp/mhp/">
+                post
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-26</span>
+            
+            
+            
+        </div>
     </div>
 
     
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/mhp/mhp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/mhp/mhp/" class="post-title-link" itemprop="url">post</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 22:12:38" itemprop="dateCreated datePublished" datetime="2021-01-26T22:12:38+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
+        <div class="content">
+            
         </div>
-      </header>
+    
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/26/210126-2/">
+                TIL 210126-2
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-26</span>
+            
+            
+            
+        </div>
     </div>
 
     
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/210126-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/210126-2/" class="post-title-link" itemprop="url">TIL 210126-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 22:10:36" itemprop="dateCreated datePublished" datetime="2021-01-26T22:10:36+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="conditional-statements-조건문"><a href="#conditional-statements-조건문" class="headerlink" title="conditional statements 조건문"></a>conditional statements 조건문</h3><h4 id="if"><a href="#if" class="headerlink" title="if"></a>if</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if 조건:</span><br><span class="line">	실행문</span><br><span class="line"></span><br><span class="line">if 조건1 and 조건2:</span><br><span class="line">	실행문</span><br><span class="line"></span><br><span class="line">if 조건1 or 조건2:</span><br><span class="line">	실행문</span><br><span class="line">if not 조건:</span><br><span class="line">	실행문</span><br></pre></td></tr></table></figure>
+        <div class="content">
+            <h3 id="conditional-statements-조건문"><a href="#conditional-statements-조건문" class="headerlink" title="conditional statements 조건문"></a>conditional statements 조건문</h3><h4 id="if"><a href="#if" class="headerlink" title="if"></a>if</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if 조건:</span><br><span class="line">	실행문</span><br><span class="line"></span><br><span class="line">if 조건1 and 조건2:</span><br><span class="line">	실행문</span><br><span class="line"></span><br><span class="line">if 조건1 or 조건2:</span><br><span class="line">	실행문</span><br><span class="line">if not 조건:</span><br><span class="line">	실행문</span><br></pre></td></tr></table></figure>
 <h4 id="else"><a href="#else" class="headerlink" title="else"></a>else</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cash &#x3D; 120000</span><br><span class="line">if cash &gt; 100000:</span><br><span class="line">    print(&quot;go to restaurant&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;go to cvs&quot;)</span><br></pre></td></tr></table></figure>
 <h4 id="elif"><a href="#elif" class="headerlink" title="elif"></a>elif</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cash &#x3D; 120000</span><br><span class="line">if cash &gt; 100000:</span><br><span class="line">    print(&quot;go to restaurant&quot;)</span><br><span class="line">elif cash &gt; 50000:</span><br><span class="line">    print(&quot;go to bobjib&quot;)</span><br><span class="line">elif cash &gt; 30000:</span><br><span class="line">    print(&quot;go to buffet&quot;)</span><br><span class="line">elif cash &gt; 20000:</span><br><span class="line">    print(&quot;go to ramen store&quot;)</span><br><span class="line">elif cash &gt; 10000:</span><br><span class="line">    print(&quot;go to chinese restaurant&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;go to cvs&quot;)</span><br></pre></td></tr></table></figure>
 <h3 id="Ternary-Operators-삼항-연산자"><a href="#Ternary-Operators-삼항-연산자" class="headerlink" title="Ternary Operators 삼항 연산자"></a>Ternary Operators 삼항 연산자</h3><h4 id="단항-연산자"><a href="#단항-연산자" class="headerlink" title="단항 연산자"></a>단항 연산자</h4><p>부호(+,-), not</p>
@@ -742,212 +446,227 @@
 </ul>
 <h3 id="conditional-expressions"><a href="#conditional-expressions" class="headerlink" title="conditional expressions"></a>conditional expressions</h3><p>a if condition else b if condition else c</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/til/210126-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/til/210126-2/" class="post-title-link" itemprop="url">210126-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 22:09:31" itemprop="dateCreated datePublished" datetime="2021-01-26T22:09:31+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
     
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
 </div>
+            
+                
+<div class="post">
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/til/210126-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/til/210126-1/" class="post-title-link" itemprop="url">210126-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 22:05:50" itemprop="dateCreated datePublished" datetime="2021-01-26T22:05:50+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2021/01/26/til/210126-2/">
+                210126-2
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2021-01-26</span>
+            
+            
+            
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
     </div>
 
     
+        <div class="content">
+            
+        </div>
     
-    
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
 </div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Nomankey</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
+            
+        </section>
     </div>
-  </footer>
-
-  
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
-
-  
+</div>
 
 
 
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="disabled" href="/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/2/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
 
-  
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a target="_blank" rel="noopener" href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2021/01/28/til/210128/">TIL 210128</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2021/01/27/til/210127/">post</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2021/01/27/210126-1/">TIL 210126-1</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2021/01/27/210127/">TIL 210127</a>
+            </li>
+            
+        </ul>
+    </div>
 
 
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://telegram.org/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-telegram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Disqus Comments -->
 
 
 
 </body>
+
 </html>
