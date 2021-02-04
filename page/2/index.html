@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,209 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/30/til/210130/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/30/til/210130/" class="post-title-link" itemprop="url">TIL 210130</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-01-30 00:00:00 / Modified: 20:26:42" itemprop="dateCreated datePublished" datetime="2021-01-30T00:00:00+09:00">2021-01-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="TIL-210130"><a href="#TIL-210130" class="headerlink" title="TIL 210130"></a>TIL 210130</h1><p>learned a process how to collabor as a team<br>The description below is the process of how PM and team member work together on git</p>
+<h1 id="팀장-1"><a href="#팀장-1" class="headerlink" title="팀장 -1"></a>팀장 -1</h1><ul>
+<li>Either GitHub</li>
+<li>Make new repository<ul>
+<li>Initialize this repository with<ul>
+<li>Add a README.file</li>
+<li>Add .gitignore</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>터미널로 이동한다.</li>
+<li>$git clone &lt;리포주소&gt;</li>
+<li>$cd clone -anything<ul>
+<li>클론 파일 이름임..</li>
+</ul>
+</li>
+<li>$git flow init</li>
+<li>$git branch<ul>
+<li>branch가 main에서 develop으로 이동 확인</li>
+</ul>
+</li>
+<li>$touch index.html</li>
+<li>$ls<ul>
+<li>만든 파일 확인</li>
+</ul>
+</li>
+<li>$git status<ul>
+<li>Index.html 가 untracked file 이라고 뜬다.</li>
+</ul>
+</li>
+<li>$git commit<ul>
+<li>feat: create index.html</li>
+<li>TODO</li>
+<li>-semantic elements</li>
+<li>-web standards</li>
+<li>-separate css, js files in to static</li>
+</ul>
+</li>
+<li>$git push -u origin develop<ul>
+<li>branch가 main이면 -u가 필요없지만 branch 가 develop 이기에 필요하다.<h1 id="팀원-1"><a href="#팀원-1" class="headerlink" title="팀원 - 1"></a>팀원 - 1</h1></li>
+</ul>
+</li>
+<li>팀장 repository 방문 &amp; Fork</li>
+<li>$git clone &lt;팀장 리포주소&gt;</li>
+<li>$cd clone -anything</li>
+<li>$ls</li>
+<li>$git branch <ul>
+<li>branch에 main만 있는걸 확인한다.</li>
+</ul>
+</li>
+<li>$git flow init<ul>
+<li>branch가 develop에 있는 것 확인</li>
+</ul>
+</li>
+<li>$ls<ul>
+<li>index.html 확인후 팀장 지령 숙지</li>
+</ul>
+</li>
+<li>팀장 GitHub 방문하고나서<ul>
+<li>팀장 repository</li>
+<li>Issues</li>
+<li>New issue</li>
+<li>팀원으로서 팀장 repository 글을 남긴다 ex) 내가 한당, 내가 찜한당<h1 id="팀장-2"><a href="#팀장-2" class="headerlink" title="팀장 -2"></a>팀장 -2</h1></li>
+<li>답을 한다</li>
+<li>Label을 준다<br>#팀원 - 2</li>
+</ul>
+</li>
+<li>팀장한테 label을 받으면 confirm, 바로 작업 ㄲ</li>
+<li>터미널로 돌아온다</li>
+<li>$ls</li>
+<li>$git flow feature start &lt;작업이름&gt;<ul>
+<li>Ex) split - static</li>
+</ul>
+</li>
+<li>$vi index.html<ul>
+<li>작업 ㄲ</li>
+</ul>
+</li>
+<li>$git status -uall</li>
+<li>$git add index.html</li>
+<li>$git status <ul>
+<li>파일 올라온거 확인</li>
+</ul>
+</li>
+<li>$git commit<ul>
+<li>팀장 repositroy에서 issue 남길때 받은 숫자를 남긴다<ul>
+<li>Ex) feat: separate css, js in to static/</li>
+<li>Sovled: #1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$git flow feature finish &lt;작업이름&gt;<ul>
+<li>Ex) split-static</li>
+</ul>
+</li>
+<li>$git push origin develop<ul>
+<li>팀원은 develop으로 push한다. 안그러면 큰일남…</li>
+</ul>
+</li>
+<li>Clone-anything repository로 복귀</li>
+<li>fork로 따서 작업한게 반영되었는지 확인</li>
+<li>Pull request를 누른다.<ul>
+<li>branch가 develop인지 확인</li>
+</ul>
+</li>
+<li>Open a pull request화면에서 팀원의 develop에서 팀장의 develop으로 갔는지 확인.</li>
+<li>Create pull request<h1 id="팀장-3"><a href="#팀장-3" class="headerlink" title="팀장 - 3"></a>팀장 - 3</h1></li>
+<li>팀원이 받은 pull request 확인<ul>
+<li>후에 피드백을 남긴다. Ex) title text를 추가하게</li>
+<li>이때는 pull request가 open 되어있다<h1 id="팀원-3"><a href="#팀원-3" class="headerlink" title="팀원 - 3"></a>팀원 - 3</h1></li>
+</ul>
+</li>
+<li>팀원은 피드백 수용후 다시 작업</li>
+<li>$git add index.html<ul>
+<li>작업한걸 다시 올린다</li>
+</ul>
+</li>
+<li>$git commit<ul>
+<li>feat: fill the title text</li>
+</ul>
+</li>
+<li>$git push origin develop<ul>
+<li>팀장의 pull request가 open일때 develop에서 push하면 무조건 팀장의 pull request로 push된다.</li>
+<li>프로젝트의 효율성을 위해 팀장은 빨리 확인하고 pull request를 닫는게 중요</li>
+<li>안그러면 다음 작업으로 못넘어감 ㅠㅜ<h1 id="팀장-4"><a href="#팀장-4" class="headerlink" title="팀장 - 4"></a>팀장 - 4</h1></li>
+</ul>
+</li>
+<li>확인후에 confirm merge</li>
+<li>팀장의 develop에 팀원의 내용이 들어간다<h1 id="팀원-4"><a href="#팀원-4" class="headerlink" title="팀원 - 4"></a>팀원 - 4</h1></li>
+<li>$git remote -v</li>
+<li>$git remote add pmorigin &lt;팀장 리포 주소&gt;</li>
+<li>$git remote -v</li>
+<li>$git pull pmorigin develop<ul>
+<li>팀원이 작업한것들을 확인 가능하다.</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -810,69 +1013,6 @@
 </ul>
 <h3 id="conditional-expressions"><a href="#conditional-expressions" class="headerlink" title="conditional expressions"></a>conditional expressions</h3><p>a if condition else b if condition else c</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/til/210126-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/til/210126-2/" class="post-title-link" itemprop="url">210126-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 22:09:31" itemprop="dateCreated datePublished" datetime="2021-01-26T22:09:31+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
       
     </div>
 
