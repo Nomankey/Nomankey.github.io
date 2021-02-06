@@ -158,12 +158,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -192,6 +192,80 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/06/til/210206/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/06/til/210206/" class="post-title-link" itemprop="url">TIL 210206</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-06 21:16:42 / Modified: 21:36:14" itemprop="dateCreated datePublished" datetime="2021-02-06T21:16:42+09:00">2021-02-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><ul>
+<li>같은 종류의 집단에 속하는 속성과 행의의 정의</li>
+<li>CamelCase로 적는다</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class SeeAttributes:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    You can see docstring.</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    integer &#x3D; 1024 # attribute</span><br><span class="line"></span><br><span class="line">    def function(self): # attribute</span><br><span class="line">        return &#39;fast&#39;</span><br></pre></td></tr></table></figure>
+<p>example of usuage of class in OOP</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Hero: # class</span><br><span class="line">    health &#x3D; 100 # class variable</span><br><span class="line">    </span><br><span class="line">    def __init__(self, name, weapon):</span><br><span class="line">        self.name &#x3D; name # instance variable</span><br><span class="line">        self.weapon &#x3D; weapon</span><br><span class="line"></span><br><span class="line">    def attack(self): # instance method</span><br><span class="line">        print(&quot;attack with &#123;&#125;&quot;.format(self.weapon))</span><br><span class="line"></span><br><span class="line">IronMan &#x3D; Hero(&#39;Iron Man&#39;, &#39;Impulse Gun&#39;) # instance</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>init</strong>: initializer(instance 생성시 자동으로 호출되어 self로 instance object를 받음)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -909,97 +983,6 @@ little_first에 대한 값 지정 없이 test_func([1,2,3]), 즉 하나의 인�
 <li>Question mark(?): 앞 문자의 존재유무(있거나 없거나)를 의미합니다. ex) appl?e == appe 또는 apple</li>
 <li>Curly brackets({m,n}): 반복횟수를 정의할 때 사용합니다. 중괄호 안의 숫자(m,n)은 반복횟수를 정의하며, 정확히 일치할 경우 1개의 숫자(m)를, 범위를 정의할 경우 2개의 숫자를 사용합니다.(m개~n개) ex1) ba(na){2} == banana ex2) ba(na){0,2} == ba, bana, banana</li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/02/til/210202/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/02/til/210202/" class="post-title-link" itemprop="url">TIL 210202</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-02 22:30:19 / Modified: 22:32:32" itemprop="dateCreated datePublished" datetime="2021-02-02T22:30:19+09:00">2021-02-02</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="TIL-210202"><a href="#TIL-210202" class="headerlink" title="TIL 210202"></a>TIL 210202</h1><h2 id="For-문"><a href="#For-문" class="headerlink" title="For 문"></a>For 문</h2><h2 id="전형적인-for-문"><a href="#전형적인-for-문" class="headerlink" title="전형적인 for 문"></a>전형적인 for 문</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test_list &#x3D; [‘one’, ‘two’, ‘three’]</span><br><span class="line">for i in test_list:</span><br><span class="line">	print(i)</span><br></pre></td></tr></table></figure>
-<p>Output:<br>one<br>two<br>three</p>
-<h2 id="다양한-for문의-사용"><a href="#다양한-for문의-사용" class="headerlink" title="다양한 for문의 사용"></a>다양한 for문의 사용</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; [(1,2), (3,4), (5,6)]</span><br><span class="line">for (first, last) in a:</span><br><span class="line">	print(first+last)</span><br></pre></td></tr></table></figure>
-<p>Output:<br>3<br>7<br>11</p>
-<h2 id="for문의-응용"><a href="#for문의-응용" class="headerlink" title="for문의 응용"></a>for문의 응용</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">marks &#x3D; [90, 25, 67, 45, 80]</span><br><span class="line"></span><br><span class="line">number &#x3D; 0 </span><br><span class="line">for mark in marks: </span><br><span class="line">    number &#x3D; number +1 </span><br><span class="line">    if mark &gt;&#x3D; 60: </span><br><span class="line">        print(“&#123;&#125;번 학생은 합격입니다.&quot; .format(number))</span><br><span class="line">    else: </span><br><span class="line">        print(“&#123;&#125;번 학생은 불합격입니다.”.format(number))</span><br></pre></td></tr></table></figure>
-<p>Output:<br>1번 학생 축하합니다. 합격입니다.<br>3번 학생 축하합니다. 합격입니다.<br>5번 학생 축하합니다. 합격입니다.</p>
-<h2 id="for문과-range를-이용한-구구단"><a href="#for문과-range를-이용한-구구단" class="headerlink" title="for문과 range를 이용한 구구단"></a>for문과 range를 이용한 구구단</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for i in range(2,10):        </span><br><span class="line">...     for j in range(1, 10):   </span><br><span class="line">...         print(i*j, end&#x3D;&quot; &quot;) </span><br><span class="line">...     print(&#39;&#39;)</span><br></pre></td></tr></table></figure>
-<p>Output:<br>2 4 6 8 10 12 14 16 18<br>3 6 9 12 15 18 21 24 27<br>4 8 12 16 20 24 28 32 36<br>5 10 15 20 25 30 35 40 45<br>6 12 18 24 30 36 42 48 54<br>7 14 21 28 35 42 49 56 63<br>8 16 24 32 40 48 56 64 72<br>9 18 27 36 45 54 63 72 81</p>
-<h4 id="매개변수-end를-넣어준-이유"><a href="#매개변수-end를-넣어준-이유" class="headerlink" title="매개변수 end를 넣어준 이유"></a>매개변수 end를 넣어준 이유</h4><p>앞의 예제에서 print(i*j, end=” “)와 같이 매개변수 end를 넣어 준 이유는 해당 결괏값을 출력할 때 다음줄로 넘기지 않고 그 줄에 계속해서 출력하기 위해서이다. 그다음에 이어지는 print(‘ ‘)는 2단, 3단 등을 구분하기 위해 두 번째 for문이 끝나면 결괏값을 다음 줄부터 출력하게 해주는 문장이다.</p>
-<h2 id="using-list-comprehension"><a href="#using-list-comprehension" class="headerlink" title="using list comprehension"></a>using list comprehension</h2><p>리스트 안에 for문을 포함하는 리스트 내포(List comprehension)를 사용하면 좀 더 편리하고 직관적인 프로그램을 만들 수 있다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a &#x3D; [1,2,3,4]</span><br><span class="line">&gt;&gt;&gt; result &#x3D; []</span><br><span class="line">&gt;&gt;&gt; for num in a:</span><br><span class="line">...     result.append(num*3)</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt; print(result)</span><br><span class="line">[3, 6, 9, 12] &#96;&#96;&#96;</span><br><span class="line">위의 예제는</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>a = [1,2,3,4]<br>result = [num * 3 for num in a]<br>print(result)<br>[3, 6, 9, 12]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List comprehension을 이용할시 위처럼 변한다.</span><br><span class="line"></span><br><span class="line">다시한번 구구단을 list comprehension을 이용하면</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>result = [x*y for x in range(2,10)<br>…               for y in range(1,10)]<br>print(result)<br>[2, 4, 6, 8, 10, 12, 14, 16, 18, 3, 6, 9, 12, 15, 18, 21, 24, 27, 4, 8, 12, 16,<br>20, 24, 28, 32, 36, 5, 10, 15, 20, 25, 30, 35, 40, 45, 6, 12, 18, 24, 30, 36, 42<br>, 48, 54, 7, 14, 21, 28, 35, 42, 49, 56, 63, 8, 16, 24, 32, 40, 48, 56, 64, 72,<br>9, 18, 27, 36, 45, 54, 63, 72, 81]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<pre><code>위처럼 표현할 수 있다.</code></pre>
 
       
     </div>
