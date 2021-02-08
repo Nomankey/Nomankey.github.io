@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,74 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/08/til/210208/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/08/til/210208/" class="post-title-link" itemprop="url">TIL 210208</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-08 23:19:12 / Modified: 23:24:13" itemprop="dateCreated datePublished" datetime="2021-02-08T23:19:12+09:00">2021-02-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>Input is handled for you by the stub code in the editor.</p>
+<p>The first line contains an integer,  (the number of test cases), and the  subsequent lines each contain an integer denoting the  of a Person instance.</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>Complete the method definitions provided in the editor so they meet the specifications outlined above; the code to test your work is already in the editor. If your methods are implemented correctly, each test case will print  or  lines (depending on whether or not a valid  was passed to the constructor).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    </span><br><span class="line">    def __init__(self,initialAge):</span><br><span class="line">        # Add some more code to run some checks on initialAge</span><br><span class="line">        self.age &#x3D; 0</span><br><span class="line">        self.initialAge &#x3D; initialAge</span><br><span class="line">        if initialAge &lt; 0:</span><br><span class="line">            print (&#39;Age is not valid, setting age to 0.&#39;)</span><br><span class="line">        else: </span><br><span class="line">            initialAge &#x3D; self.age</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def amIOld(self):</span><br><span class="line">        # Do some computations in here and print out the correct statement to the console</span><br><span class="line">        if self.initialAge &lt; 13:</span><br><span class="line">            print (&#39;You are young.&#39;)</span><br><span class="line">        elif 13 &lt;&#x3D; self.initialAge &lt; 18:</span><br><span class="line">            print (&#39;You are a teenager.&#39;)</span><br><span class="line">        else:</span><br><span class="line">            print (&#39;You are old.&#39;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def yearPasses(self):</span><br><span class="line">        # Increment the age of the person in here      </span><br><span class="line">        self.initialAge +&#x3D; 1</span><br><span class="line"></span><br><span class="line">t &#x3D; int(input())</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -909,79 +977,6 @@ little_first에 대한 값 지정 없이 test_func([1,2,3]), 즉 하나의 인�
 <li>Basic fundamental grammar of python</li>
 </ul>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/03/til/210203-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/03/til/210203-1/" class="post-title-link" itemprop="url">TIL 210203-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-03 21:59:06 / Modified: 22:16:55" itemprop="dateCreated datePublished" datetime="2021-02-03T21:59:06+09:00">2021-02-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="re-findall"><a href="#re-findall" class="headerlink" title="re.findall()"></a>re.findall()</h2><ul>
-<li>The expression re.findall() returns all the non-overlapping matches of patterns in a string as a list of strings.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import re</span><br><span class="line">&gt;&gt;&gt; re.findall(r&#39;\w&#39;,&#39;http:&#x2F;&#x2F;www.hackerrank.com&#x2F;&#39;)</span><br><span class="line">[&#39;h&#39;, &#39;t&#39;, &#39;t&#39;, &#39;p&#39;, &#39;w&#39;, &#39;w&#39;, &#39;w&#39;, &#39;h&#39;, &#39;a&#39;, &#39;c&#39;, &#39;k&#39;, &#39;e&#39;, &#39;r&#39;, &#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;k&#39;, &#39;c&#39;, &#39;o&#39;, &#39;m&#39;]</span><br></pre></td></tr></table></figure>
-<h2 id="re-finditer"><a href="#re-finditer" class="headerlink" title="re.finditer()"></a>re.finditer()</h2><ul>
-<li>The expression re.finditer() returns an iterator yielding MatchObject instances over all non-overlapping matches for the re pattern in the string.</li>
-</ul>
-<h3 id="hackerrank"><a href="#hackerrank" class="headerlink" title="hackerrank"></a>hackerrank</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">Storage &#x3D; re.findall(r&#39;(?&lt;&#x3D;[qwrtypsdfghjklzxcvbnm])([aeiou]&#123;2,&#125;)(?&#x3D;[qwrtypsdfghjklzxcvbnm])&#39;, input().strip(), re.IGNORECASE)</span><br><span class="line"></span><br><span class="line">if Storage:</span><br><span class="line">    for i in Storage:</span><br><span class="line">        print(i)</span><br><span class="line">else:</span><br><span class="line">    print(-1)</span><br></pre></td></tr></table></figure>
-<h4 id="input"><a href="#input" class="headerlink" title="input"></a>input</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabcdeefgyYhFjkIoomnpOeorteeeeet</span><br></pre></td></tr></table></figure>
-<h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ee</span><br><span class="line">Ioo</span><br><span class="line">Oeo</span><br><span class="line">eeeee</span><br></pre></td></tr></table></figure>
       
     </div>
 
