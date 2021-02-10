@@ -23,21 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="123456789101112131415161718192021222324import randomstay_vic &#x3D; 0change_vic &#x3D; 0quiz_door &#x3D; [0, 0, 1]prize &#x3D; 1trial &#x3D; 1000while trial &gt; 0:    show_door &#x3D; [0, 1]    guess">
+<meta name="description" content="Class, instance, static method Class Method: @classmethod 데코레이터 이용 cls 인자를 받음 class variable 관련 일을 할때 사용 Instance Method: self 인자 이용 객체의 고유 속성 값 사용 Static Method: 아무 인자 없이 사용 일반 함수와 같은 역할 class와 관련있는">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Monty Hall Problem">
-<meta property="og:url" content="https://nomankey.github.io/2021/01/26/mhp/index.html">
+<meta property="og:title" content="TIL 210210">
+<meta property="og:url" content="https://nomankey.github.io/2021/02/10/til/210210-1/index.html">
 <meta property="og:site_name" content="CK&#39;s Blog">
-<meta property="og:description" content="123456789101112131415161718192021222324import randomstay_vic &#x3D; 0change_vic &#x3D; 0quiz_door &#x3D; [0, 0, 1]prize &#x3D; 1trial &#x3D; 1000while trial &gt; 0:    show_door &#x3D; [0, 1]    guess">
+<meta property="og:description" content="Class, instance, static method Class Method: @classmethod 데코레이터 이용 cls 인자를 받음 class variable 관련 일을 할때 사용 Instance Method: self 인자 이용 객체의 고유 속성 값 사용 Static Method: 아무 인자 없이 사용 일반 함수와 같은 역할 class와 관련있는">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-26T13:15:08.214Z">
-<meta property="article:modified_time" content="2021-01-26T13:15:08.215Z">
+<meta property="article:published_time" content="2021-02-10T13:50:58.000Z">
+<meta property="article:modified_time" content="2021-02-10T13:55:17.485Z">
 <meta property="article:author" content="Nomankey">
-<meta property="article:tag" content="MHP">
+<meta property="article:tag" content="til">
+<meta property="article:tag" content="class">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nomankey.github.io/2021/01/26/mhp/">
+<link rel="canonical" href="https://nomankey.github.io/2021/02/10/til/210210-1/">
 
 
 <script class="page-configurations">
@@ -49,7 +50,7 @@
     lang   : 'en'
   };
 </script>
-<title>Monty Hall Problem | CK's Blog</title>
+<title>TIL 210210 | CK's Blog</title>
   
 
 
@@ -136,7 +137,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -149,6 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Class-instance-static-method"><span class="nav-number">1.</span> <span class="nav-text">Class, instance, static method</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">2.</span> <span class="nav-text">Polymorphism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract-base-class"><span class="nav-number">3.</span> <span class="nav-text">Abstract base class</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -205,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/mhp/">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/10/til/210210-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -218,7 +220,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Monty Hall Problem
+          TIL 210210
         </h1>
 
         <div class="post-meta-container">
@@ -228,8 +230,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-01-26 22:15:08" itemprop="dateCreated datePublished" datetime="2021-01-26T22:15:08+09:00">2021-01-26</time>
+      <time title="Created: 2021-02-10 22:50:58 / Modified: 22:55:17" itemprop="dateCreated datePublished" datetime="2021-02-10T22:50:58+09:00">2021-02-10</time>
     </span>
 
   
@@ -242,7 +245,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">stay_vic &#x3D; 0</span><br><span class="line">change_vic &#x3D; 0</span><br><span class="line"></span><br><span class="line">quiz_door &#x3D; [0, 0, 1]</span><br><span class="line">prize &#x3D; 1</span><br><span class="line"></span><br><span class="line">trial &#x3D; 1000</span><br><span class="line">while trial &gt; 0:</span><br><span class="line">    show_door &#x3D; [0, 1]</span><br><span class="line">    guess &#x3D; random.choice(quiz_door)</span><br><span class="line">    show_door.remove(guess) ##question 변수를 두지 말것</span><br><span class="line">    guess_2 &#x3D; random.choice(show_door)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    if guess &#x3D;&#x3D; prize:</span><br><span class="line">        stay_vic +&#x3D; 1</span><br><span class="line">    elif guess_2 &#x3D;&#x3D; prize:</span><br><span class="line">        change_vic +&#x3D; 1</span><br><span class="line">    trial -&#x3D; 1</span><br><span class="line">else:</span><br><span class="line">    print(&#39;If you DO NOT change the victory percentage is: &#39;,stay_vic&#x2F;10,&#39;%&#39;)</span><br><span class="line">    print(&#39;If you DO change the victory percentage is: &#39;,change_vic&#x2F;10,&#39;%&#39;)</span><br></pre></td></tr></table></figure>
+        <h2 id="Class-instance-static-method"><a href="#Class-instance-static-method" class="headerlink" title="Class, instance, static method"></a>Class, instance, static method</h2><ul>
+<li>Class Method: @classmethod 데코레이터 이용</li>
+<li>cls 인자를 받음</li>
+<li>class variable 관련 일을 할때 사용</li>
+<li>Instance Method: self 인자 이용</li>
+<li>객체의 고유 속성 값 사용</li>
+<li>Static Method: 아무 인자 없이 사용</li>
+<li>일반 함수와 같은 역할</li>
+<li>class와 관련있는 함수를 class 내부의 정의코자 할 때 사용</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Wallet:</span><br><span class="line">    def __init__(self, account):</span><br><span class="line">        self.account &#x3D; account</span><br><span class="line"></span><br><span class="line">    balance &#x3D; 0</span><br><span class="line">    name &#x3D; &#39;Your wallet&#39;</span><br><span class="line">    </span><br><span class="line">    @classmethod</span><br><span class="line">    def set_default(cls, amount):</span><br><span class="line">        while amount &lt; 1:</span><br><span class="line">            print(&quot;Err: You should set default value over 1. Try again!&quot;)</span><br><span class="line">            amount &#x3D; int(input(&quot;Set default value: &quot;))</span><br><span class="line">        cls.balance &#x3D; amount</span><br><span class="line">        print(&#39;Set default balance to &#123;&#125;&#39;.format(amount))</span><br><span class="line">    #instance method</span><br><span class="line">    def add_to_account(self, amount):</span><br><span class="line">        self.account +&#x3D; amount</span><br><span class="line">        print(&#39;Your total balance is &#123;&#125;&#39;.format(self.account + Wallet.balance))</span><br><span class="line">        </span><br><span class="line">    @staticmethod</span><br><span class="line">    def see_static_name():</span><br><span class="line">        print(Wallet.name)</span><br><span class="line">    </span><br><span class="line">    def get_class_name(cls):</span><br><span class="line">        print(cls.name)</span><br><span class="line"></span><br><span class="line">class MyWallet(Wallet):</span><br><span class="line">    name &#x3D; &#39;My wallet&#39;     </span><br></pre></td></tr></table></figure>
+<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><ul>
+<li>Polymorphism: 상속관계의 다양한 Class object에서 같은 이름의 method에 대해 각 object가 서로 다르게 구현된 method를 호출하여 같은이름 - 다른 행동, 기능, 결과를 가져오는 것.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class SmartPhone:</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;Application Proccessor&#39;)</span><br><span class="line"></span><br><span class="line">class IPhone(SmartPhone):</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;A series&#39;)</span><br><span class="line"></span><br><span class="line">class Galaxy(SmartPhone):</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;Exynos&#39;)</span><br></pre></td></tr></table></figure>
+<h2 id="Abstract-base-class"><a href="#Abstract-base-class" class="headerlink" title="Abstract base class"></a>Abstract base class</h2><ul>
+<li>공통 특성을 가진 부모 Class를 만들고 해당 Class가 Object instance를 생성할 수 없게 하는 것</li>
+<li>특성을 유지할 수 없도록 하여 추상적인 Class가 개념으로 존재하게 만듦</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from abc import *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class SmartPhone(metaclass &#x3D; ABCMeta):</span><br><span class="line">    @abstractmethod</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        pass</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -251,21 +273,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/MHP/" rel="tag"># MHP</a>
+              <a href="/tags/til/" rel="tag"># til</a>
+              <a href="/tags/class/" rel="tag"># class</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/26/mhp/mhp/" rel="prev" title="post">
-                  <i class="fa fa-chevron-left"></i> post
+                <a href="/2021/02/10/til/210210/" rel="prev" title="station operation in class">
+                  <i class="fa fa-chevron-left"></i> station operation in class
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/01/26/em/em/" rel="next" title="post">
-                  post <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
