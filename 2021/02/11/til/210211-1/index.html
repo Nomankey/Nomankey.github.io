@@ -23,18 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="Developer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CK&#39;s Blog">
-<meta property="og:url" content="https://nomankey.github.io/tags/json/index.html">
+<meta name="description" content="Class and Object 여기에서 설명할 클래스는 과자 틀과 비슷하다. 클래스(class)란 똑같은 무엇인가를 계속해서 만들어 낼 수 있는 설계 도면이고(과자 틀), 객체(object)란 클래스로 만든 피조물(과자 틀을 사용해 만든 과자)을 뜻한다.  클래스로 만든 객체에는 중요한 특징이 있다. 바로 객체마다 고유한 성격을 가진다는 것이다. 과자 틀로">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL 210211-1">
+<meta property="og:url" content="https://nomankey.github.io/2021/02/11/til/210211-1/index.html">
 <meta property="og:site_name" content="CK&#39;s Blog">
-<meta property="og:description" content="Developer">
+<meta property="og:description" content="Class and Object 여기에서 설명할 클래스는 과자 틀과 비슷하다. 클래스(class)란 똑같은 무엇인가를 계속해서 만들어 낼 수 있는 설계 도면이고(과자 틀), 객체(object)란 클래스로 만든 피조물(과자 틀을 사용해 만든 과자)을 뜻한다.  클래스로 만든 객체에는 중요한 특징이 있다. 바로 객체마다 고유한 성격을 가진다는 것이다. 과자 틀로">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-11T13:37:12.000Z">
+<meta property="article:modified_time" content="2021-02-11T13:42:30.167Z">
 <meta property="article:author" content="Nomankey">
+<meta property="article:tag" content="til">
+<meta property="article:tag" content="class">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nomankey.github.io/tags/json/">
+<link rel="canonical" href="https://nomankey.github.io/2021/02/11/til/210211-1/">
 
 
 <script class="page-configurations">
@@ -42,11 +46,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
-<title>Tag: json | CK's Blog</title>
+<title>TIL 210211-1 | CK's Blog</title>
   
 
 
@@ -133,7 +137,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -146,6 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Class-and-Object"><span class="nav-number">1.</span> <span class="nav-text">Class and Object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-difference-between-class-and-instance"><span class="nav-number">2.</span> <span class="nav-text">The difference between class and instance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-scatch-a-class-before-building-it"><span class="nav-number">3.</span> <span class="nav-text">How to scatch a class before building it</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -191,50 +196,97 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">json
-          <small>Tag</small>
-        </h2>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/11/til/210211-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          TIL 210211-1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+
+      <time title="Created: 2021-02-11 22:37:12 / Modified: 22:42:30" itemprop="dateCreated datePublished" datetime="2021-02-11T22:37:12+09:00">2021-02-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Class-and-Object"><a href="#Class-and-Object" class="headerlink" title="Class and Object"></a>Class and Object</h2><ul>
+<li><p>여기에서 설명할 클래스는 과자 틀과 비슷하다. 클래스(class)란 똑같은 무엇인가를 계속해서 만들어 낼 수 있는 설계 도면이고(과자 틀), 객체(object)란 클래스로 만든 피조물(과자 틀을 사용해 만든 과자)을 뜻한다.</p>
+</li>
+<li><p>클래스로 만든 객체에는 중요한 특징이 있다. 바로 객체마다 고유한 성격을 가진다는 것이다. 과자 틀로 만든 과자에 구멍을 뚫거나 조금 베어 먹더라도 다른 과자에는 아무 영향이 없는 것과 마찬가지로 동일한 클래스로 만든 객체들은 서로 전혀 영향을 주지 않는다.</p>
+</li>
+</ul>
+<h2 id="The-difference-between-class-and-instance"><a href="#The-difference-between-class-and-instance" class="headerlink" title="The difference between class and instance"></a>The difference between class and instance</h2><p>클래스로 만든 객체를 인스턴스라고도 한다. 그렇다면 객체와 인스턴스의 차이는 무엇일까? 이렇게 생각해 보자. a = Cookie() 이렇게 만든 a는 객체이다. 그리고 a 객체는 Cookie의 인스턴스이다. 즉 인스턴스라는 말은 특정 객체(a)가 어떤 클래스(Cookie)의 객체인지를 관계 위주로 설명할 때 사용한다. “a는 인스턴스”보다는 “a는 객체”라는 표현이 어울리며 “a는 Cookie의 객체”보다는 “a는 Cookie의 인스턴스”라는 표현이 훨씬 잘 어울린다.</p>
+<h2 id="How-to-scatch-a-class-before-building-it"><a href="#How-to-scatch-a-class-before-building-it" class="headerlink" title="How to scatch a class before building it"></a>How to scatch a class before building it</h2><ul>
+<li>클래스는 무작정 만드는 것보다 클래스로 만든 객체를 중심으로 어떤 식으로 동작하게 할것인지 미리 구상을 한 후에 생각한 것들을 하나씩 해결하면서 완성해 나가는 것이 좋다.</li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-02-05T18:50:46+09:00"
-              content="2021-02-05">
-          02-05
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/02/05/til/210205-2/" itemprop="url">
-            <span itemprop="name">TIL 210205-2</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/til/" rel="tag"># til</a>
+              <a href="/tags/class/" rel="tag"># class</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/02/11/til-210211/" rel="prev" title="til/210211">
+                  <i class="fa fa-chevron-left"></i> til/210211
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
+
 
 
 <script>
