@@ -158,12 +158,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">47</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -192,6 +192,71 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/08/til/210208-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/08/til/210208-1/" class="post-title-link" itemprop="url">TIL 210208-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-08 23:25:51 / Modified: 23:39:51" itemprop="dateCreated datePublished" datetime="2021-02-08T23:25:51+09:00">2021-02-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="class-variable-Not-for-Mutable"><a href="#class-variable-Not-for-Mutable" class="headerlink" title="class variable: Not for Mutable"></a>class variable: Not for Mutable</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Hero: # class</span><br><span class="line">    health &#x3D; 100 # class variable</span><br><span class="line">    inventory &#x3D; []</span><br><span class="line"></span><br><span class="line">    def __init__(self, name, weapon):</span><br><span class="line">        self.name &#x3D; name # instance variable</span><br><span class="line">        self.weapon &#x3D; weapon</span><br><span class="line"></span><br><span class="line">    def attack(self): # instance method</span><br><span class="line">        print(&quot;attack with &#123;&#125;&quot;.format(self.weapon))</span><br><span class="line">    def save_item(self, item):</span><br><span class="line">        self.inventory.append(item)</span><br></pre></td></tr></table></figure>
+<h2 id="Way-to-use-Mutable-Object"><a href="#Way-to-use-Mutable-Object" class="headerlink" title="Way to use Mutable Object"></a>Way to use Mutable Object</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Hero: # class</span><br><span class="line">    health &#x3D; 100 # class variable</span><br><span class="line"></span><br><span class="line">    def __init__(self, name, weapon, inventory):</span><br><span class="line">        self.name &#x3D; name # instance variable</span><br><span class="line">        self.weapon &#x3D; weapon</span><br><span class="line">        self.inventory &#x3D; []</span><br><span class="line"></span><br><span class="line">    def attack(self): # instance method</span><br><span class="line">        print(&quot;attack with &#123;&#125;&quot;.format(self.weapon))</span><br><span class="line">    def save_item(self, item):</span><br><span class="line">        self.inventory.append(item)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -899,84 +964,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import re </span><br><span class="line"></span><br><span class="line">data &#x3D; &quot;&quot;&quot;</span><br><span class="line">park 800905-1049118</span><br><span class="line">kim  700905-1059119</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">pat &#x3D; re.compile(&quot;(\d&#123;6&#125;)[-]\d&#123;7&#125;&quot;)</span><br><span class="line">print(pat.sub(&quot;\g&lt;1&gt;-*******&quot;, data))</span><br></pre></td></tr></table></figure>
 <p>output</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">결과값:</span><br><span class="line">park 800905-*******</span><br><span class="line">kim  700905-*******</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/03/til-210203-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/03/til-210203-2/" class="post-title-link" itemprop="url">TIL 210203-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-03 22:53:42 / Modified: 23:04:19" itemprop="dateCreated datePublished" datetime="2021-02-03T22:53:42+09:00">2021-02-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Condition"><a href="#Condition" class="headerlink" title="Condition"></a>Condition</h2><p>2개의 매개변수(parameter)를 활용하여 가장 높은 수와 가장 낮은 수를 tuple로 묶어 (양 끝에 있어 짝이 맞은) 순차적으로 print하고<br>    짝이 맞은 갯수를 리턴하는 함수를 작성하세요.<br>    아래 예제를 참고하여, little_first가 False인 경우, 각 튜플의 큰 수가 앞에 위치하여 먼저 출력 되어야 합니다.</p>
-<pre><code>##data_list: 첫번째 인자, list안에 정수만 있거나, 비어있는 리스트가 들어올 것 입니다.
-정수가 들어있을 경우 작은 수에서 큰수로 오름차순으로 정렬된 상태로 들어 올 것입니다.
-해당 정수들은 중복이 없을 것이며 아래 예제를 참고해주시기 바랍니다.
-
-##little_first: 두번째 인자, bool
-little_first에 대한 값 지정 없이 test_func([1,2,3]), 즉 하나의 인자만 전달 받을 경우,
-에러를 내지 말하야하며 True를 전달받은 동작과 동일하게 길이가 2인 튜플을 출력할 때 낮은 수가 앞에서 출력되도록 합니다.</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">##Return</span><br><span class="line">짝이 맞은 갯수만큼 리턴하며 함수를 마무리 합니다.</span><br><span class="line">첫 인자, 위의 경우 data_list의 길이가 1인 경우, 리턴값은 0이 됩니다.</span><br><span class="line">첫 인자, 위의 경우 data_list의 길이가 0인 경우, None을 리턴합니다.</span><br><span class="line"> 1 </span><br><span class="line">&gt;&gt;&gt; input_data &#x3D; [1, 30, 44, 55 ,100]</span><br><span class="line">&gt;&gt;&gt; print(test_func(input_data)))</span><br><span class="line">(1, 100)</span><br><span class="line">(30, 55)</span><br><span class="line">(44,)</span><br><span class="line">2</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; input_data &#x3D; [2, 44]</span><br><span class="line">&gt;&gt;&gt; print(test_func(input_data, False))</span><br><span class="line">(44, 2)</span><br><span class="line">1</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; input_data &#x3D;  </span><br><span class="line">&gt;&gt;&gt; print(test_func(input_data, True))</span><br><span class="line">(3,)</span><br><span class="line">0</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; input_data &#x3D; []</span><br><span class="line">&gt;&gt;&gt; print(test_func(input_data))</span><br><span class="line">None</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; test_func()</span><br><span class="line">ERROR 발생</span><br></pre></td></tr></table></figure>
-<h2 id="My-Code"><a href="#My-Code" class="headerlink" title="My Code"></a>My Code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">def test_func(data_list &#x3D; &#39;error&#39;, little_first &#x3D; True):</span><br><span class="line">  match &#x3D; 0</span><br><span class="line">  if len(data_list) &#x3D;&#x3D; 0:</span><br><span class="line">    print(None)</span><br><span class="line">  elif data_list &#x3D;&#x3D; &#39;error&#39;:</span><br><span class="line">    print(&#39;ERROR 발생 \n &quot;&quot;&quot;&#39;)</span><br><span class="line">  elif little_first &#x3D;&#x3D; True:</span><br><span class="line">    data_list.sort()</span><br><span class="line">  elif little_first &#x3D;&#x3D; False:</span><br><span class="line">    data_list.sort(reverse &#x3D; True)</span><br><span class="line">  while len(data_list) &gt; 1:</span><br><span class="line">    a &#x3D; data_list.pop(0)</span><br><span class="line">    b &#x3D; data_list.pop(-1)</span><br><span class="line">    match +&#x3D; 1</span><br><span class="line">    print((a, b))</span><br><span class="line">    if len(data_list) &#x3D;&#x3D; 0:</span><br><span class="line">        print(match)</span><br><span class="line">  print((data_list.pop(),))</span><br><span class="line">  return match</span><br></pre></td></tr></table></figure>
-<h2 id="Things-to-improve"><a href="#Things-to-improve" class="headerlink" title="Things to improve"></a>Things to improve</h2><ul>
-<li>Code should be easy to read</li>
-<li>Basic fundamental grammar of python</li>
-</ul>
-
       
     </div>
 
