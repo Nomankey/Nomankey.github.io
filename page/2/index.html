@@ -158,12 +158,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">48</span>
+          <span class="site-state-item-count">49</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -192,6 +192,73 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/09/til/210209-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/09/til/210209-1/" class="post-title-link" itemprop="url">TIL 210209-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-09 16:43:20 / Modified: 16:56:24" itemprop="dateCreated datePublished" datetime="2021-02-09T16:43:20+09:00">2021-02-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-Class"><a href="#What-is-Class" class="headerlink" title="What is Class?"></a>What is Class?</h2><p>함수와 변수를 모아놓은 것.<br>변수는 ‘멤버 변수’, 함수는 ‘메소드’이다.<br>클래스는 프로그램의 청사진이라고 보면 되며, 이 청사진을 활용해 실제 사용할 수 있는 인스턴스라는 부품을 만들어 사용하게 된다. 클래스는 빵틀, 인스턴스는 빵이라고 비유할 수 있다.</p>
+<h2 id="Self-and-Instance"><a href="#Self-and-Instance" class="headerlink" title="Self and Instance"></a>Self and Instance</h2><p>클래스 내에서 메소드를 생성할 때 인자(arguments)의 첫 번째 꼭 들어가야하는 것이 있는데, 바로 self다. 이 self는 인스턴스 자신을 가리키는 것으로,인스턴스에 저장되어 있는 멤버 변수에 접근 가능하게 한다. 다만 위의 jm.say_hello()처럼 메소드를 실행할 때 인자 자리에 self가 안들어가는 이유는 메소드의 첫번째 인수로 전달되는 ‘인스턴트 자신’의 값은 Python 시스템에 의해 자동으로 넘어가게 되기 때문이다. 그러므로 메소드를 호출할 때는 두 번째 인수부터 작성한다.</p>
+<h2 id="inheritance"><a href="#inheritance" class="headerlink" title="inheritance"></a>inheritance</h2><p>상속이란 이미 만들어진 클래스를 통째로 이어 받아 새로운 클래스를 만드는 기능이다. 클래스의 가장 큰 장점 중 하나는 재사용이 가능하다라는 것인데, 상속은 이를 더 강화하는 역할을 한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[예시]</span><br><span class="line">class Person: # &quot;Person&quot; 이라는 클래스 생성</span><br><span class="line">  name &#x3D; &quot;&quot;</span><br><span class="line">  # 변수를 초기화하기 위해 &quot;__init__&quot; 생성자함수 사용</span><br><span class="line">  def __init__(self, name): </span><br><span class="line">    </span><br><span class="line">    self.name &#x3D; name</span><br><span class="line">  </span><br><span class="line">  def say_hello(self): # say_hello라는 메소드 생성</span><br><span class="line">    print(&quot;Hello, &quot; + self.name)</span><br><span class="line"></span><br><span class="line">class AcademyPerson(Person): # Person을 상속받은 AcademyPerson 클래스 생성</span><br><span class="line">  school &#x3D; &quot;&quot; # name은 Person에서 상속받으므로, school 변수만 생성</span><br><span class="line">  </span><br><span class="line">  def __init__(self, name, school):</span><br><span class="line">    self.name &#x3D; name</span><br><span class="line">    self.school &#x3D; school</span><br><span class="line">    </span><br><span class="line">  def say_school(self):</span><br><span class="line">    print(&quot;My school is &quot; + self.school)</span><br><span class="line">    </span><br><span class="line">jm &#x3D; AcademyPerson(&quot;jm&quot;,&quot;wecode&quot;)</span><br><span class="line">jm.say_hello() # Person에 있는 메소드를 그대로 사용 가능</span><br><span class="line">jm.say_school()</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; Hello, jm</span><br><span class="line">&gt;&gt;&gt; My school is wecode</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -875,95 +942,6 @@
 <li>Common Lisp, Scheme, Haskell, Clojure, Kotlin, Python, Go, Rust, Scala.</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from math import pi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">list(map(lambda a:pi*a**2, [i for i in range(1,10+1)]))</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/04/til/210204-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/04/til/210204-1/" class="post-title-link" itemprop="url">TIL 210204-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-04 23:39:42 / Modified: 23:42:34" itemprop="dateCreated datePublished" datetime="2021-02-04T23:39:42+09:00">2021-02-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Meta-Characters-of-Regular-Expressions"><a href="#Meta-Characters-of-Regular-Expressions" class="headerlink" title="Meta Characters of Regular Expressions"></a>Meta Characters of Regular Expressions</h2><ul>
-<li>dot(.): 개행문자(\n)를 제외한 모든 문자 ex) a.ple == a(모든문자)ple == aaple, abple, acple, ..</li>
-<li>Repetition(<em>): 앞 문자의 반복을 의미합니다.(0개 ~ 무한대) ex) ap</em>le == ale, aple, apple, appple, ..</li>
-<li>Repetition(+): 앞 문자의 반복을 의미합니다.(1개 ~ 무한대) ex) ap+le == aple, apple, appple, ..</li>
-<li>Caret(^): 정의한 문자열 패턴으로 시작함을 의미합니다. ex) ^pen == penpineapple (!= applepen)</li>
-<li>Dollar sign($): 정의한 문자열 패턴으로 끝남을 의미합니다. ex) [a-z]+pen$ == applepen (!= penpineapple)* </li>
-<li>Question mark(?): 앞 문자의 존재유무(있거나 없거나)를 의미합니다. ex) appl?e == appe 또는 apple</li>
-<li>Curly brackets({m,n}): 반복횟수를 정의할 때 사용합니다. 중괄호 안의 숫자(m,n)은 반복횟수를 정의하며, 정확히 일치할 경우 1개의 숫자(m)를, 범위를 정의할 경우 2개의 숫자를 사용합니다.(m개~n개) ex1) ba(na){2} == banana ex2) ba(na){0,2} == ba, bana, banana</li>
-<li>Square brackets([]): 문자클래스를 의미합니다. 대괄호 사이에 나열한 문자 중 하나의 값과 일치할 경우를 의미합니다. 이 문자클래스와 함께 쓰이는 메타문자는 하이픈(-) 과 캐럿(^) 입니다.<ul>
-<li>Hyphen(-): 두 문자 사이의 범위를 뜻합니다. ex1) [A-Za-z] == 대문자와 소문자 알파벳 모두 ex2) [a-g0-5] == a,b,c,d,e,f,g 와 0,1,2,3,4,5 중 하나의 문자</li>
-<li>Caret(^): 부정(Not)을 의미합니다. ex1) [^0-9]: 숫자가 아닌 문자 ex2) [^A-Za-z]: 알파벳이 아닌 모든 문자</li>
-</ul>
-</li>
-<li>Parentheses( () ): 소괄호 안의 문자열의 그룹을 의미합니다. 문자열 패턴의 반복을 검사하고 싶을 때 사용합니다. ex) (apple)+ == penpineappleapplepen</li>
-<li>Vertical bar( | ):     •    | 의 좌우 중 하나의 값과 일치하는 경우를 의미합니다. ex1) (apple|apqle) == apple 또는 apqle ex2) ap[p|q]le == apple 또는 apqle </li>
-<li> Backslach(): 정규표현식을 만들 때 메타문자가 메타문자가 아닌 그 문자 그대로 사용하게 하기 위해 사용합니다. ex) <a target="_blank" rel="noopener" href="https://www.google.co.kr/=&gt;">https://www.google.co.kr/=&gt;</a> URL의 구두점(.)이 메타문자로 인식될 수 있음 -&gt; <a target="_blank" rel="noopener" href="https://www/.google/.co/.kr/">https://www\.google\.co\.kr/</a></li>
-</ul>
-<h2 id="Re-Module-Functions"><a href="#Re-Module-Functions" class="headerlink" title="Re Module Functions"></a>Re Module Functions</h2><ul>
-<li>e.search(patterns, string[, flags])</li>
-<li>re.match(patterns, string[, flags])</li>
-<li>re.findall(patterns, string[, flags])</li>
-<li>re.compile(pattern[, flags])</li>
-<li>re.split(patterns, string[,maxsplit=0])</li>
-<li>re.sub(pattern, repl, string[, count])</li>
-</ul>
 
       
     </div>
