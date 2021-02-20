@@ -23,23 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="Regex Reviewvalidating phone numbers1234567891011121314import ren &#x3D; int(input())phonenum_pattern &#x3D; re.compile(r&#39;[7-9][0-9]&amp;#123;9&amp;#125;&#39;)for _ in range(n):    phonenum_string &#x3D;">
+<meta name="description" content="Elevator ProblemRequirements 엘리베이터 객체는 추상클래스의 상속으로 생성되어야 한다. 각 객체는 운행 층수를 기록하는 total_move라는 인스턴스 변수를 가진다. 엘리베이터는 2호기로 운영되며, Elevator_1, Elevator_2의 이름을 가진다. 엘리베이터의 이동은 실시간이 아닌 턴 기반으로 이루어진다. 운행 중 동일한 방">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TIL 210205-1">
-<meta property="og:url" content="https://nomankey.github.io/2021/02/05/til/210205-1/index.html">
+<meta property="og:title" content="TIL 210220">
+<meta property="og:url" content="https://nomankey.github.io/2021/02/20/til/210220/index.html">
 <meta property="og:site_name" content="CK&#39;s Blog">
-<meta property="og:description" content="Regex Reviewvalidating phone numbers1234567891011121314import ren &#x3D; int(input())phonenum_pattern &#x3D; re.compile(r&#39;[7-9][0-9]&amp;#123;9&amp;#125;&#39;)for _ in range(n):    phonenum_string &#x3D;">
+<meta property="og:description" content="Elevator ProblemRequirements 엘리베이터 객체는 추상클래스의 상속으로 생성되어야 한다. 각 객체는 운행 층수를 기록하는 total_move라는 인스턴스 변수를 가진다. 엘리베이터는 2호기로 운영되며, Elevator_1, Elevator_2의 이름을 가진다. 엘리베이터의 이동은 실시간이 아닌 턴 기반으로 이루어진다. 운행 중 동일한 방">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-05T09:48:12.000Z">
-<meta property="article:modified_time" content="2021-02-05T09:49:04.629Z">
+<meta property="article:published_time" content="2021-02-20T12:48:47.000Z">
+<meta property="article:modified_time" content="2021-02-20T13:11:20.075Z">
 <meta property="article:author" content="Nomankey">
 <meta property="article:tag" content="til">
-<meta property="article:tag" content="review">
-<meta property="article:tag" content="regex">
+<meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nomankey.github.io/2021/02/05/til/210205-1/">
+<link rel="canonical" href="https://nomankey.github.io/2021/02/20/til/210220/">
 
 
 <script class="page-configurations">
@@ -51,7 +50,7 @@
     lang   : 'en'
   };
 </script>
-<title>TIL 210205-1 | CK's Blog</title>
+<title>TIL 210220 | CK's Blog</title>
   
 
 
@@ -151,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Regex-Review"><span class="nav-number">1.</span> <span class="nav-text">Regex Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#validating-phone-numbers"><span class="nav-number">1.1.</span> <span class="nav-text">validating phone numbers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#validating-and-parsing-email-address"><span class="nav-number">1.2.</span> <span class="nav-text">validating and parsing email address</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Elevator-Problem"><span class="nav-number">1.</span> <span class="nav-text">Elevator Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements"><span class="nav-number">1.1.</span> <span class="nav-text">Requirements</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">1.1.1.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-I-Treid-To-Solve-and-failed%E2%80%A6"><span class="nav-number">1.2.</span> <span class="nav-text">How I Treid To Solve and failed…</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/05/til/210205-1/">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/20/til/210220/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -221,7 +220,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          TIL 210205-1
+          TIL 210220
         </h1>
 
         <div class="post-meta-container">
@@ -233,7 +232,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-02-05 18:48:12 / Modified: 18:49:04" itemprop="dateCreated datePublished" datetime="2021-02-05T18:48:12+09:00">2021-02-05</time>
+      <time title="Created: 2021-02-20 21:48:47 / Modified: 22:11:20" itemprop="dateCreated datePublished" datetime="2021-02-20T21:48:47+09:00">2021-02-20</time>
     </span>
 
   
@@ -246,8 +245,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="Regex-Review"><a href="#Regex-Review" class="headerlink" title="Regex Review"></a>Regex Review</h3><h4 id="validating-phone-numbers"><a href="#validating-phone-numbers" class="headerlink" title="validating phone numbers"></a>validating phone numbers</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">phonenum_pattern &#x3D; re.compile(r&#39;[7-9][0-9]&#123;9&#125;&#39;)</span><br><span class="line"></span><br><span class="line">for _ in range(n):</span><br><span class="line">    phonenum_string &#x3D; input()</span><br><span class="line">    </span><br><span class="line">    result &#x3D; phonenum_pattern.match(phonenum_string)</span><br><span class="line">    if result:</span><br><span class="line">        print(&#39;No&#39;)</span><br><span class="line">    else:</span><br><span class="line">        print(&#39;Yes&#39;)</span><br></pre></td></tr></table></figure>
-<h4 id="validating-and-parsing-email-address"><a href="#validating-and-parsing-email-address" class="headerlink" title="validating and parsing email address"></a>validating and parsing email address</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import email.utils, re</span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">for _ in range(n):</span><br><span class="line">    u_name, u_email &#x3D; email.utils.parseaddr(input())</span><br><span class="line">    u_email_filter &#x3D; re.fullmatch(r&#39;[a-z]+(\w|\-|\.)+@[a-z]+.[a-z](1-3)&#39;,u_email, flags&#x3D;re.I)</span><br><span class="line"></span><br><span class="line">if u_email_filter !&#x3D; None:</span><br><span class="line">    print(email.utils.formataddr((u_name, u_email_filter.group())))</span><br></pre></td></tr></table></figure>
+        <h2 id="Elevator-Problem"><a href="#Elevator-Problem" class="headerlink" title="Elevator Problem"></a>Elevator Problem</h2><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul>
+<li>엘리베이터 객체는 추상클래스의 상속으로 생성되어야 한다.</li>
+<li>각 객체는 운행 층수를 기록하는 total_move라는 인스턴스 변수를 가진다.</li>
+<li>엘리베이터는 2호기로 운영되며, Elevator_1, Elevator_2의 이름을 가진다.</li>
+<li>엘리베이터의 이동은 실시간이 아닌 턴 기반으로 이루어진다.</li>
+<li>운행 중 동일한 방향으로 이동하는 승객을 태울 수 있다.</li>
+<li>다음 번째의 승객이 같은 층에 있고, 같은 방향으로 진행할 경우 동승할 수 있다.</li>
+<li>각 엘리베이터의 운행 층수를 total_move에 누적해야 한다.</li>
+<li>엘리베이터는 1층 부터 16층 까지 운행한다.</li>
+</ul>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>defining passengers</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def create_passengers(lowest, highest, num):</span><br><span class="line">    def set_passenger(a, b):</span><br><span class="line">        passenger &#x3D; (random.randint(a, b), random.randint(a, b))</span><br><span class="line">        if passenger[0]!&#x3D;passenger[1]:</span><br><span class="line">            return passenger</span><br><span class="line">        else:</span><br><span class="line">            return set_passenger(a,b)</span><br><span class="line">    return [set_passenger(lowest, highest) for _ in range(num)]</span><br><span class="line"></span><br><span class="line">if __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    print(create_passengers(1,16,50))</span><br></pre></td></tr></table></figure>
+<h3 id="How-I-Treid-To-Solve-and-failed…"><a href="#How-I-Treid-To-Solve-and-failed…" class="headerlink" title="How I Treid To Solve and failed…"></a>How I Treid To Solve and failed…</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Elevator:</span><br><span class="line"></span><br><span class="line">    def info(self, direction, c_f, d_f):</span><br><span class="line">        if c_f &gt; d_f:</span><br><span class="line">            self.direction &#x3D; &#39;down&#39;</span><br><span class="line">        else:</span><br><span class="line">            self.direction &#x3D; &#39;up&#39;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def elevator_1():</span><br><span class="line">        a,b &#x3D; passengers[0]</span><br><span class="line">        if </span><br></pre></td></tr></table></figure>
+<p>Could not write a code after this, i better work on my pseudo code again</p>
+
     </div>
 
     
@@ -257,22 +269,18 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/til/" rel="tag"># til</a>
-              <a href="/tags/review/" rel="tag"># review</a>
-              <a href="/tags/regex/" rel="tag"># regex</a>
+              <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/02/05/til/210205/" rel="prev" title="TIL 210205">
-                  <i class="fa fa-chevron-left"></i> TIL 210205
+                <a href="/2021/02/18/til/210218-2/" rel="prev" title="TIL 210218-2">
+                  <i class="fa fa-chevron-left"></i> TIL 210218-2
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/02/05/til/210205-2/" rel="next" title="TIL 210205-2">
-                  TIL 210205-2 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
