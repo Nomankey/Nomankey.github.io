@@ -226,7 +226,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-02-23 11:08:00 / Modified: 11:10:27" itemprop="dateCreated datePublished" datetime="2021-02-23T11:08:00+09:00">2021-02-23</time>
+      <time title="Created: 2021-02-23 11:08:00 / Modified: 11:54:17" itemprop="dateCreated datePublished" datetime="2021-02-23T11:08:00+09:00">2021-02-23</time>
     </span>
 
   
@@ -275,7 +275,41 @@
 <p>a.intelligence, b.intelligence ### (5, 15)</p>
 <p>a.attacked() ### 공격받음! 생명력 = 990</p>
 <p>b.attacked() ### 공격받음! 생명력 = 990</p>
-<pre><code></code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 메서드 오버라이딩</span><br><span class="line">메서드 오버라이딩(method overriding)이란, 여러 클래스에 걸쳐서 같은 이름의 메서드를 만드는 것이다.</span><br><span class="line">예를 들어서 부모 클래스, 전사 클래스, 마법사 클래스에 공통으로 attak이라는 메서드가 있지만, 각각 하는 일이 다를 때는 다음처럼 같은 이름의 메서드를 클래스별로 구현하면 된다.</span><br><span class="line">이렇게 되면 부모 클래스에서 만든 메서드 정의를 자식 클래스에서는 변경해서 사용한다.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>class Character(object):</p>
+<pre><code>def __init__(self):
+    self.life = 1000
+    self.strength = 10
+    self.intelligence = 10
+
+def attacked(self):
+    self.life -= 10
+    print(&quot;공격받음! 생명력 =&quot;, self.life)
+
+def attack(self):
+    print(&quot;공격!&quot;)</code></pre>
+<p>class Warrior(Character):</p>
+<pre><code>def __init__(self):
+    super(Warrior, self).__init__()
+    self.strength = 15
+    self.intelligence = 5
+
+def attack(self):
+    print(&quot;육탄 공격!&quot;)</code></pre>
+<p>class Wizard(Character):</p>
+<pre><code>def __init__(self):
+    super(Wizard, self).__init__()
+    self.strength = 5
+    self.intelligence = 15
+
+def attack(self):
+    print(&quot;마법 공격!&quot;)</code></pre>
+<p>a = Character()<br>b = Warrior()<br>c = Wizard()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Output</span><br></pre></td></tr></table></figure>
+<p>a.attack() ### 공격!<br>b.attack() ### 육탄 공격!<br>c.attack() ### 마법 공격!<br>a.attacked() ### 공격받음! 생명력 = 990<br>b.attacked() ### 공격받음! 생명력 = 990</p>
+<pre><code>
+
+</code></pre>
 
       
     </div>
