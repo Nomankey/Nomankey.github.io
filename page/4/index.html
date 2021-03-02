@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,188 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/05/til/210205-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/05/til/210205-1/" class="post-title-link" itemprop="url">TIL 210205-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-05 18:48:12 / Modified: 18:49:04" itemprop="dateCreated datePublished" datetime="2021-02-05T18:48:12+09:00">2021-02-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Regex-Review"><a href="#Regex-Review" class="headerlink" title="Regex Review"></a>Regex Review</h3><h4 id="validating-phone-numbers"><a href="#validating-phone-numbers" class="headerlink" title="validating phone numbers"></a>validating phone numbers</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">phonenum_pattern &#x3D; re.compile(r&#39;[7-9][0-9]&#123;9&#125;&#39;)</span><br><span class="line"></span><br><span class="line">for _ in range(n):</span><br><span class="line">    phonenum_string &#x3D; input()</span><br><span class="line">    </span><br><span class="line">    result &#x3D; phonenum_pattern.match(phonenum_string)</span><br><span class="line">    if result:</span><br><span class="line">        print(&#39;No&#39;)</span><br><span class="line">    else:</span><br><span class="line">        print(&#39;Yes&#39;)</span><br></pre></td></tr></table></figure>
+<h4 id="validating-and-parsing-email-address"><a href="#validating-and-parsing-email-address" class="headerlink" title="validating and parsing email address"></a>validating and parsing email address</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import email.utils, re</span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">for _ in range(n):</span><br><span class="line">    u_name, u_email &#x3D; email.utils.parseaddr(input())</span><br><span class="line">    u_email_filter &#x3D; re.fullmatch(r&#39;[a-z]+(\w|\-|\.)+@[a-z]+.[a-z](1-3)&#39;,u_email, flags&#x3D;re.I)</span><br><span class="line"></span><br><span class="line">if u_email_filter !&#x3D; None:</span><br><span class="line">    print(email.utils.formataddr((u_name, u_email_filter.group())))</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/05/til/210205/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/05/til/210205/" class="post-title-link" itemprop="url">TIL 210205</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-05 18:45:50 / Modified: 18:46:53" itemprop="dateCreated datePublished" datetime="2021-02-05T18:45:50+09:00">2021-02-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Object-Oriented-Programming-OOP"><a href="#Object-Oriented-Programming-OOP" class="headerlink" title="Object Oriented Programming(OOP)"></a>Object Oriented Programming(OOP)</h3><ul>
+<li>프로그램을 단순히 데이터와 처리 방법으로 나누는 것이 아니라, 프로그램을 수많은 ‘객체(object)’라는 기본 단위로 나누고 이들의 상호작용으로 서술하는 방식이다. </li>
+<li>Divide and Conquer!!</li>
+<li>Based on the concept of objects, which contain data and code.</li>
+<li>Java, C++, C#, Python, R, PHP, javaScript, Objective-C, Swift, Scala, Kotlin, ..</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from math import pi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Circle:</span><br><span class="line">    def __init__(self, radius):</span><br><span class="line">        self.radius &#x3D; radius</span><br><span class="line">    </span><br><span class="line">    def get_area(self):</span><br><span class="line">        return pi * self.radius ** 2</span><br><span class="line"></span><br><span class="line">tiny_circle &#x3D; Circle(2)</span><br><span class="line">tiny_circle.get_area()</span><br></pre></td></tr></table></figure>
+<h4 id="Object-Oriented-Programming-traits"><a href="#Object-Oriented-Programming-traits" class="headerlink" title="Object Oriented Programming traits"></a>Object Oriented Programming traits</h4><ul>
+<li>Encapsulation<ul>
+<li>구현한 것을 드러나지 않도록 함</li>
+<li>Information hiding: public, _protected, __private</li>
+</ul>
+</li>
+<li>Abstraction<ul>
+<li>인터페이스로 클래스의 공통 특성을 묶어 표현</li>
+</ul>
+</li>
+<li>Inheritance<ul>
+<li>자식 클래스가 부모 클래스의 특성과 기능을 물려받음</li>
+</ul>
+</li>
+<li>Polymorphism<ul>
+<li>변수, method가 다른 상태를 가지는 것</li>
+</ul>
+</li>
+</ul>
+<h4 id="SOLID"><a href="#SOLID" class="headerlink" title="SOLID"></a>SOLID</h4><ul>
+<li>Single Responsibility Principle<ul>
+<li>한 클래스는 하나의 책임만 가져야 한다.(goto 19)</li>
+</ul>
+</li>
+<li>Open/Closed Principle<ul>
+<li>확장에는 열려있지만, 변경에는 닫혀 있어야 한다.(override)</li>
+</ul>
+</li>
+<li>Liskov’s Substitution Principle<ul>
+<li>프로그램의 정확성을 깨트리지 않으면서 하위 타입의 인스턴스로 바꿀 수 있어야 한다.(is-A)</li>
+</ul>
+</li>
+<li>Interface Segregation Principle<ul>
+<li>사용하지 않는 method는 분리해야 한다.(Abstract)</li>
+</ul>
+</li>
+<li>Dependency Inversion Principle<ul>
+<li>추상화에 의존하고, 구체화에 의존하지 않는다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Functional-Programming"><a href="#Functional-Programming" class="headerlink" title="Functional Programming"></a>Functional Programming</h3><ul>
+<li>constructed by applying and composing functions.</li>
+<li>Common Lisp, Scheme, Haskell, Clojure, Kotlin, Python, Go, Rust, Scala.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from math import pi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">list(map(lambda a:pi*a**2, [i for i in range(1,10+1)]))</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -828,162 +1010,8 @@ little_first에 대한 값 지정 없이 test_func([1,2,3]), 즉 하나의 인�
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/01/til/210201/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/01/til/210201/" class="post-title-link" itemprop="url">TIL 210201</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-01 22:38:28 / Modified: 22:46:22" itemprop="dateCreated datePublished" datetime="2021-02-01T22:38:28+09:00">2021-02-01</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="TIL-210121"><a href="#TIL-210121" class="headerlink" title="TIL 210121"></a>TIL 210121</h1><p>My ACTUAL First code review!</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">founds &#x3D; None</span><br><span class="line">MAP_SOURCE &#x3D; [</span><br><span class="line">    [1, 0, 0, 0, 0, 1, 1],</span><br><span class="line">    [1, 1, 0, 1, 1, 1, 1],</span><br><span class="line">    [1, 1, 0, 1, 1, 0, 1],</span><br><span class="line">    [1, 1, 0, 0, 1, 0, 1],</span><br><span class="line">    [1, 0, 0, 1, 1, 1, 1],</span><br><span class="line">    [1, 1, 0, 1, 1, 1, 0],</span><br><span class="line">    [0, 1, 0, 0, 0, 0, 1],</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
-<p>From the list above<br>the output is expected to be</p>
-<ul>
-<li> MAP_SOURCE: [[1,0,0,0], [0,1,1,1], [1,0,0,0], [0, 0, 0, 0]]</li>
-<li>expect to print out: {“1” : 1, “2” : 3, “3” : 1, “4”: None} </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MAP_SOURCE &#x3D; [MAP_SOURCE[0][0:4], MAP_SOURCE[1][2:6],MAP_SOURCE[6][1:5], MAP_SOURCE[6][2:6]]</span><br><span class="line">founds &#x3D; &#39;-MAP_SOURCE: &#123;&#125; \n -expected to print out: &#123;&#125;&#39;.format(MAP_SOURCE,dict([(&quot;1&quot; ,MAP_SOURCE[0].count(1)), (&quot;2&quot; ,MAP_SOURCE[1].count(1)),(&quot;3&quot; ,MAP_SOURCE[2].count(1)),(&quot;4&quot; ,print(MAP_SOURCE[3].count(1)))]))</span><br></pre></td></tr></table></figure>
-<p>and </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">founds &#x3D; dict([(&quot;1&quot; ,MAP_SOURCE[0].count(1)), (&quot;2&quot; ,MAP_SOURCE[1].count(1)),(&quot;3&quot; ,MAP_SOURCE[2].count(1)),(&quot;4&quot; ,print(MAP_SOURCE[3].clear())])</span><br></pre></td></tr></table></figure>
-<p>are my code</p>
-<h2 id="points-to-improve"><a href="#points-to-improve" class="headerlink" title="points to improve"></a>points to improve</h2><ul>
-<li>write code more reader friendly</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/31/til/210131/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/31/til/210131/" class="post-title-link" itemprop="url">TIL 210131</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-01-31 00:00:00 / Modified: 20:16:35" itemprop="dateCreated datePublished" datetime="2021-01-31T00:00:00+09:00">2021-01-31</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="TIL-210131"><a href="#TIL-210131" class="headerlink" title="TIL 210131"></a>TIL 210131</h1><h2 id="new-fact-i-learned-as-pm-in-my-first-collaboration"><a href="#new-fact-i-learned-as-pm-in-my-first-collaboration" class="headerlink" title="new fact i learned as pm in my first collaboration"></a>new fact i learned as pm in my first collaboration</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Import random</span><br><span class="line"></span><br><span class="line">answer &#x3D; random.randint(1, 100)		</span><br><span class="line">guess &#x3D; int(input(&#39;Enter Your Guess!: &#39;))</span><br></pre></td></tr></table></figure>
-
-<p>위와 같이 제가 먼저 써놓은 코드를 팀원님들께서 fork를 해서 수정한후 팀장한테 보낼때<br>수정한 후의 코드가 구동이 안되면 팀장이 merge를 못하게 되어서 코드가 합쳐지지 않더라고요.</p>
-<p>Ex)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;Import random</span><br><span class="line"></span><br><span class="line">&gt;&gt;answer &#x3D; random.randint(1, 100)		</span><br><span class="line">&gt;&gt;guess &#x3D; int(input(&#39;Enter Your Guess!: &#39;))</span><br><span class="line"></span><br><span class="line">+else:</span><br><span class="line">+	print(&#39;DOWN&#39;)</span><br></pre></td></tr></table></figure>
-<p>위와 같은 경우에는 python 구동이 불가능한 코드이기 때문에  merge가 안되었습니다.</p>
-<p>다행히 github내에서 confirm merge 버튼옆에 solve confliction 버튼이 있어서 GitHub 홈페이지 내에서 코드를 수정할 수 있습니다.</p>
-<p>Ex)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;Import random</span><br><span class="line"></span><br><span class="line">&gt;&gt;answer &#x3D; random.randint(1, 100)		</span><br><span class="line">&gt;&gt;guess &#x3D; int(input(&#39;Enter Your Guess!: &#39;))</span><br><span class="line"></span><br><span class="line">+if answer &#x3D;&#x3D; guess:</span><br><span class="line">	print(‘congratulations!’)</span><br><span class="line"></span><br><span class="line">+else:</span><br><span class="line">+	print(&#39;DOWN&#39;)</span><br></pre></td></tr></table></figure>
-<p>위와 같이 바꾸면 웹상에서 바꾸면<br>confliction이 사라지기 때문에 팀장이 성공적으로 merge가 가능해집니다.</p>
-<p>결론!<br>    이런일이 생기지 않도록하기위해서 본격적인 협업을 할때는 팀원당 1하나의 파일을 담당할것 같습니다.<br>    한가지 파일을 여러명이서 수정하면 confliction문제가 불가피하기때문에</p>
-<pre><code>그리고 혹시나 여러명이 한파일을 담당할때는 코드를 합쳤을때 구동이 가능한 쪽으로 보내는게 좋을것 같습니다.</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
