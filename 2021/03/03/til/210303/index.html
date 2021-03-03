@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+<meta name="description" content="What is Bound Method?Python에서 method는 object에 붙어있다 면을 제외하고는 function과 같다.method는 object에 불러지며 그 object에 변화를 준다.이 method들은 bound, unbound 또는 static method가 될 수 있다.static method는 unbound method의 한 종류이다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL 210303">
+<meta property="og:url" content="https://nomankey.github.io/2021/03/03/til/210303/index.html">
+<meta property="og:site_name" content="CK&#39;s Blog">
+<meta property="og:description" content="What is Bound Method?Python에서 method는 object에 붙어있다 면을 제외하고는 function과 같다.method는 object에 불러지며 그 object에 변화를 준다.이 method들은 bound, unbound 또는 static method가 될 수 있다.static method는 unbound method의 한 종류이다.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-03T12:36:36.000Z">
+<meta property="article:modified_time" content="2021-03-03T12:47:23.586Z">
+<meta property="article:author" content="Nomankey">
+<meta property="article:tag" content="til">
+<meta property="article:tag" content="class">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://nomankey.github.io/2021/03/03/til/210303/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>TIL 210303 | CK's Blog</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">CK's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Same Dev Different Day</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-Bound-Method"><span class="nav-number">1.</span> <span class="nav-text">What is Bound Method?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bound-Methods"><span class="nav-number">2.</span> <span class="nav-text">Bound Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-Code"><span class="nav-number">2.1.</span> <span class="nav-text">Example Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">2.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%ED%95%B4%EC%84%A4"><span class="nav-number">2.3.</span> <span class="nav-text">해설</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Revised-code"><span class="nav-number">3.</span> <span class="nav-text">Revised code</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Revised-Output"><span class="nav-number">3.1.</span> <span class="nav-text">Revised Output</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nomankey</p>
+  <div class="site-description" itemprop="description">Developer</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/03/til/210303/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          TIL 210303
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-03 21:36:36 / Modified: 21:47:23" itemprop="dateCreated datePublished" datetime="2021-03-03T21:36:36+09:00">2021-03-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="What-is-Bound-Method"><a href="#What-is-Bound-Method" class="headerlink" title="What is Bound Method?"></a>What is Bound Method?</h3><p>Python에서 method는 object에 붙어있다 면을 제외하고는 function과 같다.<br>method는 object에 불러지며 그 object에 변화를 준다.<br>이 method들은 bound, unbound 또는 static method가 될 수 있다.<br>static method는 unbound method의 한 종류이다.</p>
+<h3 id="Bound-Methods"><a href="#Bound-Methods" class="headerlink" title="Bound Methods"></a>Bound Methods</h3><p>만약에 function이 class의 속성이고 instance에 엑세스된다. 그것들은 bound method라고 불린다.<br>Bound method는 ‘self’를 첫번째 argument로 가지고 있다.<br>이들은 class의 instance에 의존적이므로 instance method라고도 불린다.</p>
+<h4 id="Example-Code"><a href="#Example-Code" class="headerlink" title="Example Code"></a>Example Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Word_Parser:</span><br><span class="line">    &quot;&quot;&quot;docstring for Word_Parser&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, sentences):</span><br><span class="line">        self.sentences &#x3D; sentences</span><br><span class="line"> def parser(self):</span><br><span class="line">        self.word_list &#x3D; self.sentences.split()</span><br><span class="line">def sort_word_list(self):</span><br><span class="line">        self.sorted_word_list &#x3D; self.word_list.sort()</span><br><span class="line">def num_words(self):</span><br><span class="line">        self.num_words &#x3D; len(self.word_list)</span><br><span class="line">test &#x3D; Word_Parser(&quot;mary had a little lamb&quot;)</span><br><span class="line">test.parser()</span><br><span class="line">test.sort_word_list()</span><br><span class="line">test.num_words()</span><br><span class="line">print test.word_list</span><br><span class="line">print test.sort_word_list</span><br><span class="line">print test.num_words</span><br></pre></td></tr></table></figure>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[&#39;a&#39;, &#39;had&#39;, &#39;lamb&#39;, &#39;little&#39;, &#39;mary&#39;]</span><br><span class="line">&lt;bound method Word_Parser.sort_word_list of &lt;__main__.Word_Parser object at 0x103fdf520&gt;&gt;</span><br><span class="line">5</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="해설"><a href="#해설" class="headerlink" title="해설"></a>해설</h4><p>print(test_sort.word_list)에서 bound method error가 떴다.<br> sort_word_list는 sorted_word_list라는 variable을 놓는다. 그러고나서 print(test.sort_world_list)를 한다. 이건 function이다. variable 이다.<br>fucntion을 프린트하기에<br>&lt;bound method Word_Parser.sort_word_list of &lt;__main__.Word_Parser object at 0x103fdf520&gt;&gt;이 나온것이다.</p>
+<h3 id="Revised-code"><a href="#Revised-code" class="headerlink" title="Revised code"></a>Revised code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Word_Parser:</span><br><span class="line">    &quot;&quot;&quot;docstring for Word_Parser&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, sentences):</span><br><span class="line">        self.sentences &#x3D; sentences</span><br><span class="line"></span><br><span class="line">    def parser(self):</span><br><span class="line">        self.word_list &#x3D; self.sentences.split()</span><br><span class="line">        word_list &#x3D; []</span><br><span class="line">        word_list &#x3D; self.word_list</span><br><span class="line">        return word_list</span><br><span class="line"></span><br><span class="line">    def sort_word_list(self):</span><br><span class="line">        self.sorted_word_list &#x3D; sorted(self.sentences.split())</span><br><span class="line">        sorted_word_list &#x3D; self.sorted_word_list</span><br><span class="line">        return sorted_word_list</span><br><span class="line"></span><br><span class="line">    def get_num_words(self):</span><br><span class="line">        self.num_words &#x3D; len(self.word_list)</span><br><span class="line">        num_words &#x3D; self.num_words</span><br><span class="line">        return num_words</span><br><span class="line"></span><br><span class="line">test &#x3D; Word_Parser(&quot;mary had a little lamb&quot;)</span><br><span class="line">test.parser()</span><br><span class="line">test.sort_word_list()</span><br><span class="line">test.get_num_words()</span><br><span class="line">print(test.word_list)</span><br><span class="line">print(test.sorted_word_list)</span><br><span class="line">print(test.num_words)</span><br></pre></td></tr></table></figure>
+<h4 id="Revised-Output"><a href="#Revised-Output" class="headerlink" title="Revised Output"></a>Revised Output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[&#39;mary&#39;, &#39;had&#39;, &#39;a&#39;, &#39;little&#39;, &#39;lamb&#39;]</span><br><span class="line">[&#39;a&#39;, &#39;had&#39;, &#39;lamb&#39;, &#39;little&#39;, &#39;mary&#39;]</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/til/" rel="tag"># til</a>
+              <a href="/tags/class/" rel="tag"># class</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/02/til/210302/" rel="prev" title="TIL 210302">
+                  <i class="fa fa-chevron-left"></i> TIL 210302
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nomankey</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
