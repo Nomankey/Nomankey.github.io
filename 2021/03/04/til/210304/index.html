@@ -23,23 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="Change csv file into json file12345678import csvimport jsonwith open(&#39;.&#x2F;경기도 성남시_인구및세대_현황_20210201.csv&#39;, &#39;r&#39;, encoding &#x3D;&#39;EUC-KR&#39;)as f:    data &#x3D; csv.reader(f)">
+<meta name="description" content="What is Linked List?Linked List는 Node들이 한줄로 연결되어 있는 방식의 자료구조이다. Data Structure의 대상은 Memory이다.따라서 Memory를 효율적으로 사용하는것이Data Structure의 목적이다. STORAGE –데이터–&gt; MEMORY –데이터–&gt; CPU MEMORY의 특징은 각각 address">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TIL 210205-2">
-<meta property="og:url" content="https://nomankey.github.io/2021/02/05/til/210205-2/index.html">
+<meta property="og:title" content="TIL 210304">
+<meta property="og:url" content="https://nomankey.github.io/2021/03/04/til/210304/index.html">
 <meta property="og:site_name" content="CK&#39;s Blog">
-<meta property="og:description" content="Change csv file into json file12345678import csvimport jsonwith open(&#39;.&#x2F;경기도 성남시_인구및세대_현황_20210201.csv&#39;, &#39;r&#39;, encoding &#x3D;&#39;EUC-KR&#39;)as f:    data &#x3D; csv.reader(f)">
+<meta property="og:description" content="What is Linked List?Linked List는 Node들이 한줄로 연결되어 있는 방식의 자료구조이다. Data Structure의 대상은 Memory이다.따라서 Memory를 효율적으로 사용하는것이Data Structure의 목적이다. STORAGE –데이터–&gt; MEMORY –데이터–&gt; CPU MEMORY의 특징은 각각 address">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-05T09:50:46.000Z">
-<meta property="article:modified_time" content="2021-02-05T09:53:47.569Z">
+<meta property="article:published_time" content="2021-03-04T12:43:37.000Z">
+<meta property="article:modified_time" content="2021-03-04T12:58:51.722Z">
 <meta property="article:author" content="Nomankey">
 <meta property="article:tag" content="til">
-<meta property="article:tag" content="csv">
-<meta property="article:tag" content="json">
+<meta property="article:tag" content="data structure">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nomankey.github.io/2021/02/05/til/210205-2/">
+<link rel="canonical" href="https://nomankey.github.io/2021/03/04/til/210304/">
 
 
 <script class="page-configurations">
@@ -51,7 +50,7 @@
     lang   : 'en'
   };
 </script>
-<title>TIL 210205-2 | CK's Blog</title>
+<title>TIL 210304 | CK's Blog</title>
   
 
 
@@ -151,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Change-csv-file-into-json-file"><span class="nav-number">1.</span> <span class="nav-text">Change csv file into json file</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-Linked-List"><span class="nav-number">1.</span> <span class="nav-text">What is Linked List?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linked-List%EC%9D%98-%EA%B5%AC%EC%A1%B0"><span class="nav-number">2.</span> <span class="nav-text">Linked List의 구조</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-Linked-List-works"><span class="nav-number">3.</span> <span class="nav-text">How Linked List works</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%A4%91%EA%B0%84%EC%82%BD%EC%9E%85"><span class="nav-number">4.</span> <span class="nav-text">중간삽입</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove"><span class="nav-number">5.</span> <span class="nav-text">Remove</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/05/til/210205-2/">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/04/til/210304/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -221,7 +220,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          TIL 210205-2
+          TIL 210304
         </h1>
 
         <div class="post-meta-container">
@@ -233,7 +232,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-02-05 18:50:46 / Modified: 18:53:47" itemprop="dateCreated datePublished" datetime="2021-02-05T18:50:46+09:00">2021-02-05</time>
+      <time title="Created: 2021-03-04 21:43:37 / Modified: 21:58:51" itemprop="dateCreated datePublished" datetime="2021-03-04T21:43:37+09:00">2021-03-04</time>
     </span>
 
   
@@ -246,18 +245,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="Change-csv-file-into-json-file"><a href="#Change-csv-file-into-json-file" class="headerlink" title="Change csv file into json file"></a>Change csv file into json file</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import csv</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">with open(&#39;.&#x2F;경기도 성남시_인구및세대_현황_20210201.csv&#39;, &#39;r&#39;, encoding &#x3D;&#39;EUC-KR&#39;)as f:</span><br><span class="line">    data &#x3D; csv.reader(f)</span><br><span class="line">    dong_list &#x3D; [row for row in data]</span><br><span class="line">    </span><br><span class="line">dong_list</span><br></pre></td></tr></table></figure>
-<ul>
-<li>First import csv and json and then make a list that holds the csv file.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">users &#x3D; &#123;&#39;users&#39;: []&#125;</span><br><span class="line"></span><br><span class="line">for row in dong_list[1:]:</span><br><span class="line">    user_dict&#x3D;&#123;&#125;</span><br><span class="line">    for index, key in enumerate(dong_list[0]):</span><br><span class="line">        user_dict[key] &#x3D; row[index]</span><br><span class="line">    users[&#39;users&#39;].append(user_dict)</span><br><span class="line">users</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Assign each row to the dictionary</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data &#x3D; users</span><br><span class="line">with open(&#39;converter.json&#39;, &#39;w&#39;, encoding&#x3D;&#39;EUC-KR&#39;) as f:</span><br><span class="line">    json.dump(data, f)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Covert csv file into json </li>
-</ul>
+        <h3 id="What-is-Linked-List"><a href="#What-is-Linked-List" class="headerlink" title="What is Linked List?"></a>What is Linked List?</h3><p>Linked List는 Node들이 한줄로 연결되어 있는 방식의 자료구조이다.</p>
+<p>Data Structure의 대상은 Memory이다.<br>따라서 Memory를 효율적으로 사용하는것이<br>Data Structure의 목적이다.</p>
+<p>STORAGE –데이터–&gt; MEMORY –데이터–&gt; CPU</p>
+<p>MEMORY의 특징은 각각 address에 접근하는데 걸리는 시간이 같다.<br>이를 RAM(Random Access Memory)라고 부른다.</p>
+<p>*address란 data가 저장되는 주소.</p>
+<h3 id="Linked-List의-구조"><a href="#Linked-List의-구조" class="headerlink" title="Linked List의 구조"></a>Linked List의 구조</h3><p>*Node/vertex: Element들의 모임<br>Node는 Data field와 Link field로 이루어져있다.</p>
+<h3 id="How-Linked-List-works"><a href="#How-Linked-List-works" class="headerlink" title="How Linked List works"></a>How Linked List works</h3><p>15-&gt;6-&gt;23-&gt;-&gt;4-&gt;7-&gt;71</p>
+<ol>
+<li>새 node 생성 </li>
+<li>새 node의 다음 node로 head르 가리킨다</li>
+<li>새 node가 head가 되도록 head의 값을 변경한다.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vertex temp &#x3D; new vertex(input)</span><br><span class="line">temp.next &#x3D; head</span><br><span class="line">head &#x3D; temp</span><br></pre></td></tr></table></figure>
+
+<p>85-&gt;15-&gt;6-&gt;23-&gt;-&gt;4-&gt;7-&gt;71</p>
+<h3 id="중간삽입"><a href="#중간삽입" class="headerlink" title="중간삽입"></a>중간삽입</h3><p>15-&gt;6-&gt;23-&gt;4-&gt;7-&gt;71</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vertex temp1 &#x3D; head</span><br><span class="line">while(--k!&#x3D;0)</span><br><span class="line">	temp1&#x3D;temp1.next</span><br><span class="line">vertex temp2&#x3D;temp1.next</span><br><span class="line">vertex newvertex &#x3D; new vertex(input)</span><br><span class="line">temp1.next&#x3D;newvertex</span><br><span class="line"></span><br><span class="line">newvertex.next &#x3D; temp1</span><br></pre></td></tr></table></figure>
+<p>15-&gt;6-&gt;90-&gt;23-&gt;4-&gt;7-&gt;71</p>
+<h3 id="Remove"><a href="#Remove" class="headerlink" title="Remove"></a>Remove</h3><p>15-&gt;6-&gt;90-&gt;23-&gt;4-&gt;7-&gt;71<br>vertex cur = head<br>while(–k!=0)<br>    cur=cur.next<br>vertex tobedelete = cur.next<br>cur.next = cur.next.next<br>Delete tobedeleted</p>
+<p>15-&gt;6-&gt;23-&gt;4-&gt;7-&gt;71 </p>
 
     </div>
 
@@ -268,22 +275,18 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/til/" rel="tag"># til</a>
-              <a href="/tags/csv/" rel="tag"># csv</a>
-              <a href="/tags/json/" rel="tag"># json</a>
+              <a href="/tags/data-structure/" rel="tag"># data structure</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/02/05/til/210205-1/" rel="prev" title="TIL 210205-1">
-                  <i class="fa fa-chevron-left"></i> TIL 210205-1
+                <a href="/2021/03/03/til/210303/" rel="prev" title="TIL 210303">
+                  <i class="fa fa-chevron-left"></i> TIL 210303
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/02/06/til/210206/" rel="next" title="TIL 210206">
-                  TIL 210206 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
