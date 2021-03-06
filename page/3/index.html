@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,82 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/13/til/210213/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/13/til/210213/" class="post-title-link" itemprop="url">TIL 210213</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-13 21:54:14 / Modified: 22:00:35" itemprop="dateCreated datePublished" datetime="2021-02-13T21:54:14+09:00">2021-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Has a parameterized constructor taking these  parameters</p>
+<ul>
+<li>string title</li>
+<li>string author</li>
+<li>int price</li>
+</ul>
+<p>Implement the Book class’ abstract display method() so it prints these 3 lines</p>
+<ul>
+<li>Title:</li>
+<li>Author:</li>
+<li>Price:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">from abc import ABCMeta, abstractmethod</span><br><span class="line">class Book(object, metaclass&#x3D;ABCMeta):</span><br><span class="line">    def __init__(self,title,author):</span><br><span class="line">        self.title&#x3D;title</span><br><span class="line">        self.author&#x3D;author   </span><br><span class="line">    @abstractmethod</span><br><span class="line">    def display(): pass</span><br><span class="line"></span><br><span class="line">#Write MyBook class</span><br><span class="line">class MyBook(Book):</span><br><span class="line">    price &#x3D; 0</span><br><span class="line">    def __init__(self, title, author, price):</span><br><span class="line">        super(Book, self).__init__()</span><br><span class="line">        self.price &#x3D; price </span><br><span class="line"></span><br><span class="line">    def display(self):</span><br><span class="line">        print(&quot;Title: &quot;+ title)</span><br><span class="line">        print(&quot;Author: &quot;+ author)</span><br><span class="line">        print(&quot;Price: &quot;+ str(price))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">title&#x3D;input()</span><br><span class="line">author&#x3D;input()</span><br><span class="line">price&#x3D;int(input())</span><br><span class="line">new_novel&#x3D;MyBook(title,author,price)</span><br><span class="line">new_novel.display()</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -818,81 +894,6 @@
 <h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>Complete the method definitions provided in the editor so they meet the specifications outlined above; the code to test your work is already in the editor. If your methods are implemented correctly, each test case will print  or  lines (depending on whether or not a valid  was passed to the constructor).</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    </span><br><span class="line">    def __init__(self,initialAge):</span><br><span class="line">        # Add some more code to run some checks on initialAge</span><br><span class="line">        self.age &#x3D; 0</span><br><span class="line">        self.initialAge &#x3D; initialAge</span><br><span class="line">        if initialAge &lt; 0:</span><br><span class="line">            print (&#39;Age is not valid, setting age to 0.&#39;)</span><br><span class="line">        else: </span><br><span class="line">            initialAge &#x3D; self.age</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def amIOld(self):</span><br><span class="line">        # Do some computations in here and print out the correct statement to the console</span><br><span class="line">        if self.initialAge &lt; 13:</span><br><span class="line">            print (&#39;You are young.&#39;)</span><br><span class="line">        elif 13 &lt;&#x3D; self.initialAge &lt; 18:</span><br><span class="line">            print (&#39;You are a teenager.&#39;)</span><br><span class="line">        else:</span><br><span class="line">            print (&#39;You are old.&#39;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def yearPasses(self):</span><br><span class="line">        # Increment the age of the person in here      </span><br><span class="line">        self.initialAge +&#x3D; 1</span><br><span class="line"></span><br><span class="line">t &#x3D; int(input())</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/07/til/210207/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/07/til/210207/" class="post-title-link" itemprop="url">TIL 210207</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-07 22:59:05 / Modified: 23:24:32" itemprop="dateCreated datePublished" datetime="2021-02-07T22:59:05+09:00">2021-02-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Why-class-is-needed"><a href="#Why-class-is-needed" class="headerlink" title="Why class is needed?"></a>Why class is needed?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Calculator:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.result &#x3D; 0</span><br><span class="line"></span><br><span class="line">    def add(self, num):</span><br><span class="line">        self.result +&#x3D; num</span><br><span class="line">        return self.result</span><br><span class="line"></span><br><span class="line">cal1 &#x3D; Calculator()</span><br><span class="line">cal2 &#x3D; Calculator()</span><br><span class="line"></span><br><span class="line">print(cal1.add(3))</span><br><span class="line">print(cal1.add(4))</span><br><span class="line">print(cal2.add(3))</span><br><span class="line">print(cal2.add(7))</span><br></pre></td></tr></table></figure>
-<ul>
-<li>클래스를 사용하면 계산기 대수가 늘어나더라도 객체를 생성만 하면 되기 때문에 함수를 사용하는 경우와 달리 매우 간단해진다. 만약 빼기 기능을 더하려면 Calculator 클래스에 다음과 같은 빼기 기능 함수를 추가해 주면 된다.</li>
-</ul>
-<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Book:</span><br><span class="line"></span><br><span class="line">    def setData(self, title, price, author):</span><br><span class="line">        self.title &#x3D; title</span><br><span class="line">        self.price &#x3D; price</span><br><span class="line">        self.author &#x3D; author</span><br><span class="line"></span><br><span class="line">    def printData(self):</span><br><span class="line">        print &#39;제목 : &#39;, self.title</span><br><span class="line">        print &#39;가격 : &#39;, self.price</span><br><span class="line">        print &#39;저자 : &#39;, self.author</span><br><span class="line"></span><br><span class="line">    def __init__(self):</span><br><span class="line">        print &#39;new book has arrived&#39;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>init</strong> 매서드는 초기화 메서드라고 부른다. 어떤 클래스의 객체가 만들어질 때 자동으로 호출되어서 그 객체가 갖게 될 여러 가지 성질을 정해주는 일을 한다.</li>
-</ul>
-<h2 id="del"><a href="#del" class="headerlink" title="del"></a><em>del</em></h2><ul>
-<li> 파이썬에서는 <strong>del</strong> 메서드가 소멸자의 역할을 맡고 있다.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Employee: </span><br><span class="line">  </span><br><span class="line">    # Initializing  </span><br><span class="line">    def __init__(self): </span><br><span class="line">        print(&#39;Employee created&#39;) </span><br><span class="line">  </span><br><span class="line">    # Calling destructor </span><br><span class="line">    def __del__(self): </span><br><span class="line">        print(&quot;Destructor called&quot;) </span><br><span class="line">  </span><br><span class="line">def Create_obj(): </span><br><span class="line">    print(&#39;Making Object...&#39;) </span><br><span class="line">    obj &#x3D; Employee() </span><br><span class="line">    print(&#39;function end...&#39;) </span><br><span class="line">    return obj </span><br><span class="line">  </span><br><span class="line">print(&#39;Calling Create_obj() function...&#39;) </span><br><span class="line">obj &#x3D; Create_obj() </span><br><span class="line">print(&#39;Program End...&#39;) </span><br></pre></td></tr></table></figure>
       
     </div>
 
