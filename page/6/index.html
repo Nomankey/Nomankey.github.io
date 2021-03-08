@@ -158,12 +158,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">66</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -192,6 +192,101 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/27/210126-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/27/210126-1/" class="post-title-link" itemprop="url">TIL 210126-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-27 11:34:08" itemprop="dateCreated datePublished" datetime="2021-01-27T11:34:08+09:00">2021-01-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="List-Tuple"><a href="#List-Tuple" class="headerlink" title="List, Tuple"></a>List, Tuple</h3><p>List<br>animals = [‘’, ‘’, ‘’]<br>Tuple<br>animals= (‘’, ‘’, ‘’)</p>
+<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><ul>
+<li>List 는 선언과 동시에 값을 채워 넣을 수 있다.</li>
+<li>요소를 추가할 수 있다 (.append())</li>
+<li>특정한 위치에 원하는 값을 추가할 수 있다. lang.insert(1, “c”) print(lang)</li>
+<li>특정 요소를 삭제할 수도 있다. lang.remove(“golang”) print(lang)</li>
+<li>리스트에 있던 값을 빼낼 수도 있다. java = lang.pop(2) print(lang) print(java)</li>
+<li>리스트를 정렬. numbers = [2, 1, 4, 3] print(numbers)  /t  numbers.sort() print(numbers)</li>
+<li>리스트를 역순으로 출력. numbers = [2, 1, 4, 3] numbers.reverse() print(numbers)</li>
+<li>특정 값의 위치 출력. index_of_two = numbers.index(2) print(index_of_two)</li>
+<li>리스트끼리 더할 때는 extend. numbers += [5, 6] print(numbers) numbers.extend([7, 8]) print(numbers)</li>
+</ul>
+<h3 id="Membership-Operator"><a href="#Membership-Operator" class="headerlink" title="Membership Operator"></a>Membership Operator</h3><p>in - ‘cat’ in [‘fox’, ‘dog’, ‘cat’] =&gt; True<br>not in - ‘wolf’ not in [‘fox’, ‘dog’, ‘cat’] =&gt; True</p>
+<h3 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h3><ul>
+<li>괄호를 사용해서 선언한다. tuple1 = (1, 2, 3, 4)</li>
+<li>삭제나 추가가 불가능.</li>
+<li>tuple끼리 더하거나 반복은 가능. tuple2 = (5, 6) print(tuple1 + tuple2)  /t  print(tuple1 * 3)</li>
+<li>값을 편하게 바꿀 수 있다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; y</span><br><span class="line">y &#x3D; x (x)</span><br><span class="line"></span><br><span class="line">temp &#x3D; x</span><br><span class="line">x &#x3D; y</span><br><span class="line">y &#x3D; temp</span><br><span class="line"></span><br><span class="line">(x,y) &#x3D; (y,x)</span><br></pre></td></tr></table></figure></li>
+<li>함수에서 하나 이상의 값을 반환할때 사용한다<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def quot_and_rem(x,y):</span><br><span class="line">    quot &#x3D; x &#x2F;&#x2F; y</span><br><span class="line">    rem &#x3D; x % y</span><br><span class="line">    return (quot, rem)</span><br><span class="line">    </span><br><span class="line">(quot, rem) &#x3D; quot_and_rem(3,10)</span><br></pre></td></tr></table></figure>
+<h3 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h3></li>
+<li>매핑타입의 묶음 자료형이다.</li>
+<li>Key와 value로 구성되어 있다.</li>
+<li>Hash table 을 이용하여 구현 -&gt; 일정한 속도 -&gt; 키의 수가 맞지 않아도 일정한 탐색속도 유지</li>
+</ul>
+<h4 id="dictionary-선언"><a href="#dictionary-선언" class="headerlink" title="dictionary 선언"></a>dictionary 선언</h4><p>dict1 = {} print(dict1)<br>dict2 = {‘ja’:0, ‘chuk’:1, ‘in’:2}<br>dict3 = dict(ja=0,chuk=1,in=2)<br>dict4 = dict([(‘ja’,0), (‘chuk’,1),(‘in’,2)])</p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><ul>
+<li>집합 연산을 쉽게 하기 위해 만들어졌다.</li>
+<li>순서 없음</li>
+<li>중복 없음<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ppap &#x3D; &#123;&#39;pen&#39;, &#39;apple&#39;, &#39;pineapple&#39;, &#39;pen&#39;&#125;</span><br><span class="line">print(ppap)</span><br><span class="line">&#39;apple&#39; in ppap</span><br><span class="line">&#39;applepen&#39; in papp</span><br><span class="line">pineapple &#x3D; set(&#39;pineapple&#39;)</span><br><span class="line">pineapple</span><br></pre></td></tr></table></figure></li>
+<li>A ∪ B == A | B A ∩ B == A &amp; B A - B == A - B A Δ B == A ^ B</li>
+</ul>
+<h3 id="pseudocode"><a href="#pseudocode" class="headerlink" title="pseudocode"></a>pseudocode</h3><p>프로그램이나 알고리즘이 수행할 내용을 인간이 이해할 수 있는 언어로 표현하는 것</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -831,69 +926,6 @@ print(‘hi’, name)</code></pre>
 <h4 id="string-validator"><a href="#string-validator" class="headerlink" title="string validator"></a>string validator</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str.isalnum()</span><br><span class="line">str.isalpha()</span><br><span class="line">str.isdigit()</span><br><span class="line">str.islower()</span><br><span class="line">str.isupper()</span><br></pre></td></tr></table></figure>
 <h4 id="string-formatting"><a href="#string-formatting" class="headerlink" title="string formatting"></a>string formatting</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;I have a &#123;&#125;, I have an &#123;&#125;.&quot;.format(&quot;pen&quot;, &quot;apple&quot;))</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/26/til/210126/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/til/210126/" class="post-title-link" itemprop="url">2101026</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 21:53:18" itemprop="dateCreated datePublished" datetime="2021-01-26T21:53:18+09:00">2021-01-26</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
       
     </div>
 

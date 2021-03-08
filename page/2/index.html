@@ -158,12 +158,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">66</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -192,6 +192,72 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/25/til/210225/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/25/til/210225/" class="post-title-link" itemprop="url">TIL 210225</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-25 10:57:35 / Modified: 11:00:11" itemprop="dateCreated datePublished" datetime="2021-02-25T10:57:35+09:00">2021-02-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h3><p><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/30-binary-numbers/problem">https://www.hackerrank.com/challenges/30-binary-numbers/problem</a></p>
+<h3 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h3><p>nd and print the base- integer denoting the maximum number of consecutive ‘s in ‘s binary representation.</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">binary &#x3D; []</span><br><span class="line"></span><br><span class="line">def converter(decimal):</span><br><span class="line">  if decimal &gt;&#x3D; 1:</span><br><span class="line">    converter(decimal&#x2F;&#x2F;2)</span><br><span class="line">    binary.append(decimal%2)</span><br><span class="line">  return binary</span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line"></span><br><span class="line">counter &#x3D; 0</span><br><span class="line">for i in range(len(converter(n))):</span><br><span class="line">  if converter(n)[i] &#x3D;&#x3D; 1:</span><br><span class="line">    counter +&#x3D; 1</span><br><span class="line">  else:</span><br><span class="line">    pass</span><br><span class="line">print(counter)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -941,79 +1007,6 @@ return wrapper</code></pre>
 <h4 id="output-1"><a href="#output-1" class="headerlink" title="output"></a>output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">add(args&#x3D;(10, 20), kwargs&#x3D;&#123;&#125;) -&gt; 30</span><br><span class="line">30</span><br><span class="line">add(args&#x3D;(), kwargs&#x3D;&#123;&#39;a&#39;: 10, &#39;b&#39;: 20&#125;) -&gt; 30</span><br><span class="line">30</span><br></pre></td></tr></table></figure>
 <p>클래스로 매개변수와 반환값을 처리하는 데코레이터를 만들 때는 <strong>call</strong>  메서드에 매개변수를 지정하고, self.func에 매개변수를 넣어서 호출한뒤 반환값을 반환해준다.<br>단 여기서는 매개변수를  *args, **kwargs로 지정했으므로 self.func에 넣을 때는 언패킹하여 넣어준다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def __call__(self, *args, **kwargs):    # 호출할 함수의 매개변수를 처리</span><br><span class="line">        r &#x3D; self.func(*args, **kwargs) # self.func에 매개변수를 넣어서 호출하고 반환값을 변수에 저장</span><br><span class="line">        print(&#39;&#123;0&#125;(args&#x3D;&#123;1&#125;, kwargs&#x3D;&#123;2&#125;) -&gt; &#123;3&#125;&#39;.format(self.func.__name__, args, kwargs, r))</span><br><span class="line">                                            # 매개변수와 반환값 출력</span><br><span class="line">        return r                            # self.func의 반환값을 반환</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/14/til/210214/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/14/til/210214/" class="post-title-link" itemprop="url">TIL 210214</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-14 23:05:57 / Modified: 23:47:29" itemprop="dateCreated datePublished" datetime="2021-02-14T23:05:57+09:00">2021-02-14</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Dealing-with-Complex-Numbers"><a href="#Dealing-with-Complex-Numbers" class="headerlink" title="Dealing with Complex Numbers"></a>Dealing with Complex Numbers</h2><p>Python is a fully object-oriented language like C++, Java, etc. </p>
-<p>Methods with a double underscore before and after their name are considered as built-in methods. They are used by interpreters and are generally used in the implementation of overloaded operators or other built-in functionality.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">__add__-&gt; Can be overloaded for + operation</span><br><span class="line"></span><br><span class="line">__sub__ -&gt; Can be overloaded for - operation</span><br><span class="line"></span><br><span class="line">__mul__ -&gt; Can be overloaded for * operation</span><br></pre></td></tr></table></figure>
-<p>For two complex numbers  and , the output should be in the following sequence on separate lines:</p>
-<p>For complex numbers with non-zero real and complex part, the output should be in the following format:</p>
-<p>Replace the plus symbol  with a minus symbol  when .</p>
-<p>For complex numbers with a zero complex part i.e. real numbers, the output should be:</p>
-<p>For complex numbers where the real part is zero and the complex part is non-zero, the output should be:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">class Complex(object):</span><br><span class="line">    def __init__(self, real, imaginary):</span><br><span class="line">        self.real &#x3D; real</span><br><span class="line">        self.imaginary &#x3D; imaginary</span><br><span class="line">    </span><br><span class="line">    def __add__(self, no):</span><br><span class="line">        return Complex(self.real + no.real, self.imaginary + no.imaginary)</span><br><span class="line">   </span><br><span class="line">    def __sub__(self, no):</span><br><span class="line">        return Complex(self.real - no.real, self.imaginary - no.imaginary)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def __mul__(self, no):</span><br><span class="line">        return Complex(self.real*no.real - self.imaginary*no.imaginary, self.imaginary*no.real + self.real*no.imaginary)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def __div__(self, no):</span><br><span class="line">       </span><br><span class="line">        x &#x3D; float(no.real ** 2 + no.imaginary ** 2)</span><br><span class="line">      </span><br><span class="line">        y &#x3D; self * Complex(no.real, -no.imaginary)</span><br><span class="line"></span><br><span class="line">        real &#x3D; y.real &#x2F; x</span><br><span class="line"></span><br><span class="line">        imaginary &#x3D; y.imaginary &#x2F; x</span><br><span class="line">        return Complex(real, imaginary)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def mod(self):</span><br><span class="line">        real &#x3D; math.sqrt(self.real ** 2 + self.imaginary ** 2)</span><br><span class="line">        return Complex(real, 0)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    c &#x3D; map(float, input().split())</span><br><span class="line">    d &#x3D; map(float, input().split())</span><br><span class="line">    x &#x3D; Complex(*c)</span><br><span class="line">    y &#x3D; Complex(*d)</span><br><span class="line"> print(*map(str, [x+y, x-y, x*y, x&#x2F;y, x.mod(), y.mod()]), sep&#x3D;&#39;\n&#39;)</span><br></pre></td></tr></table></figure>
-
       
     </div>
 
