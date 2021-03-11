@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">69</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,95 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/04/til/210204-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/04/til/210204-1/" class="post-title-link" itemprop="url">TIL 210204-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-04 23:39:42 / Modified: 23:42:34" itemprop="dateCreated datePublished" datetime="2021-02-04T23:39:42+09:00">2021-02-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Meta-Characters-of-Regular-Expressions"><a href="#Meta-Characters-of-Regular-Expressions" class="headerlink" title="Meta Characters of Regular Expressions"></a>Meta Characters of Regular Expressions</h2><ul>
+<li>dot(.): 개행문자(\n)를 제외한 모든 문자 ex) a.ple == a(모든문자)ple == aaple, abple, acple, ..</li>
+<li>Repetition(<em>): 앞 문자의 반복을 의미합니다.(0개 ~ 무한대) ex) ap</em>le == ale, aple, apple, appple, ..</li>
+<li>Repetition(+): 앞 문자의 반복을 의미합니다.(1개 ~ 무한대) ex) ap+le == aple, apple, appple, ..</li>
+<li>Caret(^): 정의한 문자열 패턴으로 시작함을 의미합니다. ex) ^pen == penpineapple (!= applepen)</li>
+<li>Dollar sign($): 정의한 문자열 패턴으로 끝남을 의미합니다. ex) [a-z]+pen$ == applepen (!= penpineapple)* </li>
+<li>Question mark(?): 앞 문자의 존재유무(있거나 없거나)를 의미합니다. ex) appl?e == appe 또는 apple</li>
+<li>Curly brackets({m,n}): 반복횟수를 정의할 때 사용합니다. 중괄호 안의 숫자(m,n)은 반복횟수를 정의하며, 정확히 일치할 경우 1개의 숫자(m)를, 범위를 정의할 경우 2개의 숫자를 사용합니다.(m개~n개) ex1) ba(na){2} == banana ex2) ba(na){0,2} == ba, bana, banana</li>
+<li>Square brackets([]): 문자클래스를 의미합니다. 대괄호 사이에 나열한 문자 중 하나의 값과 일치할 경우를 의미합니다. 이 문자클래스와 함께 쓰이는 메타문자는 하이픈(-) 과 캐럿(^) 입니다.<ul>
+<li>Hyphen(-): 두 문자 사이의 범위를 뜻합니다. ex1) [A-Za-z] == 대문자와 소문자 알파벳 모두 ex2) [a-g0-5] == a,b,c,d,e,f,g 와 0,1,2,3,4,5 중 하나의 문자</li>
+<li>Caret(^): 부정(Not)을 의미합니다. ex1) [^0-9]: 숫자가 아닌 문자 ex2) [^A-Za-z]: 알파벳이 아닌 모든 문자</li>
+</ul>
+</li>
+<li>Parentheses( () ): 소괄호 안의 문자열의 그룹을 의미합니다. 문자열 패턴의 반복을 검사하고 싶을 때 사용합니다. ex) (apple)+ == penpineappleapplepen</li>
+<li>Vertical bar( | ):     •    | 의 좌우 중 하나의 값과 일치하는 경우를 의미합니다. ex1) (apple|apqle) == apple 또는 apqle ex2) ap[p|q]le == apple 또는 apqle </li>
+<li> Backslach(): 정규표현식을 만들 때 메타문자가 메타문자가 아닌 그 문자 그대로 사용하게 하기 위해 사용합니다. ex) <a target="_blank" rel="noopener" href="https://www.google.co.kr/=&gt;">https://www.google.co.kr/=&gt;</a> URL의 구두점(.)이 메타문자로 인식될 수 있음 -&gt; <a target="_blank" rel="noopener" href="https://www/.google/.co/.kr/">https://www\.google\.co\.kr/</a></li>
+</ul>
+<h2 id="Re-Module-Functions"><a href="#Re-Module-Functions" class="headerlink" title="Re Module Functions"></a>Re Module Functions</h2><ul>
+<li>e.search(patterns, string[, flags])</li>
+<li>re.match(patterns, string[, flags])</li>
+<li>re.findall(patterns, string[, flags])</li>
+<li>re.compile(pattern[, flags])</li>
+<li>re.split(patterns, string[,maxsplit=0])</li>
+<li>re.sub(pattern, repl, string[, count])</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -875,209 +964,6 @@ little_first에 대한 값 지정 없이 test_func([1,2,3]), 즉 하나의 인�
 <p>위와 같이 바꾸면 웹상에서 바꾸면<br>confliction이 사라지기 때문에 팀장이 성공적으로 merge가 가능해집니다.</p>
 <p>결론!<br>    이런일이 생기지 않도록하기위해서 본격적인 협업을 할때는 팀원당 1하나의 파일을 담당할것 같습니다.<br>    한가지 파일을 여러명이서 수정하면 confliction문제가 불가피하기때문에</p>
 <pre><code>그리고 혹시나 여러명이 한파일을 담당할때는 코드를 합쳤을때 구동이 가능한 쪽으로 보내는게 좋을것 같습니다.</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/01/30/til/210130/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/30/til/210130/" class="post-title-link" itemprop="url">TIL 210130</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-01-30 00:00:00 / Modified: 20:26:42" itemprop="dateCreated datePublished" datetime="2021-01-30T00:00:00+09:00">2021-01-30</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="TIL-210130"><a href="#TIL-210130" class="headerlink" title="TIL 210130"></a>TIL 210130</h1><p>learned a process how to collabor as a team<br>The description below is the process of how PM and team member work together on git</p>
-<h1 id="팀장-1"><a href="#팀장-1" class="headerlink" title="팀장 -1"></a>팀장 -1</h1><ul>
-<li>Either GitHub</li>
-<li>Make new repository<ul>
-<li>Initialize this repository with<ul>
-<li>Add a README.file</li>
-<li>Add .gitignore</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>터미널로 이동한다.</li>
-<li>$git clone &lt;리포주소&gt;</li>
-<li>$cd clone -anything<ul>
-<li>클론 파일 이름임..</li>
-</ul>
-</li>
-<li>$git flow init</li>
-<li>$git branch<ul>
-<li>branch가 main에서 develop으로 이동 확인</li>
-</ul>
-</li>
-<li>$touch index.html</li>
-<li>$ls<ul>
-<li>만든 파일 확인</li>
-</ul>
-</li>
-<li>$git status<ul>
-<li>Index.html 가 untracked file 이라고 뜬다.</li>
-</ul>
-</li>
-<li>$git commit<ul>
-<li>feat: create index.html</li>
-<li>TODO</li>
-<li>-semantic elements</li>
-<li>-web standards</li>
-<li>-separate css, js files in to static</li>
-</ul>
-</li>
-<li>$git push -u origin develop<ul>
-<li>branch가 main이면 -u가 필요없지만 branch 가 develop 이기에 필요하다.<h1 id="팀원-1"><a href="#팀원-1" class="headerlink" title="팀원 - 1"></a>팀원 - 1</h1></li>
-</ul>
-</li>
-<li>팀장 repository 방문 &amp; Fork</li>
-<li>$git clone &lt;팀장 리포주소&gt;</li>
-<li>$cd clone -anything</li>
-<li>$ls</li>
-<li>$git branch <ul>
-<li>branch에 main만 있는걸 확인한다.</li>
-</ul>
-</li>
-<li>$git flow init<ul>
-<li>branch가 develop에 있는 것 확인</li>
-</ul>
-</li>
-<li>$ls<ul>
-<li>index.html 확인후 팀장 지령 숙지</li>
-</ul>
-</li>
-<li>팀장 GitHub 방문하고나서<ul>
-<li>팀장 repository</li>
-<li>Issues</li>
-<li>New issue</li>
-<li>팀원으로서 팀장 repository 글을 남긴다 ex) 내가 한당, 내가 찜한당<h1 id="팀장-2"><a href="#팀장-2" class="headerlink" title="팀장 -2"></a>팀장 -2</h1></li>
-<li>답을 한다</li>
-<li>Label을 준다<br>#팀원 - 2</li>
-</ul>
-</li>
-<li>팀장한테 label을 받으면 confirm, 바로 작업 ㄲ</li>
-<li>터미널로 돌아온다</li>
-<li>$ls</li>
-<li>$git flow feature start &lt;작업이름&gt;<ul>
-<li>Ex) split - static</li>
-</ul>
-</li>
-<li>$vi index.html<ul>
-<li>작업 ㄲ</li>
-</ul>
-</li>
-<li>$git status -uall</li>
-<li>$git add index.html</li>
-<li>$git status <ul>
-<li>파일 올라온거 확인</li>
-</ul>
-</li>
-<li>$git commit<ul>
-<li>팀장 repositroy에서 issue 남길때 받은 숫자를 남긴다<ul>
-<li>Ex) feat: separate css, js in to static/</li>
-<li>Sovled: #1</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>$git flow feature finish &lt;작업이름&gt;<ul>
-<li>Ex) split-static</li>
-</ul>
-</li>
-<li>$git push origin develop<ul>
-<li>팀원은 develop으로 push한다. 안그러면 큰일남…</li>
-</ul>
-</li>
-<li>Clone-anything repository로 복귀</li>
-<li>fork로 따서 작업한게 반영되었는지 확인</li>
-<li>Pull request를 누른다.<ul>
-<li>branch가 develop인지 확인</li>
-</ul>
-</li>
-<li>Open a pull request화면에서 팀원의 develop에서 팀장의 develop으로 갔는지 확인.</li>
-<li>Create pull request<h1 id="팀장-3"><a href="#팀장-3" class="headerlink" title="팀장 - 3"></a>팀장 - 3</h1></li>
-<li>팀원이 받은 pull request 확인<ul>
-<li>후에 피드백을 남긴다. Ex) title text를 추가하게</li>
-<li>이때는 pull request가 open 되어있다<h1 id="팀원-3"><a href="#팀원-3" class="headerlink" title="팀원 - 3"></a>팀원 - 3</h1></li>
-</ul>
-</li>
-<li>팀원은 피드백 수용후 다시 작업</li>
-<li>$git add index.html<ul>
-<li>작업한걸 다시 올린다</li>
-</ul>
-</li>
-<li>$git commit<ul>
-<li>feat: fill the title text</li>
-</ul>
-</li>
-<li>$git push origin develop<ul>
-<li>팀장의 pull request가 open일때 develop에서 push하면 무조건 팀장의 pull request로 push된다.</li>
-<li>프로젝트의 효율성을 위해 팀장은 빨리 확인하고 pull request를 닫는게 중요</li>
-<li>안그러면 다음 작업으로 못넘어감 ㅠㅜ<h1 id="팀장-4"><a href="#팀장-4" class="headerlink" title="팀장 - 4"></a>팀장 - 4</h1></li>
-</ul>
-</li>
-<li>확인후에 confirm merge</li>
-<li>팀장의 develop에 팀원의 내용이 들어간다<h1 id="팀원-4"><a href="#팀원-4" class="headerlink" title="팀원 - 4"></a>팀원 - 4</h1></li>
-<li>$git remote -v</li>
-<li>$git remote add pmorigin &lt;팀장 리포 주소&gt;</li>
-<li>$git remote -v</li>
-<li>$git pull pmorigin develop<ul>
-<li>팀원이 작업한것들을 확인 가능하다.</li>
-</ul>
-</li>
-</ul>
 
       
     </div>
