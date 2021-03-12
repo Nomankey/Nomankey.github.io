@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,79 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/10/til/210210/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/10/til/210210/" class="post-title-link" itemprop="url">station operation in class</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-10 11:19:39 / Modified: 11:28:57" itemprop="dateCreated datePublished" datetime="2021-02-10T11:19:39+09:00">2021-02-10</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="description"><a href="#description" class="headerlink" title="description"></a>description</h2><ul>
+<li>a practice of using class</li>
+<li>it’s written in the point of view as subway staion operator</li>
+<li>The station is seoung su station and the operator tracks the amount of traffic</li>
+<li>Also tracks where the train is from and where its heading by the direction<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">class SeoungSuStation:</span><br><span class="line">    train_traffic &#x3D; 0 #일일 지나간 열차수</span><br><span class="line"></span><br><span class="line">    def __init__(self, number, direction, time):</span><br><span class="line">        self.number &#x3D; number #열차 번호</span><br><span class="line">        self.direction &#x3D; direction #방향</span><br><span class="line">        self.time &#x3D; time</span><br><span class="line">        </span><br><span class="line">    def interval_(self):</span><br><span class="line">        self.train_traffic &#x3D; 0</span><br><span class="line">        if 7&lt;&#x3D; self.time &lt;&#x3D; 10 or 17&lt;&#x3D; self.time &lt;&#x3D;20:</span><br><span class="line">            print(&#39;열차가 3분마다 들어옵니다.&#39;)</span><br><span class="line">        elif self.time &#x3D;&#x3D; 0:</span><br><span class="line">            print(&#39;열차가 운행을 중단합니다.&#39;)</span><br><span class="line">        elif self.time &#x3D;&#x3D; 5:</span><br><span class="line">            print(&#39;열차가 운행을 시작합니다. 성수열 일일 열차수는 &#123;&#125;대입니다.&#39;.format(self.train_traffic))</span><br><span class="line">        else:</span><br><span class="line">            print(&#39;열차가 7분마다 들어옵니다.&#39;)</span><br><span class="line">    </span><br><span class="line">    def arrive_(self):</span><br><span class="line">        if self.direction &#x3D;&#x3D; &#39;외선순환&#39;:</span><br><span class="line">            print(&#39;신설동행 열차가 들어옵니다.&#39;)</span><br><span class="line">        elif self.direction &#x3D;&#x3D; &#39;내선순환&#39;:</span><br><span class="line">            print(&#39;이번역은 종점역입니다. 다음열차를 이용해 주십시오&#39;)</span><br><span class="line">        else:</span><br><span class="line">            print(&#39;삼성행 열차가 들어옵니다.&#39;)</span><br><span class="line">        </span><br><span class="line">    def leave_(self):</span><br><span class="line">        if self.direction &#x3D;&#x3D; &#39;외선순환&#39;:</span><br><span class="line">            print(&#39;다음역은 뚝섬역입니다.&#39;)</span><br><span class="line">        elif self.direction &#x3D;&#x3D; &#39;내선순환&#39;:</span><br><span class="line">            print(&#39;다음역은 건대입구역입니다.&#39;)</span><br><span class="line">        else:</span><br><span class="line">            print(&#39;다음역은 용답역입니다.&#39;)</span><br><span class="line">        self.train_traffic +&#x3D; 1</span><br><span class="line">        print(&#39;성수역 일일 지나간 열차수는 &#123;&#125;대 입니다.&#39;.format(self.train_traffic))</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -826,123 +899,6 @@
     <div class="post-body" itemprop="articleBody">
           <h3 id="Regex-Review"><a href="#Regex-Review" class="headerlink" title="Regex Review"></a>Regex Review</h3><h4 id="validating-phone-numbers"><a href="#validating-phone-numbers" class="headerlink" title="validating phone numbers"></a>validating phone numbers</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">phonenum_pattern &#x3D; re.compile(r&#39;[7-9][0-9]&#123;9&#125;&#39;)</span><br><span class="line"></span><br><span class="line">for _ in range(n):</span><br><span class="line">    phonenum_string &#x3D; input()</span><br><span class="line">    </span><br><span class="line">    result &#x3D; phonenum_pattern.match(phonenum_string)</span><br><span class="line">    if result:</span><br><span class="line">        print(&#39;No&#39;)</span><br><span class="line">    else:</span><br><span class="line">        print(&#39;Yes&#39;)</span><br></pre></td></tr></table></figure>
 <h4 id="validating-and-parsing-email-address"><a href="#validating-and-parsing-email-address" class="headerlink" title="validating and parsing email address"></a>validating and parsing email address</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import email.utils, re</span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">for _ in range(n):</span><br><span class="line">    u_name, u_email &#x3D; email.utils.parseaddr(input())</span><br><span class="line">    u_email_filter &#x3D; re.fullmatch(r&#39;[a-z]+(\w|\-|\.)+@[a-z]+.[a-z](1-3)&#39;,u_email, flags&#x3D;re.I)</span><br><span class="line"></span><br><span class="line">if u_email_filter !&#x3D; None:</span><br><span class="line">    print(email.utils.formataddr((u_name, u_email_filter.group())))</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/05/til/210205/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/05/til/210205/" class="post-title-link" itemprop="url">TIL 210205</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-05 18:45:50 / Modified: 18:46:53" itemprop="dateCreated datePublished" datetime="2021-02-05T18:45:50+09:00">2021-02-05</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Object-Oriented-Programming-OOP"><a href="#Object-Oriented-Programming-OOP" class="headerlink" title="Object Oriented Programming(OOP)"></a>Object Oriented Programming(OOP)</h3><ul>
-<li>프로그램을 단순히 데이터와 처리 방법으로 나누는 것이 아니라, 프로그램을 수많은 ‘객체(object)’라는 기본 단위로 나누고 이들의 상호작용으로 서술하는 방식이다. </li>
-<li>Divide and Conquer!!</li>
-<li>Based on the concept of objects, which contain data and code.</li>
-<li>Java, C++, C#, Python, R, PHP, javaScript, Objective-C, Swift, Scala, Kotlin, ..</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from math import pi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Circle:</span><br><span class="line">    def __init__(self, radius):</span><br><span class="line">        self.radius &#x3D; radius</span><br><span class="line">    </span><br><span class="line">    def get_area(self):</span><br><span class="line">        return pi * self.radius ** 2</span><br><span class="line"></span><br><span class="line">tiny_circle &#x3D; Circle(2)</span><br><span class="line">tiny_circle.get_area()</span><br></pre></td></tr></table></figure>
-<h4 id="Object-Oriented-Programming-traits"><a href="#Object-Oriented-Programming-traits" class="headerlink" title="Object Oriented Programming traits"></a>Object Oriented Programming traits</h4><ul>
-<li>Encapsulation<ul>
-<li>구현한 것을 드러나지 않도록 함</li>
-<li>Information hiding: public, _protected, __private</li>
-</ul>
-</li>
-<li>Abstraction<ul>
-<li>인터페이스로 클래스의 공통 특성을 묶어 표현</li>
-</ul>
-</li>
-<li>Inheritance<ul>
-<li>자식 클래스가 부모 클래스의 특성과 기능을 물려받음</li>
-</ul>
-</li>
-<li>Polymorphism<ul>
-<li>변수, method가 다른 상태를 가지는 것</li>
-</ul>
-</li>
-</ul>
-<h4 id="SOLID"><a href="#SOLID" class="headerlink" title="SOLID"></a>SOLID</h4><ul>
-<li>Single Responsibility Principle<ul>
-<li>한 클래스는 하나의 책임만 가져야 한다.(goto 19)</li>
-</ul>
-</li>
-<li>Open/Closed Principle<ul>
-<li>확장에는 열려있지만, 변경에는 닫혀 있어야 한다.(override)</li>
-</ul>
-</li>
-<li>Liskov’s Substitution Principle<ul>
-<li>프로그램의 정확성을 깨트리지 않으면서 하위 타입의 인스턴스로 바꿀 수 있어야 한다.(is-A)</li>
-</ul>
-</li>
-<li>Interface Segregation Principle<ul>
-<li>사용하지 않는 method는 분리해야 한다.(Abstract)</li>
-</ul>
-</li>
-<li>Dependency Inversion Principle<ul>
-<li>추상화에 의존하고, 구체화에 의존하지 않는다.</li>
-</ul>
-</li>
-</ul>
-<h3 id="Functional-Programming"><a href="#Functional-Programming" class="headerlink" title="Functional Programming"></a>Functional Programming</h3><ul>
-<li>constructed by applying and composing functions.</li>
-<li>Common Lisp, Scheme, Haskell, Clojure, Kotlin, Python, Go, Rust, Scala.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from math import pi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">list(map(lambda a:pi*a**2, [i for i in range(1,10+1)]))</span><br></pre></td></tr></table></figure>
-
       
     </div>
 
