@@ -158,12 +158,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -192,6 +192,89 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/10/til/210210-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/10/til/210210-1/" class="post-title-link" itemprop="url">TIL 210210</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-10 22:50:58 / Modified: 22:55:17" itemprop="dateCreated datePublished" datetime="2021-02-10T22:50:58+09:00">2021-02-10</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Class-instance-static-method"><a href="#Class-instance-static-method" class="headerlink" title="Class, instance, static method"></a>Class, instance, static method</h2><ul>
+<li>Class Method: @classmethod 데코레이터 이용</li>
+<li>cls 인자를 받음</li>
+<li>class variable 관련 일을 할때 사용</li>
+<li>Instance Method: self 인자 이용</li>
+<li>객체의 고유 속성 값 사용</li>
+<li>Static Method: 아무 인자 없이 사용</li>
+<li>일반 함수와 같은 역할</li>
+<li>class와 관련있는 함수를 class 내부의 정의코자 할 때 사용</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Wallet:</span><br><span class="line">    def __init__(self, account):</span><br><span class="line">        self.account &#x3D; account</span><br><span class="line"></span><br><span class="line">    balance &#x3D; 0</span><br><span class="line">    name &#x3D; &#39;Your wallet&#39;</span><br><span class="line">    </span><br><span class="line">    @classmethod</span><br><span class="line">    def set_default(cls, amount):</span><br><span class="line">        while amount &lt; 1:</span><br><span class="line">            print(&quot;Err: You should set default value over 1. Try again!&quot;)</span><br><span class="line">            amount &#x3D; int(input(&quot;Set default value: &quot;))</span><br><span class="line">        cls.balance &#x3D; amount</span><br><span class="line">        print(&#39;Set default balance to &#123;&#125;&#39;.format(amount))</span><br><span class="line">    #instance method</span><br><span class="line">    def add_to_account(self, amount):</span><br><span class="line">        self.account +&#x3D; amount</span><br><span class="line">        print(&#39;Your total balance is &#123;&#125;&#39;.format(self.account + Wallet.balance))</span><br><span class="line">        </span><br><span class="line">    @staticmethod</span><br><span class="line">    def see_static_name():</span><br><span class="line">        print(Wallet.name)</span><br><span class="line">    </span><br><span class="line">    def get_class_name(cls):</span><br><span class="line">        print(cls.name)</span><br><span class="line"></span><br><span class="line">class MyWallet(Wallet):</span><br><span class="line">    name &#x3D; &#39;My wallet&#39;     </span><br></pre></td></tr></table></figure>
+<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><ul>
+<li>Polymorphism: 상속관계의 다양한 Class object에서 같은 이름의 method에 대해 각 object가 서로 다르게 구현된 method를 호출하여 같은이름 - 다른 행동, 기능, 결과를 가져오는 것.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class SmartPhone:</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;Application Proccessor&#39;)</span><br><span class="line"></span><br><span class="line">class IPhone(SmartPhone):</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;A series&#39;)</span><br><span class="line"></span><br><span class="line">class Galaxy(SmartPhone):</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;Exynos&#39;)</span><br></pre></td></tr></table></figure>
+<h2 id="Abstract-base-class"><a href="#Abstract-base-class" class="headerlink" title="Abstract base class"></a>Abstract base class</h2><ul>
+<li>공통 특성을 가진 부모 Class를 만들고 해당 Class가 Object instance를 생성할 수 없게 하는 것</li>
+<li>특성을 유지할 수 없도록 하여 추상적인 Class가 개념으로 존재하게 만듦</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from abc import *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class SmartPhone(metaclass &#x3D; ABCMeta):</span><br><span class="line">    @abstractmethod</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        pass</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -851,73 +934,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/05/til/210205-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/05/til/210205-1/" class="post-title-link" itemprop="url">TIL 210205-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-05 18:48:12 / Modified: 18:49:04" itemprop="dateCreated datePublished" datetime="2021-02-05T18:48:12+09:00">2021-02-05</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Regex-Review"><a href="#Regex-Review" class="headerlink" title="Regex Review"></a>Regex Review</h3><h4 id="validating-phone-numbers"><a href="#validating-phone-numbers" class="headerlink" title="validating phone numbers"></a>validating phone numbers</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">phonenum_pattern &#x3D; re.compile(r&#39;[7-9][0-9]&#123;9&#125;&#39;)</span><br><span class="line"></span><br><span class="line">for _ in range(n):</span><br><span class="line">    phonenum_string &#x3D; input()</span><br><span class="line">    </span><br><span class="line">    result &#x3D; phonenum_pattern.match(phonenum_string)</span><br><span class="line">    if result:</span><br><span class="line">        print(&#39;No&#39;)</span><br><span class="line">    else:</span><br><span class="line">        print(&#39;Yes&#39;)</span><br></pre></td></tr></table></figure>
-<h4 id="validating-and-parsing-email-address"><a href="#validating-and-parsing-email-address" class="headerlink" title="validating and parsing email address"></a>validating and parsing email address</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import email.utils, re</span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">for _ in range(n):</span><br><span class="line">    u_name, u_email &#x3D; email.utils.parseaddr(input())</span><br><span class="line">    u_email_filter &#x3D; re.fullmatch(r&#39;[a-z]+(\w|\-|\.)+@[a-z]+.[a-z](1-3)&#39;,u_email, flags&#x3D;re.I)</span><br><span class="line"></span><br><span class="line">if u_email_filter !&#x3D; None:</span><br><span class="line">    print(email.utils.formataddr((u_name, u_email_filter.group())))</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 

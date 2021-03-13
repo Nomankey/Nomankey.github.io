@@ -158,12 +158,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -192,6 +192,75 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/18/til/210218-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/18/til/210218-2/" class="post-title-link" itemprop="url">TIL 210218-2</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-18 21:12:19 / Modified: 21:20:44" itemprop="dateCreated datePublished" datetime="2021-02-18T21:12:19+09:00">2021-02-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Scrapping-with-requests"><a href="#Scrapping-with-requests" class="headerlink" title="Scrapping with requests"></a>Scrapping with requests</h2><p>먼저 url로 부터 데이터를 url 받고 text로 변환해준다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url &#x3D; &#39;https:&#x2F;&#x2F;apiv2.corona-live.com&#x2F;updates.json?timestamp&#x3D;1613547340934&#39;</span><br><span class="line">response &#x3D; requests.get(url)</span><br><span class="line">response  ### &lt;Response [200]&gt; </span><br><span class="line">response.url ### https:&#x2F;&#x2F;apiv2.corona-live.com&#x2F;updates.json?timestamp&#x3D;1613547340934</span><br><span class="line">response.status_code ### 200</span><br><span class="line">response_dict &#x3D; response.json()</span><br></pre></td></tr></table></figure>
+<p>response_dict를 실행해보면 아래와 같은 형식으로 dictionary가 list에 쌓여서 출력된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">response_dict </span><br><span class="line"></span><br><span class="line">### [&#123;&#39;total&#39;: 3,</span><br><span class="line">  &#39;gu&#39;: 3,</span><br><span class="line">  &#39;city&#39;: 2,</span><br><span class="line">  &#39;cases&#39;: None,</span><br><span class="line">  &#39;datetime&#39;: &#39;2021&#x2F;02&#x2F;18 09:09:07&#39;,</span><br><span class="line">  &#39;src&#39;: &#39;코로나19 확진자 3명 발생(확진자 접촉 3명). 역학조사 중, 확진자 주변 방역 실시 예정.blog.naver.com&#x2F;yeonsulife&#39;&#125;,</span><br><span class="line"> &#123;&#39;total&#39;: 1,</span><br><span class="line">  &#39;gu&#39;: 0,</span><br><span class="line">  &#39;city&#39;: 9,</span><br><span class="line">  &#39;cases&#39;: None,</span><br><span class="line">  &#39;datetime&#39;: &#39;2021&#x2F;02&#x2F;18 09:06:36&#39;,</span><br><span class="line">  &#39;src&#39;: &#39;확진자 발생(462번). 해외입국자 격리해제 전 검사로 이동동선은 없습니다. 사업장 내 외국인 근로자 코로나 의심 시, 보건소 선별진료 받으세요.&#39;&#125;,</span><br><span class="line"> &#123;&#39;total&#39;: &#39;&#39;,</span><br><span class="line">  &#39;gu&#39;: -1,</span><br><span class="line">  &#39;city&#39;: 5,</span><br><span class="line">  &#39;cases&#39;: 6,</span><br><span class="line">  &#39;datetime&#39;: &#39;2021&#x2F;02&#x2F;18 09:00:32&#39;,</span><br><span class="line">  &#39;src&#39;: &#39;6명 추가 확진. 1164번(서구),1165번~1167번(동구),1168번~1169번(서구) 기 확진자 관련, 방문장소는 홈페이지에 공개예정입니다.’&#125;]</span><br></pre></td></tr></table></figure>
+<p>위의 자료에서 ‘src’만을 뽑아내 위해서는 아래와 같이한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def pandemic_scraper():</span><br><span class="line">    for i in range(len(response_dict)):</span><br><span class="line">        print(response_dict[i][&#39;src&#39;])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pandemic_scraper()</span><br><span class="line">### 코로나19 확진자 3명 발생(확진자 접촉 3명). 역학조사 중, 확진자 주변 방역 실시 예정.blog.naver.com&#x2F;yeonsulife</span><br><span class="line">확진자 발생(462번). 해외입국자 격리해제 전 검사로 이동동선은 없습니다. 사업장 내 외국인 근로자 코로나 의심 시, 보건소 선별진료 받으세요.</span><br><span class="line">6명 추가 확진. 1164번(서구),1165번~1167번(동구),1168번~1169번(서구) 기 확진자 관련, 방문장소는 홈페이지에 공개예정입니다.</span><br><span class="line">코로나19 982번(북구),983~985번(중구),986번(북구),987번(북구,격리기간중 확진),988~990번(북구) 확진자발생.역학조사중입니다.</span><br><span class="line">확진자 1명 발생. 공주98번(80대, 아산317번 접촉, 아산 귀뚜라미보일러 공장 관련) 역학조사 중으로 자세한 내용은 시 홈페이지 공개예정입니다.</span><br><span class="line">남원51번 확진자 발생(남원47번 확진자 접촉), 자가격리 중 확진으로 이동동선 없습니다.</span><br><span class="line">1명 확진[579번(진천 확진자 접촉)]. 동선은 역학조사 후 홈페이지·블로그에 게시 계획입니다. 5명부터 사적모임 금지 등 방역수칙 준수바랍니다.</span><br><span class="line">어제(17일) 확진자 16명(기 발표 5)이 발생했습니다. 1960번 남구, 1961~1966번 1970번 광산구, 1969번 서구 거주자입니다.</span><br><span class="line">확진자 1명(95번) 발생, 자가격리 중 확진으로 관내 이동동선 없음을 알려드립니다.</span><br><span class="line">장안구 2명, 권선구 1명, 영통구 1명 확진자 발생. 자택 및 주변 소독 예정, 동선은 역학조사 후 SNS 및 홈페이지에 공개하겠습니다.</span><br><span class="line">코로나19 아산 342번(아산 331번 접촉자) 확진자 발생, 역학조사 및 방역소독 등 후속조치 시행중 입니다.</span><br><span class="line">2.18(목) 오전 확진자4명발생(1166~1169). 역학조사후 https:&#x2F;&#x2F;www.nowon.kr&#x2F;corona19&#x2F;index.do 공개하겠습니다</span><br><span class="line">진천군 193~196번 확진자 발생(감염경로 조사중)▲ 동선 및 접촉자는 역학조사 후 군 홈페이지 및 블로그에 게시 예정▲참여방역 준수 바랍니다.</span><br><span class="line">서산 166번과 167번 확진자 발생(해외 입국자 &#x2F; 자가격리 중). 심층역학 조사 중. 자세한 사항은 다시 알려드리겠습니다.</span><br><span class="line">밀양78번(밀양74번가족)확진자1명,자가격리중발생&#x2F;심층역학조사 및 방역소독진행중&#x2F;코로나증상의심시 즉시검사받기,마스크착용 등 방역수칙을준수하시기바랍니다.</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -858,91 +927,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/10/til/210210-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/10/til/210210-1/" class="post-title-link" itemprop="url">TIL 210210</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-10 22:50:58 / Modified: 22:55:17" itemprop="dateCreated datePublished" datetime="2021-02-10T22:50:58+09:00">2021-02-10</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Class-instance-static-method"><a href="#Class-instance-static-method" class="headerlink" title="Class, instance, static method"></a>Class, instance, static method</h2><ul>
-<li>Class Method: @classmethod 데코레이터 이용</li>
-<li>cls 인자를 받음</li>
-<li>class variable 관련 일을 할때 사용</li>
-<li>Instance Method: self 인자 이용</li>
-<li>객체의 고유 속성 값 사용</li>
-<li>Static Method: 아무 인자 없이 사용</li>
-<li>일반 함수와 같은 역할</li>
-<li>class와 관련있는 함수를 class 내부의 정의코자 할 때 사용</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Wallet:</span><br><span class="line">    def __init__(self, account):</span><br><span class="line">        self.account &#x3D; account</span><br><span class="line"></span><br><span class="line">    balance &#x3D; 0</span><br><span class="line">    name &#x3D; &#39;Your wallet&#39;</span><br><span class="line">    </span><br><span class="line">    @classmethod</span><br><span class="line">    def set_default(cls, amount):</span><br><span class="line">        while amount &lt; 1:</span><br><span class="line">            print(&quot;Err: You should set default value over 1. Try again!&quot;)</span><br><span class="line">            amount &#x3D; int(input(&quot;Set default value: &quot;))</span><br><span class="line">        cls.balance &#x3D; amount</span><br><span class="line">        print(&#39;Set default balance to &#123;&#125;&#39;.format(amount))</span><br><span class="line">    #instance method</span><br><span class="line">    def add_to_account(self, amount):</span><br><span class="line">        self.account +&#x3D; amount</span><br><span class="line">        print(&#39;Your total balance is &#123;&#125;&#39;.format(self.account + Wallet.balance))</span><br><span class="line">        </span><br><span class="line">    @staticmethod</span><br><span class="line">    def see_static_name():</span><br><span class="line">        print(Wallet.name)</span><br><span class="line">    </span><br><span class="line">    def get_class_name(cls):</span><br><span class="line">        print(cls.name)</span><br><span class="line"></span><br><span class="line">class MyWallet(Wallet):</span><br><span class="line">    name &#x3D; &#39;My wallet&#39;     </span><br></pre></td></tr></table></figure>
-<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><ul>
-<li>Polymorphism: 상속관계의 다양한 Class object에서 같은 이름의 method에 대해 각 object가 서로 다르게 구현된 method를 호출하여 같은이름 - 다른 행동, 기능, 결과를 가져오는 것.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class SmartPhone:</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;Application Proccessor&#39;)</span><br><span class="line"></span><br><span class="line">class IPhone(SmartPhone):</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;A series&#39;)</span><br><span class="line"></span><br><span class="line">class Galaxy(SmartPhone):</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        print(&#39;Exynos&#39;)</span><br></pre></td></tr></table></figure>
-<h2 id="Abstract-base-class"><a href="#Abstract-base-class" class="headerlink" title="Abstract base class"></a>Abstract base class</h2><ul>
-<li>공통 특성을 가진 부모 Class를 만들고 해당 Class가 Object instance를 생성할 수 없게 하는 것</li>
-<li>특성을 유지할 수 없도록 하여 추상적인 Class가 개념으로 존재하게 만듦</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from abc import *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class SmartPhone(metaclass &#x3D; ABCMeta):</span><br><span class="line">    @abstractmethod</span><br><span class="line">    def get_ap(self):</span><br><span class="line">        pass</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
