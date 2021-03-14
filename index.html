@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,74 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/14/til/210314/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/14/til/210314/" class="post-title-link" itemprop="url">TIL 210314</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-14 11:00:44 / Modified: 12:51:29" itemprop="dateCreated datePublished" datetime="2021-03-14T11:00:44+09:00">2021-03-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Printing-Triangles-made-of-Stars-in-JavaScript-Day-2"><a href="#Printing-Triangles-made-of-Stars-in-JavaScript-Day-2" class="headerlink" title="Printing Triangles made of Stars in JavaScript Day 2"></a>Printing Triangles made of Stars in JavaScript Day 2</h3><h4 id="problem-4"><a href="#problem-4" class="headerlink" title="problem 4"></a>problem 4</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var starContainer &#x3D; &#39;&#39;;</span><br><span class="line"></span><br><span class="line">for (var line &#x3D; 5; line &gt; 0; line--) &#123;</span><br><span class="line"></span><br><span class="line">  for (var space &#x3D; 0; space &lt; line; space++)&#123;</span><br><span class="line">    starContainer +&#x3D; &#39; &#39;;</span><br><span class="line">  &#125;;</span><br><span class="line">  for (var star &#x3D; 0; star &lt; 6 - line; star++)&#123;</span><br><span class="line">    starContainer +&#x3D; &#39;*&#39;;</span><br><span class="line">  </span><br><span class="line">  &#125;</span><br><span class="line">  starContainer +&#x3D; &#39;\n&#39;</span><br><span class="line">&#125;</span><br><span class="line">console.log(starContainer);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">    *</span><br><span class="line">   **</span><br><span class="line">  ***</span><br><span class="line"> ****</span><br><span class="line">*****</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="Printing-Equilateral-Triangle"><a href="#Printing-Equilateral-Triangle" class="headerlink" title="Printing Equilateral Triangle"></a>Printing Equilateral Triangle</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var starContainer &#x3D; &#39;&#39;;</span><br><span class="line"></span><br><span class="line">for(var line &#x3D; 5; line &gt; 0; line --)&#123;</span><br><span class="line">  for(var space &#x3D; 0; space &lt; line - 1; space++)&#123;</span><br><span class="line">    starContainer +&#x3D; &#39; &#39;;</span><br><span class="line">  &#125;;</span><br><span class="line">  for(var star &#x3D; 0; star &lt; 6 - line; star++)&#123;</span><br><span class="line">    starContainer +&#x3D; &#39;*&#39;;</span><br><span class="line">  &#125;;</span><br><span class="line">  for(var starSub &#x3D; 0; starSub &lt; 5-line; starSub++)&#123;</span><br><span class="line">    starContainer +&#x3D; &#39;*&#39;;</span><br><span class="line">    </span><br><span class="line">  &#125;;</span><br><span class="line">  starContainer +&#x3D; &#39;\n&#39;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(starContainer);</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">    *</span><br><span class="line">   ***</span><br><span class="line">  *****</span><br><span class="line"> *******</span><br><span class="line">*********</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="Printing-Inverted-Triangle"><a href="#Printing-Inverted-Triangle" class="headerlink" title="Printing Inverted Triangle"></a>Printing Inverted Triangle</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var starContainer &#x3D; &#39;&#39;;</span><br><span class="line"></span><br><span class="line">for(var line &#x3D; 5; line &gt; 0; line--)&#123;</span><br><span class="line">  for(var space &#x3D; 0; space &lt; 5 - line; space++)&#123;</span><br><span class="line">    starContainer +&#x3D; &#39; &#39;;</span><br><span class="line">  &#125;;</span><br><span class="line">  for(var star &#x3D; 0; star &lt; line; star++)&#123;</span><br><span class="line">    starContainer +&#x3D; &#39;*&#39;;</span><br><span class="line">  &#125;;</span><br><span class="line">  for(var starSub &#x3D; 0; starSub &lt; line - 1; starSub++)&#123;</span><br><span class="line">    starContainer +&#x3D; &#39;*&#39;;</span><br><span class="line">  &#125;;</span><br><span class="line">  starContainer +&#x3D; &#39;\n&#39;;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(starContainer);</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line"></span><br><span class="line">*********</span><br><span class="line"> *******</span><br><span class="line">  *****</span><br><span class="line">   ***</span><br><span class="line">    *</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -853,77 +921,6 @@ You better work on more data structures</code></pre>
 <p>15-&gt;6-&gt;90-&gt;23-&gt;4-&gt;7-&gt;71</p>
 <h3 id="Remove"><a href="#Remove" class="headerlink" title="Remove"></a>Remove</h3><p>15-&gt;6-&gt;90-&gt;23-&gt;4-&gt;7-&gt;71<br>vertex cur = head<br>while(–k!=0)<br>    cur=cur.next<br>vertex tobedelete = cur.next<br>cur.next = cur.next.next<br>Delete tobedeleted</p>
 <p>15-&gt;6-&gt;23-&gt;4-&gt;7-&gt;71 </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/03/til/210303/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/03/til/210303/" class="post-title-link" itemprop="url">TIL 210303</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-03 21:36:36 / Modified: 21:47:23" itemprop="dateCreated datePublished" datetime="2021-03-03T21:36:36+09:00">2021-03-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="What-is-Bound-Method"><a href="#What-is-Bound-Method" class="headerlink" title="What is Bound Method?"></a>What is Bound Method?</h3><p>Python에서 method는 object에 붙어있다 면을 제외하고는 function과 같다.<br>method는 object에 불러지며 그 object에 변화를 준다.<br>이 method들은 bound, unbound 또는 static method가 될 수 있다.<br>static method는 unbound method의 한 종류이다.</p>
-<h3 id="Bound-Methods"><a href="#Bound-Methods" class="headerlink" title="Bound Methods"></a>Bound Methods</h3><p>만약에 function이 class의 속성이고 instance에 엑세스된다. 그것들은 bound method라고 불린다.<br>Bound method는 ‘self’를 첫번째 argument로 가지고 있다.<br>이들은 class의 instance에 의존적이므로 instance method라고도 불린다.</p>
-<h4 id="Example-Code"><a href="#Example-Code" class="headerlink" title="Example Code"></a>Example Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Word_Parser:</span><br><span class="line">    &quot;&quot;&quot;docstring for Word_Parser&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, sentences):</span><br><span class="line">        self.sentences &#x3D; sentences</span><br><span class="line"> def parser(self):</span><br><span class="line">        self.word_list &#x3D; self.sentences.split()</span><br><span class="line">def sort_word_list(self):</span><br><span class="line">        self.sorted_word_list &#x3D; self.word_list.sort()</span><br><span class="line">def num_words(self):</span><br><span class="line">        self.num_words &#x3D; len(self.word_list)</span><br><span class="line">test &#x3D; Word_Parser(&quot;mary had a little lamb&quot;)</span><br><span class="line">test.parser()</span><br><span class="line">test.sort_word_list()</span><br><span class="line">test.num_words()</span><br><span class="line">print test.word_list</span><br><span class="line">print test.sort_word_list</span><br><span class="line">print test.num_words</span><br></pre></td></tr></table></figure>
-<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[&#39;a&#39;, &#39;had&#39;, &#39;lamb&#39;, &#39;little&#39;, &#39;mary&#39;]</span><br><span class="line">&lt;bound method Word_Parser.sort_word_list of &lt;__main__.Word_Parser object at 0x103fdf520&gt;&gt;</span><br><span class="line">5</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="해설"><a href="#해설" class="headerlink" title="해설"></a>해설</h4><p>print(test_sort.word_list)에서 bound method error가 떴다.<br> sort_word_list는 sorted_word_list라는 variable을 놓는다. 그러고나서 print(test.sort_world_list)를 한다. 이건 function이다. variable 이다.<br>fucntion을 프린트하기에<br>&lt;bound method Word_Parser.sort_word_list of &lt;__main__.Word_Parser object at 0x103fdf520&gt;&gt;이 나온것이다.</p>
-<h3 id="Revised-code"><a href="#Revised-code" class="headerlink" title="Revised code"></a>Revised code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Word_Parser:</span><br><span class="line">    &quot;&quot;&quot;docstring for Word_Parser&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, sentences):</span><br><span class="line">        self.sentences &#x3D; sentences</span><br><span class="line"></span><br><span class="line">    def parser(self):</span><br><span class="line">        self.word_list &#x3D; self.sentences.split()</span><br><span class="line">        word_list &#x3D; []</span><br><span class="line">        word_list &#x3D; self.word_list</span><br><span class="line">        return word_list</span><br><span class="line"></span><br><span class="line">    def sort_word_list(self):</span><br><span class="line">        self.sorted_word_list &#x3D; sorted(self.sentences.split())</span><br><span class="line">        sorted_word_list &#x3D; self.sorted_word_list</span><br><span class="line">        return sorted_word_list</span><br><span class="line"></span><br><span class="line">    def get_num_words(self):</span><br><span class="line">        self.num_words &#x3D; len(self.word_list)</span><br><span class="line">        num_words &#x3D; self.num_words</span><br><span class="line">        return num_words</span><br><span class="line"></span><br><span class="line">test &#x3D; Word_Parser(&quot;mary had a little lamb&quot;)</span><br><span class="line">test.parser()</span><br><span class="line">test.sort_word_list()</span><br><span class="line">test.get_num_words()</span><br><span class="line">print(test.word_list)</span><br><span class="line">print(test.sorted_word_list)</span><br><span class="line">print(test.num_words)</span><br></pre></td></tr></table></figure>
-<h4 id="Revised-Output"><a href="#Revised-Output" class="headerlink" title="Revised Output"></a>Revised Output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[&#39;mary&#39;, &#39;had&#39;, &#39;a&#39;, &#39;little&#39;, &#39;lamb&#39;]</span><br><span class="line">[&#39;a&#39;, &#39;had&#39;, &#39;lamb&#39;, &#39;little&#39;, &#39;mary&#39;]</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
 
       
     </div>
