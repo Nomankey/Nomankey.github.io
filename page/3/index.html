@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-count">75</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,141 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/23/til/210223/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/23/til/210223/" class="post-title-link" itemprop="url">TIL 210223</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-23 11:08:00 / Modified: 11:54:17" itemprop="dateCreated datePublished" datetime="2021-02-23T11:08:00+09:00">2021-02-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="객체-Object"><a href="#객체-Object" class="headerlink" title="객체(Object)"></a>객체(Object)</h2><p>객체 지향 프로그래밍은 컴퓨터 프로그램을 명령어의 목록으로 보는 시각에서 벗어나 여러 개의 독립된 단위, 즉 “객체”들의 모임으로 파악하고자 하는 것이다. 각각의 객체는 메시지를 주고받고, 데이터를 처리할 수 있다.<br>객체 지향 프로그래밍은 프로그램을 유연하고 변경이 용이하게 만들기 때문에 대규모 소프트웨어 개발에 많이 사용된다</p>
+<p>프로그램이 어떤 작업을 수행하기 위해서는 (1)데이터와 (2)데이터를 조작하는 행위, 두가지 요소가 필요하다.<br>일반적으로 데이터는 변수에 넣어서 사용하고 데이터를 조작하는 일은 함수로 구성해서 쉽게 실행할 수 있도록 만들어 놓는다.</p>
+<p>객체(object, instance)는 서로 연관된 데이터와 그 데이터를 조작하기 위한 함수를 하나의 집합에 모아놓은 것을 말한다 . 이때 집합의 원소가 되는 변수나 함수는 멤버(member)또는 속성(attribute)라고 한다.<br>특히 객체 속성인 함수는 메서드(method)라고 부른다.</p>
+<p>객체지향을 사용하지 않고 파이썬으로 구현하면 아래와 같이 된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">h &#x3D; 10</span><br><span class="line">v &#x3D; 20</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def area(h, v):</span><br><span class="line">    return h * v</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a &#x3D; area(h, v)</span><br><span class="line">print(a) ### 200</span><br></pre></td></tr></table></figure>
+<p>아래는 위의 프로그램을 객체지향으로 바꾼것이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Rectangle(object):</span><br><span class="line"></span><br><span class="line">    def __init__(self, h, v):</span><br><span class="line">        self.h &#x3D; h</span><br><span class="line">        self.v &#x3D; v</span><br><span class="line"></span><br><span class="line">    def area(self):</span><br><span class="line">        return self.h * self.v</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">r &#x3D; Rectangle(10, 20)</span><br><span class="line">a &#x3D; r.area()</span><br><span class="line">print(a) ### 200</span><br></pre></td></tr></table></figure>
+<p>위의 프로그램에서 r이 객체이다.<br>객체 r은 사각형의 가로 길이와 세로 길이를 나타내는 변수 h와 v 그리고 면적을 계산하는 함수 area()가 합쳐져서 만들어진 것이다. <br>객체 r에 포함된 이 변수들과 함수, 즉 속성을 꺼내려면 객체 이름 뒤에 점(.)을 붙인 다음 속성 이름을 입력하면 된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">r.h ### 10</span><br><span class="line">r.v ### 20</span><br><span class="line">r.area() ### 200</span><br></pre></td></tr></table></figure>
+<h2 id="클래스-Class"><a href="#클래스-Class" class="headerlink" title="클래스(Class)"></a>클래스(Class)</h2><p>객체지향 프로그래밍에서 객체를 만들려면 객체를 바로 만들지 못하고 항상 class를 만들고 그 클래스를 이용해서 객체를 만들어야한다.<br>위의 예제에서 Rectangle은 class이고 r은 Rectangle 클래스로 만들어진 객체이다. 객체와 클래스의 관계는 ‘붕어빵’과 ‘붕어빵’틀에 비유할 수 있다.<br>즉 정해진 속성, 여기에서는 가로 길이 h와 세로 길이 v라는 속성을 가지도록 사각형 클래스를 한번 만들어 놓으면 이 속성을 가지는 실제 사각형을 얼마든지 만들 수 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; Rectangle(1, 1)   # 가로 1, 세로 1인 사각형</span><br><span class="line">b &#x3D; Rectangle(2, 1)   # 가로 2, 세로 1인 사각형</span><br><span class="line">c &#x3D; Rectangle(4, 2)   # 가로 4, 세로 2인 사각형</span><br><span class="line">d &#x3D; Rectangle(6, 3)   # 가로 6, 세로 3인 사각형</span><br><span class="line">e &#x3D; Rectangle(8, 5)   # 가로 8, 세로 5인 사각형</span><br><span class="line"></span><br><span class="line">print(a.area()) ### 1</span><br><span class="line">print(b.area()) ### 2</span><br><span class="line">print(c.area()) ### 8</span><br><span class="line">print(d.area()) ### 18</span><br><span class="line">print(e.area()) ### 40</span><br></pre></td></tr></table></figure>
+<h3 id="생성자-Constructor"><a href="#생성자-Constructor" class="headerlink" title="생성자(Constructor)"></a>생성자(Constructor)</h3><p>파이썬에서 클래스를 정의하는 문법은 아래와 같다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class 클래스이름(object):</span><br><span class="line">    </span><br><span class="line">    def __init__(self, 속성값1, 속성값2, 속성값3):</span><br><span class="line">        self.속성이름1 &#x3D; 속성값1</span><br><span class="line">        self.속성이름2 &#x3D; 속성값2</span><br><span class="line">        self.속성이름3 &#x3D; 속성값3</span><br></pre></td></tr></table></figure>
+<p>이때 속성값인수는 필요하지 않다면 없어도 된다. 여기에서 class 블럭 안에 정의된 __init__란 함수는 생성자(constructor)라고 하며 클래스 정의에서 가장 중요한 함수이다.<br>클래스를 정의할때 클래스 이름을 호출하는데 실제로는 __init__으로 정의된 생성자 함수가 정의된다.</p>
+<h3 id="클래스-상속"><a href="#클래스-상속" class="headerlink" title="클래스 상속"></a>클래스 상속</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Class Character(object):</span><br><span class="line">	def __init__(self):</span><br><span class="line">		self.life &#x3D; 1000</span><br><span class="line"></span><br><span class="line">	def attacked(self):</span><br><span class="line">		self.life -&#x3D; 10</span><br><span class="line">		print(‘공격받음! 생명력&#x3D;‘, self.life)</span><br><span class="line"></span><br><span class="line">속성(attribute): 캐릭터 능력치</span><br><span class="line">메서드(method): 캐릭터가 움직이는 방법, 공격, 이동 등등</span><br><span class="line"></span><br><span class="line">Character 부모 클래스에서 상속을 통해 Warrior 라는 자식 클래스와 Wizard 라는 자식 클래스를 만든다 상속을 위한 파이썬 문법은 다음과 같다.</span><br></pre></td></tr></table></figure>
+<p>class 자식클래스이름(부모클래스이름):</p>
+<pre><code>def __init__(self, 속성값1, 속성값2):
+    super(자식클래스이름, self).__init__()
+    자식 클래스의 초기화 코드</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">지금까지 쓰던 클래스 정의를 보면 object라는 부모 클래스에서 상속받는 것이었다.</span><br><span class="line">위의 코드에서 super(자식클래스이름, self).__init__() 부분은 부모클래스의 초기화 생성자를 호출하는 부분이다.</span><br><span class="line">예를 들어 Warrior라는 클래스에서 부모 클래스인 character 클래스의 생성자를 호출하면 life라는 속성값을 초기화하기에 자식 클래스에서는 이 속성값을 초기화해줄 필요가 없다.</span><br></pre></td></tr></table></figure>
+<p>Class Warrior(Character):</p>
+<pre><code>def__init__(self):
+    super(Warrior,self).__init__()
+    self.strength = 15
+    self.intelligence = 5</code></pre>
+<p>Class Wizard(Character):</p>
+<pre><code>def__init__(self):
+    super(Warrior.self).__init__()
+    self.strength = 5     self.intelligence = 15</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">이 클래스의 객체를 만들어보면 명시적으로 만들지 않았지만 life라는 속성과 attacked 라는 메서드를 가진다.</span><br></pre></td></tr></table></figure>
+<p>a = Warrior()<br>b = Wizard()</p>
+<p>a.life, b.life ### (1000, 1000)</p>
+<p>a.strength, b.strength ### (15, 5)</p>
+<p>a.intelligence, b.intelligence ### (5, 15)</p>
+<p>a.attacked() ### 공격받음! 생명력 = 990</p>
+<p>b.attacked() ### 공격받음! 생명력 = 990</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 메서드 오버라이딩</span><br><span class="line">메서드 오버라이딩(method overriding)이란, 여러 클래스에 걸쳐서 같은 이름의 메서드를 만드는 것이다.</span><br><span class="line">예를 들어서 부모 클래스, 전사 클래스, 마법사 클래스에 공통으로 attak이라는 메서드가 있지만, 각각 하는 일이 다를 때는 다음처럼 같은 이름의 메서드를 클래스별로 구현하면 된다.</span><br><span class="line">이렇게 되면 부모 클래스에서 만든 메서드 정의를 자식 클래스에서는 변경해서 사용한다.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>class Character(object):</p>
+<pre><code>def __init__(self):
+    self.life = 1000
+    self.strength = 10
+    self.intelligence = 10
+
+def attacked(self):
+    self.life -= 10
+    print(&quot;공격받음! 생명력 =&quot;, self.life)
+
+def attack(self):
+    print(&quot;공격!&quot;)</code></pre>
+<p>class Warrior(Character):</p>
+<pre><code>def __init__(self):
+    super(Warrior, self).__init__()
+    self.strength = 15
+    self.intelligence = 5
+
+def attack(self):
+    print(&quot;육탄 공격!&quot;)</code></pre>
+<p>class Wizard(Character):</p>
+<pre><code>def __init__(self):
+    super(Wizard, self).__init__()
+    self.strength = 5
+    self.intelligence = 15
+
+def attack(self):
+    print(&quot;마법 공격!&quot;)</code></pre>
+<p>a = Character()<br>b = Warrior()<br>c = Wizard()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Output</span><br></pre></td></tr></table></figure>
+<p>a.attack() ### 공격!<br>b.attack() ### 육탄 공격!<br>c.attack() ### 마법 공격!<br>a.attacked() ### 공격받음! 생명력 = 990<br>b.attacked() ### 공격받음! 생명력 = 990</p>
+<pre><code>
+
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -879,82 +1014,6 @@ return wrapper</code></pre>
 <p>For complex numbers where the real part is zero and the complex part is non-zero, the output should be:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">class Complex(object):</span><br><span class="line">    def __init__(self, real, imaginary):</span><br><span class="line">        self.real &#x3D; real</span><br><span class="line">        self.imaginary &#x3D; imaginary</span><br><span class="line">    </span><br><span class="line">    def __add__(self, no):</span><br><span class="line">        return Complex(self.real + no.real, self.imaginary + no.imaginary)</span><br><span class="line">   </span><br><span class="line">    def __sub__(self, no):</span><br><span class="line">        return Complex(self.real - no.real, self.imaginary - no.imaginary)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def __mul__(self, no):</span><br><span class="line">        return Complex(self.real*no.real - self.imaginary*no.imaginary, self.imaginary*no.real + self.real*no.imaginary)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def __div__(self, no):</span><br><span class="line">       </span><br><span class="line">        x &#x3D; float(no.real ** 2 + no.imaginary ** 2)</span><br><span class="line">      </span><br><span class="line">        y &#x3D; self * Complex(no.real, -no.imaginary)</span><br><span class="line"></span><br><span class="line">        real &#x3D; y.real &#x2F; x</span><br><span class="line"></span><br><span class="line">        imaginary &#x3D; y.imaginary &#x2F; x</span><br><span class="line">        return Complex(real, imaginary)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def mod(self):</span><br><span class="line">        real &#x3D; math.sqrt(self.real ** 2 + self.imaginary ** 2)</span><br><span class="line">        return Complex(real, 0)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    c &#x3D; map(float, input().split())</span><br><span class="line">    d &#x3D; map(float, input().split())</span><br><span class="line">    x &#x3D; Complex(*c)</span><br><span class="line">    y &#x3D; Complex(*d)</span><br><span class="line"> print(*map(str, [x+y, x-y, x*y, x&#x2F;y, x.mod(), y.mod()]), sep&#x3D;&#39;\n&#39;)</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/13/til/210213/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/13/til/210213/" class="post-title-link" itemprop="url">TIL 210213</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-13 21:54:14 / Modified: 22:00:35" itemprop="dateCreated datePublished" datetime="2021-02-13T21:54:14+09:00">2021-02-13</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Has a parameterized constructor taking these  parameters</p>
-<ul>
-<li>string title</li>
-<li>string author</li>
-<li>int price</li>
-</ul>
-<p>Implement the Book class’ abstract display method() so it prints these 3 lines</p>
-<ul>
-<li>Title:</li>
-<li>Author:</li>
-<li>Price:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">from abc import ABCMeta, abstractmethod</span><br><span class="line">class Book(object, metaclass&#x3D;ABCMeta):</span><br><span class="line">    def __init__(self,title,author):</span><br><span class="line">        self.title&#x3D;title</span><br><span class="line">        self.author&#x3D;author   </span><br><span class="line">    @abstractmethod</span><br><span class="line">    def display(): pass</span><br><span class="line"></span><br><span class="line">#Write MyBook class</span><br><span class="line">class MyBook(Book):</span><br><span class="line">    price &#x3D; 0</span><br><span class="line">    def __init__(self, title, author, price):</span><br><span class="line">        super(Book, self).__init__()</span><br><span class="line">        self.price &#x3D; price </span><br><span class="line"></span><br><span class="line">    def display(self):</span><br><span class="line">        print(&quot;Title: &quot;+ title)</span><br><span class="line">        print(&quot;Author: &quot;+ author)</span><br><span class="line">        print(&quot;Price: &quot;+ str(price))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">title&#x3D;input()</span><br><span class="line">author&#x3D;input()</span><br><span class="line">price&#x3D;int(input())</span><br><span class="line">new_novel&#x3D;MyBook(title,author,price)</span><br><span class="line">new_novel.display()</span><br></pre></td></tr></table></figure>
       
     </div>
 
