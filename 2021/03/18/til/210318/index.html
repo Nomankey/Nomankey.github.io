@@ -23,18 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="Developer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CK&#39;s Blog">
-<meta property="og:url" content="https://nomankey.github.io/tags/Torsional-Angle/index.html">
+<meta name="description" content="Binary Tree기본적으로 Binary Tree는 edges로 연결되어있는 node들로 구성되어있다. Binary Tree t가 있다고 가정을 해보자.이 tree는 비어있거나 2개의 자식요소 (left subtree, right subtree)를 가진 단일 root 요소를 가질 것이다.Binary라는 이름에서 알 수 있듯이 , binary tree에서는">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL 210318">
+<meta property="og:url" content="https://nomankey.github.io/2021/03/18/til/210318/index.html">
 <meta property="og:site_name" content="CK&#39;s Blog">
-<meta property="og:description" content="Developer">
+<meta property="og:description" content="Binary Tree기본적으로 Binary Tree는 edges로 연결되어있는 node들로 구성되어있다. Binary Tree t가 있다고 가정을 해보자.이 tree는 비어있거나 2개의 자식요소 (left subtree, right subtree)를 가진 단일 root 요소를 가질 것이다.Binary라는 이름에서 알 수 있듯이 , binary tree에서는">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-18T02:34:19.000Z">
+<meta property="article:modified_time" content="2021-03-18T02:38:40.036Z">
 <meta property="article:author" content="Nomankey">
+<meta property="article:tag" content="til">
+<meta property="article:tag" content="data structure">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nomankey.github.io/tags/Torsional-Angle/">
+<link rel="canonical" href="https://nomankey.github.io/2021/03/18/til/210318/">
 
 
 <script class="page-configurations">
@@ -42,11 +46,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
-<title>Tag: Torsional Angle | CK's Blog</title>
+<title>TIL 210318 | CK's Blog</title>
   
 
 
@@ -133,7 +137,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -146,6 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Binary-Tree"><span class="nav-number">1.</span> <span class="nav-text">Binary Tree</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -191,50 +196,100 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">Torsional Angle
-          <small>Tag</small>
-        </h2>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/18/til/210318/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          TIL 210318
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+
+      <time title="Created: 2021-03-18 11:34:19 / Modified: 11:38:40" itemprop="dateCreated datePublished" datetime="2021-03-18T11:34:19+09:00">2021-03-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="Binary-Tree"><a href="#Binary-Tree" class="headerlink" title="Binary Tree"></a>Binary Tree</h3><p>기본적으로 Binary Tree는 edges로 연결되어있는 node들로 구성되어있다.</p>
+<p>Binary Tree t가 있다고 가정을 해보자.<br>이 tree는 비어있거나 2개의 자식요소 (left subtree, right subtree)를 가진 단일 root 요소를 가질 것이다.<br>Binary라는 이름에서 알 수 있듯이 , binary tree에서는 최대 2개의 자식을 가질 수 있다.</p>
+<ul>
+<li>Binday Tree Diagram에서  root는 맨 위에 있고 subtrees는 아래로 갈라져 나온다</li>
+<li> Node의 left subtree 와 right subtree는 자식이며 node는 sub tree들의 부모이다.</li>
+<li> root도 아니며 자식도 없는 node는 leaf라고 불린다.</li>
+<li> Binary tree의 root node는 모든 node들의 조상이다.</li>
+<li> 어떠한 node a 가 어떠한 node b의 조상이라면, a로부터 b까지의 경로는 a에서 b까지의 혈육 사슬을 따른 길이다.</li>
+<li>tree의 높이는 root와 가장 멀리있는 leaf 사이의 edge 수이다. 더 기술적으로 표기를 하자면 <ul>
+<li> 1+max(height(leftSubtree), height(rightSubtree))</li>
+</ul>
+</li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-02-09T16:14:26+09:00"
-              content="2021-02-09">
-          02-09
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/02/09/til/210209/" itemprop="url">
-            <span itemprop="name">TIL 210209</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/til/" rel="tag"># til</a>
+              <a href="/tags/data-structure/" rel="tag"># data structure</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/17/til/210317/" rel="prev" title="TIL 210317">
+                  <i class="fa fa-chevron-left"></i> TIL 210317
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
+
 
 
 <script>
