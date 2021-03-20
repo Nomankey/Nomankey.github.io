@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-count">78</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,146 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/09/til/210209/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/09/til/210209/" class="post-title-link" itemprop="url">TIL 210209</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-09 16:14:26 / Modified: 16:25:17" itemprop="dateCreated datePublished" datetime="2021-02-09T16:14:26+09:00">2021-02-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="description"><a href="#description" class="headerlink" title="description"></a>description</h2><p>Points are given a,b,c,d in a 3-dimensional cartesian coordinate system.<br>Its required to print the angle between the plane made by the points a,b,c and b,c,d in degrees.</p>
+<ul>
+<li>cos(PHI) = (x.y)|x||y|</li>
+<li>x = ab x bc</li>
+<li>y = bc x cd</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">class Points(object):</span><br><span class="line">    def __init__(self, x, y, z):</span><br><span class="line">        self.x &#x3D; x</span><br><span class="line">        self.y &#x3D; y</span><br><span class="line">        self.z &#x3D; z</span><br><span class="line"></span><br><span class="line">    def __sub__(self, no):</span><br><span class="line">        return Points((self.x - no.x), (self.y - no.y), (self.z - no.z))</span><br><span class="line">             </span><br><span class="line">    def dot(self, no):</span><br><span class="line">        return (self.x*no.x)+(self.y*no.y)+(self.z*no.z)</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    def cross(self, no):</span><br><span class="line">        return Points((self.y*no.z - self.z*no.y),(self.z*no.x - self.x*no.z),(self.x*no.y - self.y*no.x))</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    def absolute(self):</span><br><span class="line">        return pow((self.x ** 2 + self.y ** 2 + self.z ** 2), 0.5)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    points &#x3D; list()</span><br><span class="line">    for i in range(4):</span><br><span class="line">        a &#x3D; list(map(float, input().split()))</span><br><span class="line">        points.append(a)</span><br><span class="line"></span><br><span class="line">    a, b, c, d &#x3D; Points(*points[0]), Points(*points[1]), Points(*points[2]), Points(*points[3])</span><br><span class="line">    x &#x3D; (b - a).cross(c - b)</span><br><span class="line">    y &#x3D; (c - b).cross(d - c)</span><br><span class="line">    angle &#x3D; math.acos(x.dot(y) &#x2F; (x.absolute() * y.absolute()))</span><br><span class="line"></span><br><span class="line">    print(&quot;%.2f&quot; % math.degrees(angle))</span><br></pre></td></tr></table></figure>
+<h2 id="formula-used"><a href="#formula-used" class="headerlink" title="formula used"></a>formula used</h2><ul>
+<li>dot product formula</li>
+<li>vector cross product formula</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/08/til/210208-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/08/til/210208-1/" class="post-title-link" itemprop="url">TIL 210208-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-08 23:25:51 / Modified: 23:39:51" itemprop="dateCreated datePublished" datetime="2021-02-08T23:25:51+09:00">2021-02-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="class-variable-Not-for-Mutable"><a href="#class-variable-Not-for-Mutable" class="headerlink" title="class variable: Not for Mutable"></a>class variable: Not for Mutable</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Hero: # class</span><br><span class="line">    health &#x3D; 100 # class variable</span><br><span class="line">    inventory &#x3D; []</span><br><span class="line"></span><br><span class="line">    def __init__(self, name, weapon):</span><br><span class="line">        self.name &#x3D; name # instance variable</span><br><span class="line">        self.weapon &#x3D; weapon</span><br><span class="line"></span><br><span class="line">    def attack(self): # instance method</span><br><span class="line">        print(&quot;attack with &#123;&#125;&quot;.format(self.weapon))</span><br><span class="line">    def save_item(self, item):</span><br><span class="line">        self.inventory.append(item)</span><br></pre></td></tr></table></figure>
+<h2 id="Way-to-use-Mutable-Object"><a href="#Way-to-use-Mutable-Object" class="headerlink" title="Way to use Mutable Object"></a>Way to use Mutable Object</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Hero: # class</span><br><span class="line">    health &#x3D; 100 # class variable</span><br><span class="line"></span><br><span class="line">    def __init__(self, name, weapon, inventory):</span><br><span class="line">        self.name &#x3D; name # instance variable</span><br><span class="line">        self.weapon &#x3D; weapon</span><br><span class="line">        self.inventory &#x3D; []</span><br><span class="line"></span><br><span class="line">    def attack(self): # instance method</span><br><span class="line">        print(&quot;attack with &#123;&#125;&quot;.format(self.weapon))</span><br><span class="line">    def save_item(self, item):</span><br><span class="line">        self.inventory.append(item)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -823,158 +963,6 @@
 <li>re.compile(pattern[, flags])</li>
 <li>re.split(patterns, string[,maxsplit=0])</li>
 <li>re.sub(pattern, repl, string[, count])</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/04/til/210204/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/04/til/210204/" class="post-title-link" itemprop="url">TIL 210204</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-04 23:31:31 / Modified: 23:40:51" itemprop="dateCreated datePublished" datetime="2021-02-04T23:31:31+09:00">2021-02-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Where-Regular-Expression-is-used"><a href="#Where-Regular-Expression-is-used" class="headerlink" title="Where Regular Expression is used?"></a>Where Regular Expression is used?</h2><p>복잡한 문자열을 처리할때 사용하는 기법. 파이썬만의 고유의 문법이 아니라 문자열을 처리하는 모든 곳에서 사용한다.</p>
-<h2 id="How-does-the-process-flows"><a href="#How-does-the-process-flows" class="headerlink" title="How does the process flows?"></a>How does the process flows?</h2><p>예를 들어서 주민등록번호를 포함하고 있는 텍스트가 있다. 이 텍스트에 포함된 모든 주민등록번호의 뒷자리를 * 문자로 변경해 볼때는 아래와 같이 생각한다.</p>
-<ol>
-<li>전체 텍스트를 공백 문자로 나눈다(split).</li>
-<li>나뉜 단어가 주민등록번호 형식인지 조사한다.</li>
-<li>단어가 주민등록번호 형식이라면 뒷자리를 *로 변환한다.</li>
-<li>나뉜 단어를 다시 조립한다.</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import re </span><br><span class="line"></span><br><span class="line">data &#x3D; &quot;&quot;&quot;</span><br><span class="line">park 800905-1049118</span><br><span class="line">kim  700905-1059119</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">pat &#x3D; re.compile(&quot;(\d&#123;6&#125;)[-]\d&#123;7&#125;&quot;)</span><br><span class="line">print(pat.sub(&quot;\g&lt;1&gt;-*******&quot;, data))</span><br></pre></td></tr></table></figure>
-<p>output</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">결과값:</span><br><span class="line">park 800905-*******</span><br><span class="line">kim  700905-*******</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/03/til-210203-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/03/til-210203-2/" class="post-title-link" itemprop="url">TIL 210203-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-03 22:53:42 / Modified: 23:04:19" itemprop="dateCreated datePublished" datetime="2021-02-03T22:53:42+09:00">2021-02-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Condition"><a href="#Condition" class="headerlink" title="Condition"></a>Condition</h2><p>2개의 매개변수(parameter)를 활용하여 가장 높은 수와 가장 낮은 수를 tuple로 묶어 (양 끝에 있어 짝이 맞은) 순차적으로 print하고<br>    짝이 맞은 갯수를 리턴하는 함수를 작성하세요.<br>    아래 예제를 참고하여, little_first가 False인 경우, 각 튜플의 큰 수가 앞에 위치하여 먼저 출력 되어야 합니다.</p>
-<pre><code>##data_list: 첫번째 인자, list안에 정수만 있거나, 비어있는 리스트가 들어올 것 입니다.
-정수가 들어있을 경우 작은 수에서 큰수로 오름차순으로 정렬된 상태로 들어 올 것입니다.
-해당 정수들은 중복이 없을 것이며 아래 예제를 참고해주시기 바랍니다.
-
-##little_first: 두번째 인자, bool
-little_first에 대한 값 지정 없이 test_func([1,2,3]), 즉 하나의 인자만 전달 받을 경우,
-에러를 내지 말하야하며 True를 전달받은 동작과 동일하게 길이가 2인 튜플을 출력할 때 낮은 수가 앞에서 출력되도록 합니다.</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">##Return</span><br><span class="line">짝이 맞은 갯수만큼 리턴하며 함수를 마무리 합니다.</span><br><span class="line">첫 인자, 위의 경우 data_list의 길이가 1인 경우, 리턴값은 0이 됩니다.</span><br><span class="line">첫 인자, 위의 경우 data_list의 길이가 0인 경우, None을 리턴합니다.</span><br><span class="line"> 1 </span><br><span class="line">&gt;&gt;&gt; input_data &#x3D; [1, 30, 44, 55 ,100]</span><br><span class="line">&gt;&gt;&gt; print(test_func(input_data)))</span><br><span class="line">(1, 100)</span><br><span class="line">(30, 55)</span><br><span class="line">(44,)</span><br><span class="line">2</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; input_data &#x3D; [2, 44]</span><br><span class="line">&gt;&gt;&gt; print(test_func(input_data, False))</span><br><span class="line">(44, 2)</span><br><span class="line">1</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; input_data &#x3D;  </span><br><span class="line">&gt;&gt;&gt; print(test_func(input_data, True))</span><br><span class="line">(3,)</span><br><span class="line">0</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; input_data &#x3D; []</span><br><span class="line">&gt;&gt;&gt; print(test_func(input_data))</span><br><span class="line">None</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; test_func()</span><br><span class="line">ERROR 발생</span><br></pre></td></tr></table></figure>
-<h2 id="My-Code"><a href="#My-Code" class="headerlink" title="My Code"></a>My Code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">def test_func(data_list &#x3D; &#39;error&#39;, little_first &#x3D; True):</span><br><span class="line">  match &#x3D; 0</span><br><span class="line">  if len(data_list) &#x3D;&#x3D; 0:</span><br><span class="line">    print(None)</span><br><span class="line">  elif data_list &#x3D;&#x3D; &#39;error&#39;:</span><br><span class="line">    print(&#39;ERROR 발생 \n &quot;&quot;&quot;&#39;)</span><br><span class="line">  elif little_first &#x3D;&#x3D; True:</span><br><span class="line">    data_list.sort()</span><br><span class="line">  elif little_first &#x3D;&#x3D; False:</span><br><span class="line">    data_list.sort(reverse &#x3D; True)</span><br><span class="line">  while len(data_list) &gt; 1:</span><br><span class="line">    a &#x3D; data_list.pop(0)</span><br><span class="line">    b &#x3D; data_list.pop(-1)</span><br><span class="line">    match +&#x3D; 1</span><br><span class="line">    print((a, b))</span><br><span class="line">    if len(data_list) &#x3D;&#x3D; 0:</span><br><span class="line">        print(match)</span><br><span class="line">  print((data_list.pop(),))</span><br><span class="line">  return match</span><br></pre></td></tr></table></figure>
-<h2 id="Things-to-improve"><a href="#Things-to-improve" class="headerlink" title="Things to improve"></a>Things to improve</h2><ul>
-<li>Code should be easy to read</li>
-<li>Basic fundamental grammar of python</li>
 </ul>
 
       

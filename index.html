@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-count">78</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,162 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/20/til/210320/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/20/til/210320/" class="post-title-link" itemprop="url">TIL 210320</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-20 21:39:42 / Modified: 21:56:17" itemprop="dateCreated datePublished" datetime="2021-03-20T21:39:42+09:00">2021-03-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="What-is-Array"><a href="#What-is-Array" class="headerlink" title="What is Array?"></a>What is Array?</h3><p>배열(array)는 여러개의 값을 순차적으로 나열한 자료 구조(Data Structure).</p>
+<p>ex)    const arr = [‘apple’, ‘banana’, ‘orange’]</p>
+<p>배열이 가지고 있는 값은 요소(element)이다. 자바스크립트에서 모든 값은 배열이 될 수 있다.</p>
+<p>ex)<br>    arr[0] // apple<br>    arr[1] // banana<br>    arr[2] // orange</p>
+<p>위와 같이 element에 접근할때는 대괄호 표기법을 갖는다.</p>
+<p>ex)<br>    arr.length // 3</p>
+<p>배열은 또한 요소의 개수, 즉 배열의 길이를 나타내는 length 프로퍼티를 갖는다.</p>
+<p>ex)<br>    for (let i = 0; I &lt; arr.length; i++){<br>            console.log(arr[i]);<br>        }</p>
+<p>배열은 인덱스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 요소에 접근할 수 있다.</p>
+<p>또한 자바스크립트는 배열(array)라는 타입이 없기 때문에 배열은 객체 타입이다.</p>
+<p>ex)<br>    const arr = [1, 2, 3];</p>
+<pre><code>arr.constructor === Array // true
+Object.getPrototypeOf(arr) === Array.prototype // true</code></pre>
+<p>배열은 배열 리터럴, array 생성자 함수, array.of, array.from 메서드로 생성가능<br>배열의 프로토타입 객체는 array.prototype</p>
+<h3 id="Array-in-JavaScript-is-not-an-Array"><a href="#Array-in-JavaScript-is-not-an-Array" class="headerlink" title="Array in JavaScript is not an Array!"></a>Array in JavaScript is not an Array!</h3><p>자료 구조(data structure)에서 배열이란 동일한 크기의 메모리 공간이 빈틈이 없이 연속적으로 나열된 구조<br>    =&gt; 밀집 배열(dense array)</p>
+<p>인덱스를 통해 단 한번의 연산으로 임의의 요소에 접근(random access) 하여 효율적으로 고속으로 동작한다.</p>
+<p>검색 대상의 메모리 주소 = 배열의 시작 메모리 주소 + 인덱스*요소의 바이트 수<br>    • 인덱스가 0인 요소의 메모리 주소: 1000 + 0 * 8 = 1000<br>    • 인덱스가 1인 요소에 메모리 주소: 1000 + 1 * 8 = 1008<br>    • 인덱스가 2인 요소에 메모리 주소: 1000 + 2 * 8 = 1016</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function linearSearch(array, target) &#123;</span><br><span class="line">	const length &#x3D; array.length;</span><br><span class="line">			</span><br><span class="line">		for (let i &#x3D; 0; i &lt; length; i++) &#123;</span><br><span class="line">			if(array[i] &#x3D;&#x3D;&#x3D; target) return i;</span><br><span class="line">		&#125;</span><br><span class="line">		return -1;</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	console.log(linearSearch([1, 2, 3, 4, 5, 6], 3)); &#x2F;&#x2F; 2 </span><br><span class="line">	console.log(linearSearch([1, 2, 3, 4, 5, 6], 0)); &#x2F;&#x2F; -1</span><br></pre></td></tr></table></figure>
+<p>인덱스를 통해 효율적으로 요소에 접근할 수 있지만 정렬되지 않은 배열에서 특정한 요소를 검색할때는 array의 모든 요소를 처음부터 특정 요소를 발견할 때까지 차례대로 검색(linear search)를 해야한다.<br>array에 element를 삽입하거나 삭제할때 element를 연속적으로 유지하기 위해서는 element를 이동시켜야 한다        </p>
+<p>자바스크립트의 배열은 지금까지와의 배열과는 다르게 array의 element를 위한 각각 메모리 공간의 크기가 동일하지 않아도 되고 연속적으로 이어져 있지도 않다.<br>    =&gt; 배열의 요소가 연속적으로 이어져 있지 않은 배열을 희소 배열(sparse array)이라 한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">console.log(Object.getOwnPropertyDescriptors([1, 2, 3]));</span><br><span class="line">		</span><br><span class="line">&#x2F;*</span><br><span class="line">&#123;</span><br><span class="line">	&#39;0&#39;: &#123;value: 1, writable: true, enumerable: true, configurable: true&#125;</span><br><span class="line">	&#39;1&#39;: &#123;value: 2, writable: true, enumerable: true, configurable: true&#125;</span><br><span class="line">	&#39;2&#39;: &#123;value: 3, writable: true, enumerable: true, configurable: true&#125;</span><br><span class="line">	length: &#123;value: 3, writable: true, enumerable: false, configurable: false&#125;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>위처럼 자바스크립 배열은 인덱스를 나타내는 문자열을 프로퍼티 키로 가지며, length 값을 프로퍼티로 갖는 특수한 객체이다. 자바스크립트 array elements 는 사실상 property value 이다.</p>
+<p>일반적인 배열(array list)과 자바스크립트 배열(linked list)의 장단점</p>
+<ul>
+<li><p> 일반적인 배열은 인덱스로 요소에 빠르게 접근이 가능하며 특정 요소를 검색하거나 요소를 삽입 삭제할때는 효율적이지 않다</p>
+</li>
+<li><p>자바스크립트 배열은 해시 테이블로 구현된 객체이기에 인덱스로 요소에 접근하는 경우에는 일반적인 배열보다 성능이 느릴 수 밖에 없지만, 특정 요소를 검색하거나 요소를 삽입 또는 삭제하는 경우에는 일반적인 배열보다는 빠른 성능을 기대할 수 있다.</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/20/til/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/20/til/" class="post-title-link" itemprop="url">210320</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-03-20 21:39:12" itemprop="dateCreated datePublished" datetime="2021-03-20T21:39:12+09:00">2021-03-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -784,153 +940,6 @@ null은 의도적 부재. undefined는 자바스크립트 엔진이 변수를 �
     <div class="post-body" itemprop="articleBody">
           <h3 id="Address"><a href="#Address" class="headerlink" title="Address"></a>Address</h3><p><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/30-interfaces/copy-from/203720822">https://www.hackerrank.com/challenges/30-interfaces/copy-from/203720822</a></p>
 <h3 id="My-Function"><a href="#My-Function" class="headerlink" title="My Function"></a>My Function</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class AdvancedArithmetic(object):</span><br><span class="line">    def divisorSum(n):</span><br><span class="line">        raise NotImplementedError</span><br><span class="line"></span><br><span class="line">class Calculator(AdvancedArithmetic):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.arithmetic_container &#x3D; []</span><br><span class="line">        </span><br><span class="line">    def divisorSum(self, n):</span><br><span class="line">        for i in range(1, n+1):</span><br><span class="line">            if n%i &#x3D;&#x3D; 0:</span><br><span class="line">                self.arithmetic_container.append(i)</span><br><span class="line">        return sum(self.arithmetic_container)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">my_calculator &#x3D; Calculator()</span><br><span class="line">s &#x3D; my_calculator.divisorSum(n)</span><br><span class="line">print(&quot;I implemented: &quot; + type(my_calculator).__bases__[0].__name__)</span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/10/til/210310/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/10/til/210310/" class="post-title-link" itemprop="url">TIL 210310</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-10 11:32:54 / Modified: 11:51:30" itemprop="dateCreated datePublished" datetime="2021-03-10T11:32:54+09:00">2021-03-10</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="What-is-Palindrome"><a href="#What-is-Palindrome" class="headerlink" title="What is Palindrome:"></a>What is Palindrome:</h3><pre><code>앞에서 시작하든 뒤에서 시작하든 똑같은 것
-Ex)
-    Racecar
-
-     dog! A panic in a pagoda
-
-    이효리 거꾸로 해도 이효리</code></pre>
-<h3 id="My-Function"><a href="#My-Function" class="headerlink" title="My Function:"></a>My Function:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.stack_container &#x3D; []</span><br><span class="line">        self.queue_container &#x3D; []</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    def pushCharacter(self, stack):</span><br><span class="line">        self.stack_container.append(stack)</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    def enqueueCharacter(self, queue):</span><br><span class="line">        self.queue_container.append(queue)</span><br><span class="line">    </span><br><span class="line">    def popCharacter(self):</span><br><span class="line">        return self.stack_container.pop()</span><br><span class="line">        </span><br><span class="line">    def dequeueCharacter(self):</span><br><span class="line">        return self.queue_container.pop(0)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># read the string s</span><br><span class="line">s&#x3D;input() </span><br><span class="line">#Create the Solution class object</span><br><span class="line">obj&#x3D;Solution()   </span><br><span class="line"></span><br><span class="line">l&#x3D;len(s)</span><br><span class="line"># push&#x2F;enqueue all the characters of string s to stack</span><br><span class="line">for i in range(l):</span><br><span class="line">    obj.pushCharacter(s[i])</span><br><span class="line">    obj.enqueueCharacter(s[i])</span><br><span class="line">    </span><br><span class="line">isPalindrome&#x3D;True</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">pop the top character from stack</span><br><span class="line">dequeue the first character from queue</span><br><span class="line">compare both the characters</span><br><span class="line">&#39;&#39;&#39; </span><br><span class="line">for i in range(l &#x2F;&#x2F; 2):</span><br><span class="line">    if obj.popCharacter()!&#x3D;obj.dequeueCharacter():</span><br><span class="line">        isPalindrome&#x3D;False</span><br><span class="line">        break</span><br><span class="line">#finally print whether string s is palindrome or not.</span><br><span class="line">if isPalindrome:</span><br><span class="line">    print(&quot;The word, &quot;+s+&quot;, is a palindrome.&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;The word, &quot;+s+&quot;, is not a palindrome.&quot;)  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="Function-from-discussion"><a href="#Function-from-discussion" class="headerlink" title="Function from discussion:"></a>Function from discussion:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.mystack &#x3D; list()</span><br><span class="line">        self.myqueue &#x3D; list()</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    def pushCharacter(self, char):</span><br><span class="line">        self.mystack.append(char)</span><br><span class="line"></span><br><span class="line">    def popCharacter(self):</span><br><span class="line">        return(self.mystack.pop(-1))</span><br><span class="line"></span><br><span class="line">    def enqueueCharacter(self, char):</span><br><span class="line">        self.myqueue.append(char)</span><br><span class="line"></span><br><span class="line">    def dequeueCharacter(self):</span><br><span class="line">        return(self.myqueue.pop(0))</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"># read the string s</span><br><span class="line">s&#x3D;input()</span><br><span class="line">#Create the Solution class object</span><br><span class="line">obj&#x3D;Solution()   </span><br><span class="line"></span><br><span class="line">l&#x3D;len(s)</span><br><span class="line"># push&#x2F;enqueue all the characters of string s to stack</span><br><span class="line">for i in range(l):</span><br><span class="line">    obj.pushCharacter(s[i])</span><br><span class="line">    obj.enqueueCharacter(s[i])</span><br><span class="line">    </span><br><span class="line">isPalindrome&#x3D;True</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">pop the top character from stack</span><br><span class="line">dequeue the first character from queue</span><br><span class="line">compare both the characters</span><br><span class="line">&#39;&#39;&#39; </span><br><span class="line">for i in range(l &#x2F;&#x2F; 2):</span><br><span class="line">    if obj.popCharacter()!&#x3D;obj.dequeueCharacter():</span><br><span class="line">        isPalindrome&#x3D;False</span><br><span class="line">        break</span><br><span class="line">#finally print whether string s is palindrome or not.</span><br><span class="line">if isPalindrome:</span><br><span class="line">    print(&quot;The word, &quot;+s+&quot;, is a palindrome.&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;The word, &quot;+s+&quot;, is not a palindrome.&quot;)    </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="Self-Evaluation"><a href="#Self-Evaluation" class="headerlink" title="Self Evaluation:"></a>Self Evaluation:</h3><p>Class 내에서 self의 역할 숙지가 명확하지 않음<br>function 내에서 return의 역할이 명확하지가 않음</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/08/til/210308-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/08/til/210308-1/" class="post-title-link" itemprop="url">TIL 210308-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-08 11:41:04 / Modified: 11:48:34" itemprop="dateCreated datePublished" datetime="2021-03-08T11:41:04+09:00">2021-03-08</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Runtime-Error"><a href="#Runtime-Error" class="headerlink" title="Runtime Error"></a>Runtime Error</h3><h4 id="When-it-happens"><a href="#When-it-happens" class="headerlink" title="When it happens?"></a>When it happens?</h4><p>Runtime Error는 프로그래밍이 성공적으로 compile된 이후에 프로그램이 실행되는 도중에 발생한다.</p>
-<p>개발을 시작하는 사람들이 가장 많이 마주하게 될 문제들 중 하나이다. 이것이 발생하는 주된이유들은</p>
-<ul>
-<li>segmentation fault: 메모리에 허용되지 않는 접속을 할때</li>
-<li>10^8 보다 많은 array를 선언했을때</li>
-<li>0으로 modulus를 나누거나 가져올때</li>
-<li>GDB를 사용하면 runtime error를 보다 쉽게 디버깅이 가능하다.</li>
-</ul>
-<p>runtime error는 많은 경우에 bug라고 불리며 소프웨어가 출시되기전 debugging 과정에서 많이 발생한다.<br>public에 프로그램이 출시된 이후에 runtime error가 발생하면 개발자들은 error를 고치기 위해 패치나 작은 업데이트등은 진행한다.</p>
-
       
     </div>
 
