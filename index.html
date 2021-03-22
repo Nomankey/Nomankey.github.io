@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,70 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/22/til/210322/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/22/til/210322/" class="post-title-link" itemprop="url">TIL 210322</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-22 21:27:54 / Modified: 21:29:30" itemprop="dateCreated datePublished" datetime="2021-03-22T21:27:54+09:00">2021-03-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Array-HOF-연습-문제"><a href="#Array-HOF-연습-문제" class="headerlink" title="Array HOF 연습 문제"></a>Array HOF 연습 문제</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; EX 9. id 프로퍼티의 값 중에서 최대값 구하기</span><br><span class="line">&#x2F;&#x2F; todos의 id 프로퍼티의 값 중에서 최대값을 구하는 함수를 작성하라.</span><br><span class="line">&#x2F;&#x2F; 단, for 문, Array#forEach는 사용하지 않도록 하자.</span><br><span class="line">let todos &#x3D; [</span><br><span class="line">  &#123; id: 3, content: &#39;HTML&#39;, completed: false &#125;,</span><br><span class="line">  &#123; id: 2, content: &#39;CSS&#39;, completed: true &#125;,</span><br><span class="line">  &#123; id: 1, content: &#39;Javascript&#39;, completed: false &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">function getMaxId() &#123;</span><br><span class="line">	const container &#x3D; [];</span><br><span class="line">	todos.map((todo) &#x3D;&gt; container.push(todo.id)); &#x2F;&#x2F; 화살표 끝에 있는 것들은 자동으로 리턴~ </span><br><span class="line">	return Math.max(...container);   &#x2F;&#x2F;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(getMaxId()); &#x2F;&#x2F; 3</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -875,71 +939,6 @@ null은 의도적 부재. undefined는 자바스크립트 엔진이 변수를 �
 <p>Dynamic Typing<br>    타입이 동적으로 바뀐다. 정적타이핑은 타입이 잘바뀌지 않는다<br>    Int x = 1; //태어날때부터 타입을 가진다.<br>    Var x = 1; //동적 타입<br>     정적타입언어는 컴파일 시점에 타입 체크를 수행한다. 통과하지 못했으면 에러를 발생시키고 프로그램의 실행 자체를 막는다. 안정적이며 에러를 줄임<br>    자바스크립트 변수는 선언이 아닌 할당에 의해 타입이 결정된다. 그리고 재할당에 의해 변수 타입은 언제든지 동적으로 변할 수 있다.</p>
 <p>제어문(control flow statement)<br>    주어진 조건에 따라 코드 블록을 실행하거나 반복 실행 할때 사용한다. 보통 코드는 위에서 아래로 진행하는데 제어문을 이를 방해할 수 있다.<br>    그래서 가독성을 해친다. 가독성이 좋지않은 코드는 오류를 발생시킬 확률이 높다. </p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/11/til/210311/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/11/til/210311/" class="post-title-link" itemprop="url">TIL 210311</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-11 10:55:36 / Modified: 10:59:23" itemprop="dateCreated datePublished" datetime="2021-03-11T10:55:36+09:00">2021-03-11</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Address"><a href="#Address" class="headerlink" title="Address"></a>Address</h3><p><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/30-interfaces/copy-from/203720822">https://www.hackerrank.com/challenges/30-interfaces/copy-from/203720822</a></p>
-<h3 id="My-Function"><a href="#My-Function" class="headerlink" title="My Function"></a>My Function</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class AdvancedArithmetic(object):</span><br><span class="line">    def divisorSum(n):</span><br><span class="line">        raise NotImplementedError</span><br><span class="line"></span><br><span class="line">class Calculator(AdvancedArithmetic):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.arithmetic_container &#x3D; []</span><br><span class="line">        </span><br><span class="line">    def divisorSum(self, n):</span><br><span class="line">        for i in range(1, n+1):</span><br><span class="line">            if n%i &#x3D;&#x3D; 0:</span><br><span class="line">                self.arithmetic_container.append(i)</span><br><span class="line">        return sum(self.arithmetic_container)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">my_calculator &#x3D; Calculator()</span><br><span class="line">s &#x3D; my_calculator.divisorSum(n)</span><br><span class="line">print(&quot;I implemented: &quot; + type(my_calculator).__bases__[0].__name__)</span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
       
     </div>
 

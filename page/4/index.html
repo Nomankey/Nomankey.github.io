@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,87 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/18/til/210218/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/18/til/210218/" class="post-title-link" itemprop="url">TIL 210218</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-18 20:37:24 / Modified: 20:47:58" itemprop="dateCreated datePublished" datetime="2021-02-18T20:37:24+09:00">2021-02-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-closure"><a href="#What-is-closure" class="headerlink" title="What is closure??"></a>What is closure??</h2><p>프로그래밍 언어에서의 클로저란 퍼스트클래스 함수를 지원하는  언어의 네임 바인딩 기술이다. 클로저는 어떤 함수를 자신이 가지고 있는 환경과 함께 저장한 레코드다. 또한 함수가 가진 프리변수(free variable)를 클로저가 만들어지는 당시의 값과 래퍼런스에 맵핑하여 주는 역할을 한다. 클로저는 일반 함수와는 다르게, 자신의 영역 밖에서 호출된 함수의 변수값과 래퍼런스를 복사하고 저장한 뒤, 이 캡쳐한 값들에 액세스할 수 있게 도와준다.</p>
+<p>프리변수(free variable)는 파이썬에서 코드블럭안에서 사용되었지만 그 코드블럭안에서 정의되지않은 변수를 뜻한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def outer_func(): #1</span><br><span class="line">    message &#x3D; &#39;Hi&#39; #3</span><br><span class="line"></span><br><span class="line">    def inner_func(): #4</span><br><span class="line">        print message #6 </span><br><span class="line"></span><br><span class="line">    return inner_func() #5</span><br><span class="line"></span><br><span class="line">outer_func() #2 ### Hi</span><br></pre></td></tr></table></figure>
+<ol>
+<li> #1에서 정의된 함수 outer_func를 #2에서 호출을 합니다. 물론 outer_func는 어떤 인수도 받지 않습니다.</li>
+<li> outer_func가 실행된 후, 가장 먼저 하는 것은 messge 라는 변수에 ‘Hi’라는 문자열을 할당합니다. #3입니다.</li>
+<li> #4번에서 inner_func를 정의하고 #5번에서 inner_func를 호출하며 동시에 리턴합니다.</li>
+<li> #6에서 message 변수를 참조하여 출력합니다. 여기서 message는 inner_func 안에서 정의되지는 않았지만, inner_func 안에서 사용되기 때문에 프리변수라고 부릅니다.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def outer_func(): #1</span><br><span class="line">    message &#x3D; &#39;Hi&#39; #3</span><br><span class="line"></span><br><span class="line">    def inner_func(): #4</span><br><span class="line">        print message #6 </span><br><span class="line"></span><br><span class="line">    return inner_func #5 &lt;-- ()를 지웠습니다.</span><br><span class="line"></span><br><span class="line">outer_func() #2</span><br></pre></td></tr></table></figure>
+<p>맨 처음 함수와 다르게 ()를 지우면 아무것도 실행되지가 않는다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def outer_func(): #1</span><br><span class="line">    message &#x3D; &#39;Hi&#39; #3</span><br><span class="line"></span><br><span class="line">    def inner_func(): #4</span><br><span class="line">        print message #6</span><br><span class="line"></span><br><span class="line">    return inner_func #5</span><br><span class="line"></span><br><span class="line">my_func &#x3D; outer_func() #2</span><br><span class="line"></span><br><span class="line">my_func() #7 ### Hi</span><br><span class="line">my_func() #8 ### Hi</span><br><span class="line">my_func() #9 ### Hi</span><br></pre></td></tr></table></figure>
+<p>my_func()를 3번 실행하여 “Hi”를 3번 출력하였습니다. 그런데 뭔가 이상합니다. outer_func는 분명히 #2에서 호출된 후, 종료되었습니다. 그런데 #7, #8, #9에서 호출된 my_func(*여기서 my_func는 inner_func와 같다는 점을 기억하시기 바랍니다.) 함수가 outer_func 함수의 로컬변수인 message를 참조했다는 겁니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">def outer_func():  #1</span><br><span class="line">    message &#x3D; &#39;Hi&#39;  #3</span><br><span class="line"></span><br><span class="line">    def inner_func():  #4</span><br><span class="line">        print message  #6</span><br><span class="line"></span><br><span class="line">    return inner_func  #5</span><br><span class="line"></span><br><span class="line">my_func &#x3D; outer_func()  #2</span><br><span class="line"></span><br><span class="line">print my_func  #7 ### &lt;function inner_func at 0x1019dfed8&gt;</span><br><span class="line"></span><br><span class="line">print</span><br><span class="line">print dir(my_func)  #8 ### [&#39;__call__&#39;, &#39;__class__&#39;, &#39;__closure__&#39;, &#39;__code__&#39;, &#39;__defaults__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__doc__&#39;, &#39;__format__&#39;, &#39;__get__&#39;, &#39;__getattribute__&#39;, &#39;__globals__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__module__&#39;, &#39;__name__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;func_closure&#39;, &#39;func_code&#39;, &#39;func_defaults&#39;, &#39;func_dict&#39;, &#39;func_doc&#39;, &#39;func_globals&#39;, &#39;func_name&#39;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print</span><br><span class="line">print type(my_func.__closure__) #9 ### &lt;type &#39;tuple&#39;&gt;</span><br><span class="line"></span><br><span class="line">print</span><br><span class="line">print my_func.__closure__  #10 ### (&lt;cell at 0x1019e14b0: str object at 0x1019ea788&gt;,)</span><br><span class="line"></span><br><span class="line">print</span><br><span class="line">print my_func.__closure__[0]  #11 &lt;cell at 0x1019e14b0: str object at 0x1019ea788&gt;</span><br><span class="line"></span><br><span class="line">print</span><br><span class="line">print dir(my_func.__closure__[0])  #12 ### [&#39;__class__&#39;, &#39;__cmp__&#39;, &#39;__delattr__&#39;, &#39;__doc__&#39;, &#39;__format__&#39;, &#39;__getattribute__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;cell_contents&#39;]</span><br><span class="line"></span><br><span class="line">print</span><br><span class="line">print my_func.__closure__[0].cell_contents  #13 ### Hi</span><br></pre></td></tr></table></figure>
+<p>출력된 결과를 하나씩 확인하겠습니다.<br>#7 결과: my_func 변수에 inner_func 함수 오브젝트가 할당되어 있는 것은 위에서도 확인을 하였습니다.<br>#8 결과: 클로저가 도데체 어디에 데이터를 숨기는지 dir() 명령어를 이용해 my_func의 네임스페이스를 확인해 봤습니다. 아하! <strong>closure</strong> 라는 속성이 숨어 있는 것을 알았습니다.<br>#9 결과: __closure__는 무슨 타입인지 확인해 봤습니다. 타입은 튜플이라고 하네요.<br>#10 결과: 그 튜플안에 뭐가 들어 있는지 확인해 봤습니다. 아이템이 하나 들어있네요.<br>#11 결과: 튜플안에 첫 번째 아이템입니다. “cell”이라는 문자열 오브젝트네요.<br>#12 결과: 이 cell 오브젝트는 어떤 속성들을 가지고 있을까요? 여기에 뭔가 답이 있을 것 같습니다. “cell_contents”라는 속성이 있네요.<br>#13 결과: cell_contents에는 뭐가 들어 있는지 확인 해 보겠습니다. ‘Hi’가 들어 있네요. :)<br>이상으로 클로저가 데이터를 어디에 저장하는지 알아냈다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def outer_func(tag):  #1</span><br><span class="line">    tag &#x3D; tag  #5</span><br><span class="line"></span><br><span class="line">    def inner_func(txt):  #6</span><br><span class="line">        text &#x3D; txt  #8</span><br><span class="line">        print &#39;&lt;&#123;0&#125;&gt;&#123;1&#125;&lt;&#123;0&#125;&gt;&#39;.format(tag, text)  #9</span><br><span class="line"></span><br><span class="line">    return inner_func  #7</span><br><span class="line"></span><br><span class="line">h1_func &#x3D; outer_func(&#39;h1&#39;)  #2</span><br><span class="line">p_func &#x3D; outer_func(&#39;p&#39;)  #3</span><br><span class="line"></span><br><span class="line">h1_func(&#39;h1태그의 안입니다.&#39;)  #4</span><br><span class="line">p_func(&#39;p태그의 안입니다.&#39;)  #10</span><br></pre></td></tr></table></figure>
+<p>클로저는 이와같이 하나의 함수로 여러가지 함수를 간단히 만들어낼 수 있게도 해주며, 기존에 만들어진 함수나 모듈등을 수정하지 않고도 wrapper 함수를 이용해 커스터마이징할 수 있게 해준다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -844,73 +925,6 @@
 </li>
 </ul>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/09/til/210209-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/09/til/210209-1/" class="post-title-link" itemprop="url">TIL 210209-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-09 16:43:20 / Modified: 16:56:24" itemprop="dateCreated datePublished" datetime="2021-02-09T16:43:20+09:00">2021-02-09</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="What-is-Class"><a href="#What-is-Class" class="headerlink" title="What is Class?"></a>What is Class?</h2><p>함수와 변수를 모아놓은 것.<br>변수는 ‘멤버 변수’, 함수는 ‘메소드’이다.<br>클래스는 프로그램의 청사진이라고 보면 되며, 이 청사진을 활용해 실제 사용할 수 있는 인스턴스라는 부품을 만들어 사용하게 된다. 클래스는 빵틀, 인스턴스는 빵이라고 비유할 수 있다.</p>
-<h2 id="Self-and-Instance"><a href="#Self-and-Instance" class="headerlink" title="Self and Instance"></a>Self and Instance</h2><p>클래스 내에서 메소드를 생성할 때 인자(arguments)의 첫 번째 꼭 들어가야하는 것이 있는데, 바로 self다. 이 self는 인스턴스 자신을 가리키는 것으로,인스턴스에 저장되어 있는 멤버 변수에 접근 가능하게 한다. 다만 위의 jm.say_hello()처럼 메소드를 실행할 때 인자 자리에 self가 안들어가는 이유는 메소드의 첫번째 인수로 전달되는 ‘인스턴트 자신’의 값은 Python 시스템에 의해 자동으로 넘어가게 되기 때문이다. 그러므로 메소드를 호출할 때는 두 번째 인수부터 작성한다.</p>
-<h2 id="inheritance"><a href="#inheritance" class="headerlink" title="inheritance"></a>inheritance</h2><p>상속이란 이미 만들어진 클래스를 통째로 이어 받아 새로운 클래스를 만드는 기능이다. 클래스의 가장 큰 장점 중 하나는 재사용이 가능하다라는 것인데, 상속은 이를 더 강화하는 역할을 한다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[예시]</span><br><span class="line">class Person: # &quot;Person&quot; 이라는 클래스 생성</span><br><span class="line">  name &#x3D; &quot;&quot;</span><br><span class="line">  # 변수를 초기화하기 위해 &quot;__init__&quot; 생성자함수 사용</span><br><span class="line">  def __init__(self, name): </span><br><span class="line">    </span><br><span class="line">    self.name &#x3D; name</span><br><span class="line">  </span><br><span class="line">  def say_hello(self): # say_hello라는 메소드 생성</span><br><span class="line">    print(&quot;Hello, &quot; + self.name)</span><br><span class="line"></span><br><span class="line">class AcademyPerson(Person): # Person을 상속받은 AcademyPerson 클래스 생성</span><br><span class="line">  school &#x3D; &quot;&quot; # name은 Person에서 상속받으므로, school 변수만 생성</span><br><span class="line">  </span><br><span class="line">  def __init__(self, name, school):</span><br><span class="line">    self.name &#x3D; name</span><br><span class="line">    self.school &#x3D; school</span><br><span class="line">    </span><br><span class="line">  def say_school(self):</span><br><span class="line">    print(&quot;My school is &quot; + self.school)</span><br><span class="line">    </span><br><span class="line">jm &#x3D; AcademyPerson(&quot;jm&quot;,&quot;wecode&quot;)</span><br><span class="line">jm.say_hello() # Person에 있는 메소드를 그대로 사용 가능</span><br><span class="line">jm.say_school()</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; Hello, jm</span><br><span class="line">&gt;&gt;&gt; My school is wecode</span><br></pre></td></tr></table></figure>
       
     </div>
 
