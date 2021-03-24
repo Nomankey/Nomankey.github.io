@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+<meta name="description" content="Browser Rendering Process구글 V8 JavaScript Engine으로 빌드된 JavaScript Runtime Environment인 Node.Js의 등장으로 웹브라우저에서 벗어나서 servier side development가 가능해진 multi-purpose language가 되었지만 여전히 가장 많이 사용되는 분야는 웹 브라우저">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL 210324">
+<meta property="og:url" content="https://nomankey.github.io/2021/03/24/til/210324/index.html">
+<meta property="og:site_name" content="CK&#39;s Blog">
+<meta property="og:description" content="Browser Rendering Process구글 V8 JavaScript Engine으로 빌드된 JavaScript Runtime Environment인 Node.Js의 등장으로 웹브라우저에서 벗어나서 servier side development가 가능해진 multi-purpose language가 되었지만 여전히 가장 많이 사용되는 분야는 웹 브라우저">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-24T12:33:57.000Z">
+<meta property="article:modified_time" content="2021-03-24T12:43:17.571Z">
+<meta property="article:author" content="Nomankey">
+<meta property="article:tag" content="til">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://nomankey.github.io/2021/03/24/til/210324/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>TIL 210324 | CK's Blog</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">CK's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Same Dev Different Day</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Browser-Rendering-Process"><span class="nav-number">1.</span> <span class="nav-text">Browser Rendering Process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Request-and-Response"><span class="nav-number">2.</span> <span class="nav-text">Request and Response</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-1-1%EA%B3%BC-HTTP-2-0"><span class="nav-number">3.</span> <span class="nav-text">HTTP 1.1과 HTTP 2.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-parsing-and-DOM-production"><span class="nav-number">4.</span> <span class="nav-text">HTML parsing and DOM production</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-%ED%8C%8C%EC%8B%B1%EA%B3%BC-CSSOM-%EC%83%9D%EC%84%B1"><span class="nav-number">5.</span> <span class="nav-text">CSS 파싱과 CSSOM 생성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Render-Tree-%EC%83%9D%EC%84%B1"><span class="nav-number">6.</span> <span class="nav-text">Render Tree 생성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-Parsing-and-Execution"><span class="nav-number">7.</span> <span class="nav-text">JavaScript Parsing and Execution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reflow-and-Repaint"><span class="nav-number">8.</span> <span class="nav-text">Reflow and Repaint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#script-tag%EC%9D%98-async-defer-attribute"><span class="nav-number">9.</span> <span class="nav-text">script tag의 async&#x2F; defer attribute</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nomankey</p>
+  <div class="site-description" itemprop="description">Developer</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/24/til/210324/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          TIL 210324
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-24 21:33:57 / Modified: 21:43:17" itemprop="dateCreated datePublished" datetime="2021-03-24T21:33:57+09:00">2021-03-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="Browser-Rendering-Process"><a href="#Browser-Rendering-Process" class="headerlink" title="Browser Rendering Process"></a>Browser Rendering Process</h3><p>구글 V8 JavaScript Engine으로 빌드된 JavaScript Runtime Environment인 Node.Js의 등장으로 웹브라우저에서 벗어나서 servier side development가 가능해진 multi-purpose language가 되었지만 여전히 가장 많이 사용되는 분야는 웹 브라우저 환경에서 동작하는 웹페이지/애플리케이션 분야이다.</p>
+<ul>
+<li>대부분의 프로그래밍 언어는 브라우저가 아니라 Operating System이나 Virtual Machine위에서 실행된다.</li>
+</ul>
+<p>자바스크립트가 브라우저에서 작동하느다는 것을 알았으니 어떻게 parse하여 browser에 redering하는지 알아본다.</p>
+<ul>
+<li><p>parse는 해석을 의미한다.</p>
+</li>
+<li><p>프로그래밍 언어에 맞게 작성된 텍스트 문서를 읽어 들여 실행하기 위해서 문자열을 토큰으로 분해하고 거기에 문법적 의미와 구조를 반영하여 트리 구조의 자료구조인 parse tree/syntex tree 를 생성하는 과정을 말함</p>
+</li>
+<li><p>Rendering</p>
+</li>
+<li><p>Html, css, javascript를 parsing 하여 브라우저에 시각적으로 출력하는 것.</p>
+</li>
+</ul>
+<h3 id="Request-and-Response"><a href="#Request-and-Response" class="headerlink" title="Request and Response"></a>Request and Response</h3><p>브라우저의 핵심 기능은 필요한 리소스를 server에 request하고 server로부터 response를 받아서 rendering 하는 것이다.<br>서버에 request를 전송하기 위해 브라우저는 주소창을 제공한다. 브라우저 주소창에 URL을 입력하고 엔터 키를 누르면 URL의 호스트 이름이 DNS를 통해 IP주소로 변환되고 이 IP 주소를 갖는 서버에게 요청을 전송한다.</p>
+<h3 id="HTTP-1-1과-HTTP-2-0"><a href="#HTTP-1-1과-HTTP-2-0" class="headerlink" title="HTTP 1.1과 HTTP 2.0"></a>HTTP 1.1과 HTTP 2.0</h3><p>HTTP(HyperText Transfer Protocol )는 웹에서 브라우저와 서버가 통신을 하기 위한 protocol(규약)이다.</p>
+<p>HTTP/1.1은 connection 당 하나의 응답을 한다. 즉 여러개의 요청을 한번에 전송할 수 없다.<br>Resource request가 개별적으로 전송되고 response또한 개별적으로 전송된다. 요청할 resource에 비례하여 응답시간이 길어진다.</p>
+<p>반면에 HTTP/2는 connection 당 여러 개의 요청과 응답, 즉 다중 요청/응답이 가능하다. HTTP 1.1에 비해서 속도가 약 50%정도 빠르다.</p>
+<h3 id="HTML-parsing-and-DOM-production"><a href="#HTML-parsing-and-DOM-production" class="headerlink" title="HTML parsing and DOM production"></a>HTML parsing and DOM production</h3><p>브라우저의 요청에 의해 서버가 응답한 HTML 문서는 문자열로 이루어진 순수한 text이다. Browser Rendering Engine은 응답받은 HTML 문서를 파싱하여 브라우저가 이해할 수 있는 DATA STRUCTURE인 DOM(Document Object Model)을 생성한다.<br>DOM은 문서를 parsing 한 결과물이다.</p>
+<h3 id="CSS-파싱과-CSSOM-생성"><a href="#CSS-파싱과-CSSOM-생성" class="headerlink" title="CSS 파싱과 CSSOM 생성"></a>CSS 파싱과 CSSOM 생성</h3><p>Redering Engine은 HTML을 처음부터 한 줄 씩 순차적으로 파싱하여 DOM을 생성해 나간다. 그러나 CSS Link를 로드하는 link 태그나 style 태그를 만나면 DOM 생성을 일시중지한다.</p>
+<p>그러고 나서 link 태그의 href attribute(속성)에 지정된 CSS 파일을 서버에 요청하여(바이트 -&gt; 문자 -&gt; 토큰 -&gt; 노드 -&gt; CSSOM)과 같이 HTML과 똑같은 과정을 거쳐 해석하여 CSSOM(CSS Object Model)을 생성한다.그리고 CSS 파싱이 완료되면 다시 HTML파싱을 시작한다.</p>
+<h3 id="Render-Tree-생성"><a href="#Render-Tree-생성" class="headerlink" title="Render Tree 생성"></a>Render Tree 생성</h3><p>DOM과 CSSOM을 생성했으면 이들은 랜더링을 위해 Render Tree로 결합된다.<br>Render Tree는 Redering을 하기위한 tree shaped data structure이다. 따라서 브라우저 화면에 rendering 하지 않는 node는 포함하지 않는다.</p>
+<p>이후 완성된 render tree는 각 HTML 요소의 레이아웃을 계산하는 데 사용되며 브라우저 화면에 픽셀을 렌더링하는 페인팅 처리에 입력된다</p>
+<p>렌더링 작업은 반복되서 실행될 수 있다.</p>
+<ul>
+<li>자바스크립트에 의한 노드 추가 또는 삭제</li>
+<li>브라우저 창의 리사이징</li>
+<li>HTML요소의 크기를 조정</li>
+</ul>
+<p>위와 같은 작업은 리렌더링에 비용이 많이 드는 작업이므로 가급적 삼가하도록 한다.</p>
+<h3 id="JavaScript-Parsing-and-Execution"><a href="#JavaScript-Parsing-and-Execution" class="headerlink" title="JavaScript Parsing and Execution"></a>JavaScript Parsing and Execution</h3><p>HTML parsing의 결과물로 생성된 DOM은 HTML 문서의 구조와 정보 뿐만 아니라 요소와 스타일도 변경할 수 있는 DOM API를 제공한다. DOM API를 사용하면 이미 생성된 DOM을 동적으로 조작할 수 있다.</p>
+<p>Rendering engine으로 부터 제어권을 넘겨받은 javascript engine은 javascript code를 파싱하기 시작하는데, 자바스크립트 엔진은 자바스크립트를 해석하여 AST(Abstract Syntax Tree, 추상 문법 트리)를 생성한다.그러고나서 AST를 기반으로 인터프리터가 실행할 수 있는 중간 코드(intermediate code)인 바이트코드를 생성하여 실행한다.</p>
+<p>파싱으로 결과로 생긴 AST는 인터프리터가 실행할 수 있는 중간 코드인 바이트코드로 변환되고 인터프리터에 의해 실행된다.</p>
+<h3 id="Reflow-and-Repaint"><a href="#Reflow-and-Repaint" class="headerlink" title="Reflow and Repaint"></a>Reflow and Repaint</h3><p>자바스크립트 코드에 DOM이나 CSSOM을 변경하는 DOM API가 사용된 경우 DOM이나 CSSOM이 변경된다. DOM과 CSSOM은 다시 Render Tree로 결합되고 Render Tree를 기반으로 레이아웃과 페인트 과정을 통해 브라우저 화면에 다시 렌더링 한다    </p>
+<p>리플로우는 레이아웃 계산을 다시하는것을 의미하므로 노드 추가/삭제, 요소의 크기/위치 변경, 윈도우 리사이징 등 레이아웃에 영향을 주는 변경이 발생한 경우에 한하여 실행된다.</p>
+<h3 id="script-tag의-async-defer-attribute"><a href="#script-tag의-async-defer-attribute" class="headerlink" title="script tag의 async/ defer attribute"></a>script tag의 async/ defer attribute</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src &#x3D; &quot;extern.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script defer src &#x3D; &quot;extern.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>자바스크립트 파싱에 의한 DOM 생성이 중단되는 문제를 근본적으로 해결하기 위한 attribute들이다.</p>
+<p>async와 defer attribute는 다음과 같이 src 어트리뷰트를 통해 외부 자바스크립트 파일을 로드하는 경우에만 사용할 수 있다.</p>
+<p>async attribute<br>HTML parsing 과 외부 자바스크립트 파일의 로드가 비동기적으로 동시에 진행된다. 단, 자바스크립트의 파싱과 실행은 자바스크립트 파일의 로드가 완료된 직후 진행되며 이때 HTML parsing이 중단된다.</p>
+<p>defer attribute<br>async와 마찬가지로 비동기적으로 동시에 진행된다. 하지만 DOM이 생성된 직후에 진행된다. 따라서 DOM이 완료된 이후에 실행되어야 할 자바스크립트에 유용하다.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/til/" rel="tag"># til</a>
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/23/til/210323/" rel="prev" title="TIL 210323">
+                  <i class="fa fa-chevron-left"></i> TIL 210323
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nomankey</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

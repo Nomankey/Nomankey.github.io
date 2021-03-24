@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">80</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,71 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/05/til/210205-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/05/til/210205-1/" class="post-title-link" itemprop="url">TIL 210205-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-05 18:48:12 / Modified: 18:49:04" itemprop="dateCreated datePublished" datetime="2021-02-05T18:48:12+09:00">2021-02-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Regex-Review"><a href="#Regex-Review" class="headerlink" title="Regex Review"></a>Regex Review</h3><h4 id="validating-phone-numbers"><a href="#validating-phone-numbers" class="headerlink" title="validating phone numbers"></a>validating phone numbers</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">phonenum_pattern &#x3D; re.compile(r&#39;[7-9][0-9]&#123;9&#125;&#39;)</span><br><span class="line"></span><br><span class="line">for _ in range(n):</span><br><span class="line">    phonenum_string &#x3D; input()</span><br><span class="line">    </span><br><span class="line">    result &#x3D; phonenum_pattern.match(phonenum_string)</span><br><span class="line">    if result:</span><br><span class="line">        print(&#39;No&#39;)</span><br><span class="line">    else:</span><br><span class="line">        print(&#39;Yes&#39;)</span><br></pre></td></tr></table></figure>
+<h4 id="validating-and-parsing-email-address"><a href="#validating-and-parsing-email-address" class="headerlink" title="validating and parsing email address"></a>validating and parsing email address</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import email.utils, re</span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line">for _ in range(n):</span><br><span class="line">    u_name, u_email &#x3D; email.utils.parseaddr(input())</span><br><span class="line">    u_email_filter &#x3D; re.fullmatch(r&#39;[a-z]+(\w|\-|\.)+@[a-z]+.[a-z](1-3)&#39;,u_email, flags&#x3D;re.I)</span><br><span class="line"></span><br><span class="line">if u_email_filter !&#x3D; None:</span><br><span class="line">    print(email.utils.formataddr((u_name, u_email_filter.group())))</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -945,86 +1010,8 @@ little_first에 대한 값 지정 없이 test_func([1,2,3]), 즉 하나의 인�
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/01/til/210201/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/01/til/210201/" class="post-title-link" itemprop="url">TIL 210201</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-01 22:38:28 / Modified: 22:46:22" itemprop="dateCreated datePublished" datetime="2021-02-01T22:38:28+09:00">2021-02-01</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="TIL-210121"><a href="#TIL-210121" class="headerlink" title="TIL 210121"></a>TIL 210121</h1><p>My ACTUAL First code review!</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">founds &#x3D; None</span><br><span class="line">MAP_SOURCE &#x3D; [</span><br><span class="line">    [1, 0, 0, 0, 0, 1, 1],</span><br><span class="line">    [1, 1, 0, 1, 1, 1, 1],</span><br><span class="line">    [1, 1, 0, 1, 1, 0, 1],</span><br><span class="line">    [1, 1, 0, 0, 1, 0, 1],</span><br><span class="line">    [1, 0, 0, 1, 1, 1, 1],</span><br><span class="line">    [1, 1, 0, 1, 1, 1, 0],</span><br><span class="line">    [0, 1, 0, 0, 0, 0, 1],</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
-<p>From the list above<br>the output is expected to be</p>
-<ul>
-<li> MAP_SOURCE: [[1,0,0,0], [0,1,1,1], [1,0,0,0], [0, 0, 0, 0]]</li>
-<li>expect to print out: {“1” : 1, “2” : 3, “3” : 1, “4”: None} </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MAP_SOURCE &#x3D; [MAP_SOURCE[0][0:4], MAP_SOURCE[1][2:6],MAP_SOURCE[6][1:5], MAP_SOURCE[6][2:6]]</span><br><span class="line">founds &#x3D; &#39;-MAP_SOURCE: &#123;&#125; \n -expected to print out: &#123;&#125;&#39;.format(MAP_SOURCE,dict([(&quot;1&quot; ,MAP_SOURCE[0].count(1)), (&quot;2&quot; ,MAP_SOURCE[1].count(1)),(&quot;3&quot; ,MAP_SOURCE[2].count(1)),(&quot;4&quot; ,print(MAP_SOURCE[3].count(1)))]))</span><br></pre></td></tr></table></figure>
-<p>and </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">founds &#x3D; dict([(&quot;1&quot; ,MAP_SOURCE[0].count(1)), (&quot;2&quot; ,MAP_SOURCE[1].count(1)),(&quot;3&quot; ,MAP_SOURCE[2].count(1)),(&quot;4&quot; ,print(MAP_SOURCE[3].clear())])</span><br></pre></td></tr></table></figure>
-<p>are my code</p>
-<h2 id="points-to-improve"><a href="#points-to-improve" class="headerlink" title="points to improve"></a>points to improve</h2><ul>
-<li>write code more reader friendly</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
