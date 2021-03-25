@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-count">82</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,77 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/03/til/210303/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/03/til/210303/" class="post-title-link" itemprop="url">TIL 210303</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-03 21:36:36 / Modified: 21:47:23" itemprop="dateCreated datePublished" datetime="2021-03-03T21:36:36+09:00">2021-03-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="What-is-Bound-Method"><a href="#What-is-Bound-Method" class="headerlink" title="What is Bound Method?"></a>What is Bound Method?</h3><p>Python에서 method는 object에 붙어있다 면을 제외하고는 function과 같다.<br>method는 object에 불러지며 그 object에 변화를 준다.<br>이 method들은 bound, unbound 또는 static method가 될 수 있다.<br>static method는 unbound method의 한 종류이다.</p>
+<h3 id="Bound-Methods"><a href="#Bound-Methods" class="headerlink" title="Bound Methods"></a>Bound Methods</h3><p>만약에 function이 class의 속성이고 instance에 엑세스된다. 그것들은 bound method라고 불린다.<br>Bound method는 ‘self’를 첫번째 argument로 가지고 있다.<br>이들은 class의 instance에 의존적이므로 instance method라고도 불린다.</p>
+<h4 id="Example-Code"><a href="#Example-Code" class="headerlink" title="Example Code"></a>Example Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Word_Parser:</span><br><span class="line">    &quot;&quot;&quot;docstring for Word_Parser&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, sentences):</span><br><span class="line">        self.sentences &#x3D; sentences</span><br><span class="line"> def parser(self):</span><br><span class="line">        self.word_list &#x3D; self.sentences.split()</span><br><span class="line">def sort_word_list(self):</span><br><span class="line">        self.sorted_word_list &#x3D; self.word_list.sort()</span><br><span class="line">def num_words(self):</span><br><span class="line">        self.num_words &#x3D; len(self.word_list)</span><br><span class="line">test &#x3D; Word_Parser(&quot;mary had a little lamb&quot;)</span><br><span class="line">test.parser()</span><br><span class="line">test.sort_word_list()</span><br><span class="line">test.num_words()</span><br><span class="line">print test.word_list</span><br><span class="line">print test.sort_word_list</span><br><span class="line">print test.num_words</span><br></pre></td></tr></table></figure>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[&#39;a&#39;, &#39;had&#39;, &#39;lamb&#39;, &#39;little&#39;, &#39;mary&#39;]</span><br><span class="line">&lt;bound method Word_Parser.sort_word_list of &lt;__main__.Word_Parser object at 0x103fdf520&gt;&gt;</span><br><span class="line">5</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="해설"><a href="#해설" class="headerlink" title="해설"></a>해설</h4><p>print(test_sort.word_list)에서 bound method error가 떴다.<br> sort_word_list는 sorted_word_list라는 variable을 놓는다. 그러고나서 print(test.sort_world_list)를 한다. 이건 function이다. variable 이다.<br>fucntion을 프린트하기에<br>&lt;bound method Word_Parser.sort_word_list of &lt;__main__.Word_Parser object at 0x103fdf520&gt;&gt;이 나온것이다.</p>
+<h3 id="Revised-code"><a href="#Revised-code" class="headerlink" title="Revised code"></a>Revised code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Word_Parser:</span><br><span class="line">    &quot;&quot;&quot;docstring for Word_Parser&quot;&quot;&quot;</span><br><span class="line">    def __init__(self, sentences):</span><br><span class="line">        self.sentences &#x3D; sentences</span><br><span class="line"></span><br><span class="line">    def parser(self):</span><br><span class="line">        self.word_list &#x3D; self.sentences.split()</span><br><span class="line">        word_list &#x3D; []</span><br><span class="line">        word_list &#x3D; self.word_list</span><br><span class="line">        return word_list</span><br><span class="line"></span><br><span class="line">    def sort_word_list(self):</span><br><span class="line">        self.sorted_word_list &#x3D; sorted(self.sentences.split())</span><br><span class="line">        sorted_word_list &#x3D; self.sorted_word_list</span><br><span class="line">        return sorted_word_list</span><br><span class="line"></span><br><span class="line">    def get_num_words(self):</span><br><span class="line">        self.num_words &#x3D; len(self.word_list)</span><br><span class="line">        num_words &#x3D; self.num_words</span><br><span class="line">        return num_words</span><br><span class="line"></span><br><span class="line">test &#x3D; Word_Parser(&quot;mary had a little lamb&quot;)</span><br><span class="line">test.parser()</span><br><span class="line">test.sort_word_list()</span><br><span class="line">test.get_num_words()</span><br><span class="line">print(test.word_list)</span><br><span class="line">print(test.sorted_word_list)</span><br><span class="line">print(test.num_words)</span><br></pre></td></tr></table></figure>
+<h4 id="Revised-Output"><a href="#Revised-Output" class="headerlink" title="Revised Output"></a>Revised Output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[&#39;mary&#39;, &#39;had&#39;, &#39;a&#39;, &#39;little&#39;, &#39;lamb&#39;]</span><br><span class="line">[&#39;a&#39;, &#39;had&#39;, &#39;lamb&#39;, &#39;little&#39;, &#39;mary&#39;]</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -904,84 +975,6 @@ return wrapper</code></pre>
 <p>out put</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X</span><br><span class="line">MMMM</span><br></pre></td></tr></table></figure>
 <h2 id="What-I-have-learned"><a href="#What-I-have-learned" class="headerlink" title="What I have learned"></a>What I have learned</h2><p>Defining a for loop without a variable</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/20/til/210220/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/20/til/210220/" class="post-title-link" itemprop="url">TIL 210220</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-20 21:48:47 / Modified: 22:11:20" itemprop="dateCreated datePublished" datetime="2021-02-20T21:48:47+09:00">2021-02-20</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Elevator-Problem"><a href="#Elevator-Problem" class="headerlink" title="Elevator Problem"></a>Elevator Problem</h2><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul>
-<li>엘리베이터 객체는 추상클래스의 상속으로 생성되어야 한다.</li>
-<li>각 객체는 운행 층수를 기록하는 total_move라는 인스턴스 변수를 가진다.</li>
-<li>엘리베이터는 2호기로 운영되며, Elevator_1, Elevator_2의 이름을 가진다.</li>
-<li>엘리베이터의 이동은 실시간이 아닌 턴 기반으로 이루어진다.</li>
-<li>운행 중 동일한 방향으로 이동하는 승객을 태울 수 있다.</li>
-<li>다음 번째의 승객이 같은 층에 있고, 같은 방향으로 진행할 경우 동승할 수 있다.</li>
-<li>각 엘리베이터의 운행 층수를 total_move에 누적해야 한다.</li>
-<li>엘리베이터는 1층 부터 16층 까지 운행한다.</li>
-</ul>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>defining passengers</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def create_passengers(lowest, highest, num):</span><br><span class="line">    def set_passenger(a, b):</span><br><span class="line">        passenger &#x3D; (random.randint(a, b), random.randint(a, b))</span><br><span class="line">        if passenger[0]!&#x3D;passenger[1]:</span><br><span class="line">            return passenger</span><br><span class="line">        else:</span><br><span class="line">            return set_passenger(a,b)</span><br><span class="line">    return [set_passenger(lowest, highest) for _ in range(num)]</span><br><span class="line"></span><br><span class="line">if __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    print(create_passengers(1,16,50))</span><br></pre></td></tr></table></figure>
-<h3 id="How-I-Treid-To-Solve-and-failed…"><a href="#How-I-Treid-To-Solve-and-failed…" class="headerlink" title="How I Treid To Solve and failed…"></a>How I Treid To Solve and failed…</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Elevator:</span><br><span class="line"></span><br><span class="line">    def info(self, direction, c_f, d_f):</span><br><span class="line">        if c_f &gt; d_f:</span><br><span class="line">            self.direction &#x3D; &#39;down&#39;</span><br><span class="line">        else:</span><br><span class="line">            self.direction &#x3D; &#39;up&#39;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def elevator_1():</span><br><span class="line">        a,b &#x3D; passengers[0]</span><br><span class="line">        if </span><br></pre></td></tr></table></figure>
-<p>Could not write a code after this, i better work on my pseudo code again</p>
 
       
     </div>
