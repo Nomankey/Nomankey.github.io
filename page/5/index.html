@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">83</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,80 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/11/til/210211-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/11/til/210211-1/" class="post-title-link" itemprop="url">TIL 210211-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-11 22:37:12 / Modified: 22:42:30" itemprop="dateCreated datePublished" datetime="2021-02-11T22:37:12+09:00">2021-02-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Class-and-Object"><a href="#Class-and-Object" class="headerlink" title="Class and Object"></a>Class and Object</h2><ul>
+<li><p>여기에서 설명할 클래스는 과자 틀과 비슷하다. 클래스(class)란 똑같은 무엇인가를 계속해서 만들어 낼 수 있는 설계 도면이고(과자 틀), 객체(object)란 클래스로 만든 피조물(과자 틀을 사용해 만든 과자)을 뜻한다.</p>
+</li>
+<li><p>클래스로 만든 객체에는 중요한 특징이 있다. 바로 객체마다 고유한 성격을 가진다는 것이다. 과자 틀로 만든 과자에 구멍을 뚫거나 조금 베어 먹더라도 다른 과자에는 아무 영향이 없는 것과 마찬가지로 동일한 클래스로 만든 객체들은 서로 전혀 영향을 주지 않는다.</p>
+</li>
+</ul>
+<h2 id="The-difference-between-class-and-instance"><a href="#The-difference-between-class-and-instance" class="headerlink" title="The difference between class and instance"></a>The difference between class and instance</h2><p>클래스로 만든 객체를 인스턴스라고도 한다. 그렇다면 객체와 인스턴스의 차이는 무엇일까? 이렇게 생각해 보자. a = Cookie() 이렇게 만든 a는 객체이다. 그리고 a 객체는 Cookie의 인스턴스이다. 즉 인스턴스라는 말은 특정 객체(a)가 어떤 클래스(Cookie)의 객체인지를 관계 위주로 설명할 때 사용한다. “a는 인스턴스”보다는 “a는 객체”라는 표현이 어울리며 “a는 Cookie의 객체”보다는 “a는 Cookie의 인스턴스”라는 표현이 훨씬 잘 어울린다.</p>
+<h2 id="How-to-scatch-a-class-before-building-it"><a href="#How-to-scatch-a-class-before-building-it" class="headerlink" title="How to scatch a class before building it"></a>How to scatch a class before building it</h2><ul>
+<li>클래스는 무작정 만드는 것보다 클래스로 만든 객체를 중심으로 어떤 식으로 동작하게 할것인지 미리 구상을 한 후에 생각한 것들을 하나씩 해결하면서 완성해 나가는 것이 좋다.</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -823,86 +897,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def even_selector(x):</span><br><span class="line">    if x % 2 &#x3D;&#x3D; 0:</span><br><span class="line">        return True</span><br><span class="line">    else:</span><br><span class="line">        return False</span><br><span class="line"></span><br><span class="line">filter(even_selector, range(1,10+1))</span><br></pre></td></tr></table></figure>
 <h3 id="filter-used-with-filter"><a href="#filter-used-with-filter" class="headerlink" title="filter used with filter"></a>filter used with filter</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter(lambda x: x%2&#x3D;&#x3D;0, range(1,10+1))</span><br></pre></td></tr></table></figure>
 
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/06/til/210206/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/06/til/210206/" class="post-title-link" itemprop="url">TIL 210206</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-06 21:16:42 / Modified: 21:56:10" itemprop="dateCreated datePublished" datetime="2021-02-06T21:16:42+09:00">2021-02-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><ul>
-<li>같은 종류의 집단에 속하는 속성과 행의의 정의</li>
-<li>CamelCase로 적는다</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class SeeAttributes:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    You can see docstring.</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    integer &#x3D; 1024 # attribute</span><br><span class="line"></span><br><span class="line">    def function(self): # attribute</span><br><span class="line">        return &#39;fast&#39;</span><br></pre></td></tr></table></figure>
-<p>example of usuage of class in OOP</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Hero: # class</span><br><span class="line">    health &#x3D; 100 # class variable</span><br><span class="line">    </span><br><span class="line">    def __init__(self, name, weapon):</span><br><span class="line">        self.name &#x3D; name # instance variable</span><br><span class="line">        self.weapon &#x3D; weapon</span><br><span class="line"></span><br><span class="line">    def attack(self): # instance method</span><br><span class="line">        print(&quot;attack with &#123;&#125;&quot;.format(self.weapon))</span><br><span class="line"></span><br><span class="line">IronMan &#x3D; Hero(&#39;Iron Man&#39;, &#39;Impulse Gun&#39;) # instance</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>init</strong>: initializer(instance 생성시 자동으로 호출되어 self로 instance object를 받음)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    def __init__(self, initialAge):</span><br><span class="line">        # Add some more code to run some checks on initialAge</span><br><span class="line">        self.age &#x3D; 0</span><br><span class="line">        if initialAge &lt; 0:</span><br><span class="line">            print(&quot;Age is not valid, setting age to 0.&quot;)</span><br><span class="line">        else:</span><br><span class="line">            self.age &#x3D; initialAge</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def amIOld(self):</span><br><span class="line">        # Do some computations in here and print out the correct statement to the console</span><br><span class="line">        if age &lt; 13:</span><br><span class="line">            print(&quot;You are young.&quot;)</span><br><span class="line">        elif 13 &lt;&#x3D; age &lt; 18:</span><br><span class="line">            print(&quot;You are a teenager.&quot;)</span><br><span class="line">        elif age &gt;&#x3D; 18:</span><br><span class="line">            print(&quot;You are old.&quot;)</span><br><span class="line"></span><br><span class="line">    def yearPasses(self):    </span><br><span class="line">        # Increment the age of the person in here</span><br><span class="line">        global age</span><br><span class="line">        age +&#x3D; 1</span><br></pre></td></tr></table></figure>
-<p>input = [4, -1, 10, 16, 18]</p>
-<p>output<br>“””<br>Age is not valid, setting age to 0.<br>You are young.<br>You are young.</p>
-<p>You are young.<br>You are a teenager.</p>
-<p>You are a teenager.<br>You are old.</p>
-<p>You are old.<br>You are old.<br>“””</p>
 
       
     </div>

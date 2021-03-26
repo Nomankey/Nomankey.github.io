@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">83</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,90 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/04/til/210304/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/04/til/210304/" class="post-title-link" itemprop="url">TIL 210304</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-04 21:43:37 / Modified: 21:58:51" itemprop="dateCreated datePublished" datetime="2021-03-04T21:43:37+09:00">2021-03-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="What-is-Linked-List"><a href="#What-is-Linked-List" class="headerlink" title="What is Linked List?"></a>What is Linked List?</h3><p>Linked List는 Node들이 한줄로 연결되어 있는 방식의 자료구조이다.</p>
+<p>Data Structure의 대상은 Memory이다.<br>따라서 Memory를 효율적으로 사용하는것이<br>Data Structure의 목적이다.</p>
+<p>STORAGE –데이터–&gt; MEMORY –데이터–&gt; CPU</p>
+<p>MEMORY의 특징은 각각 address에 접근하는데 걸리는 시간이 같다.<br>이를 RAM(Random Access Memory)라고 부른다.</p>
+<p>*address란 data가 저장되는 주소.</p>
+<h3 id="Linked-List의-구조"><a href="#Linked-List의-구조" class="headerlink" title="Linked List의 구조"></a>Linked List의 구조</h3><p>*Node/vertex: Element들의 모임<br>Node는 Data field와 Link field로 이루어져있다.</p>
+<h3 id="How-Linked-List-works"><a href="#How-Linked-List-works" class="headerlink" title="How Linked List works"></a>How Linked List works</h3><p>15-&gt;6-&gt;23-&gt;-&gt;4-&gt;7-&gt;71</p>
+<ol>
+<li>새 node 생성 </li>
+<li>새 node의 다음 node로 head르 가리킨다</li>
+<li>새 node가 head가 되도록 head의 값을 변경한다.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vertex temp &#x3D; new vertex(input)</span><br><span class="line">temp.next &#x3D; head</span><br><span class="line">head &#x3D; temp</span><br></pre></td></tr></table></figure>
+
+<p>85-&gt;15-&gt;6-&gt;23-&gt;-&gt;4-&gt;7-&gt;71</p>
+<h3 id="중간삽입"><a href="#중간삽입" class="headerlink" title="중간삽입"></a>중간삽입</h3><p>15-&gt;6-&gt;23-&gt;4-&gt;7-&gt;71</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vertex temp1 &#x3D; head</span><br><span class="line">while(--k!&#x3D;0)</span><br><span class="line">	temp1&#x3D;temp1.next</span><br><span class="line">vertex temp2&#x3D;temp1.next</span><br><span class="line">vertex newvertex &#x3D; new vertex(input)</span><br><span class="line">temp1.next&#x3D;newvertex</span><br><span class="line"></span><br><span class="line">newvertex.next &#x3D; temp1</span><br></pre></td></tr></table></figure>
+<p>15-&gt;6-&gt;90-&gt;23-&gt;4-&gt;7-&gt;71</p>
+<h3 id="Remove"><a href="#Remove" class="headerlink" title="Remove"></a>Remove</h3><p>15-&gt;6-&gt;90-&gt;23-&gt;4-&gt;7-&gt;71<br>vertex cur = head<br>while(–k!=0)<br>    cur=cur.next<br>vertex tobedelete = cur.next<br>cur.next = cur.next.next<br>Delete tobedeleted</p>
+<p>15-&gt;6-&gt;23-&gt;4-&gt;7-&gt;71 </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -906,75 +990,6 @@ return wrapper</code></pre>
 <pre><code>#1과 #2에 데코레이터 2개를 한꺼번에 사용했다.
 
 </code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/21/til/210221/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/21/til/210221/" class="post-title-link" itemprop="url">til-210221</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-21 22:17:08 / Modified: 22:27:20" itemprop="dateCreated datePublished" datetime="2021-02-21T22:17:08+09:00">2021-02-21</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Convert-an-integer-it-to-a-roman-nameral"><a href="#Convert-an-integer-it-to-a-roman-nameral" class="headerlink" title="Convert an integer it to a roman nameral"></a>Convert an integer it to a roman nameral</h2><p>Roman Characters</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">class py_solution:</span><br><span class="line">    def int_to_Roman(self, num):</span><br><span class="line">        val &#x3D; [</span><br><span class="line">            1000, 900, 500, 400,</span><br><span class="line">            100, 90, 50, 40,</span><br><span class="line">            10, 9, 5, 4,</span><br><span class="line">            1</span><br><span class="line">            ]</span><br><span class="line">        syb &#x3D; [</span><br><span class="line">            &quot;M&quot;, &quot;CM&quot;, &quot;D&quot;, &quot;CD&quot;,</span><br><span class="line">            &quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;,</span><br><span class="line">            &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;,</span><br><span class="line">            &quot;I&quot;</span><br><span class="line">            ]</span><br><span class="line">        roman_num &#x3D; &#39;&#39;</span><br><span class="line">        i &#x3D; 0</span><br><span class="line">        while  num &gt; 0:</span><br><span class="line">            for _ in range(num &#x2F;&#x2F; val[i]):</span><br><span class="line">                roman_num +&#x3D; syb[i]</span><br><span class="line">                num -&#x3D; val[i]</span><br><span class="line">            i +&#x3D; 1</span><br><span class="line">        return roman_num</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(py_solution().int_to_Roman(10))</span><br><span class="line">print(py_solution().int_to_Roman(4000)) </span><br></pre></td></tr></table></figure>
-<p>out put</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X</span><br><span class="line">MMMM</span><br></pre></td></tr></table></figure>
-<h2 id="What-I-have-learned"><a href="#What-I-have-learned" class="headerlink" title="What I have learned"></a>What I have learned</h2><p>Defining a for loop without a variable</p>
 
       
     </div>
