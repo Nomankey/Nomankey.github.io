@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">85</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,156 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/13/til/210213/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/13/til/210213/" class="post-title-link" itemprop="url">TIL 210213</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-13 21:54:14 / Modified: 22:00:35" itemprop="dateCreated datePublished" datetime="2021-02-13T21:54:14+09:00">2021-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Has a parameterized constructor taking these  parameters</p>
+<ul>
+<li>string title</li>
+<li>string author</li>
+<li>int price</li>
+</ul>
+<p>Implement the Book class’ abstract display method() so it prints these 3 lines</p>
+<ul>
+<li>Title:</li>
+<li>Author:</li>
+<li>Price:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">from abc import ABCMeta, abstractmethod</span><br><span class="line">class Book(object, metaclass&#x3D;ABCMeta):</span><br><span class="line">    def __init__(self,title,author):</span><br><span class="line">        self.title&#x3D;title</span><br><span class="line">        self.author&#x3D;author   </span><br><span class="line">    @abstractmethod</span><br><span class="line">    def display(): pass</span><br><span class="line"></span><br><span class="line">#Write MyBook class</span><br><span class="line">class MyBook(Book):</span><br><span class="line">    price &#x3D; 0</span><br><span class="line">    def __init__(self, title, author, price):</span><br><span class="line">        super(Book, self).__init__()</span><br><span class="line">        self.price &#x3D; price </span><br><span class="line"></span><br><span class="line">    def display(self):</span><br><span class="line">        print(&quot;Title: &quot;+ title)</span><br><span class="line">        print(&quot;Author: &quot;+ author)</span><br><span class="line">        print(&quot;Price: &quot;+ str(price))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">title&#x3D;input()</span><br><span class="line">author&#x3D;input()</span><br><span class="line">price&#x3D;int(input())</span><br><span class="line">new_novel&#x3D;MyBook(title,author,price)</span><br><span class="line">new_novel.display()</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/12/til/210212/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/12/til/210212/" class="post-title-link" itemprop="url">TIL 210212</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-12 23:40:37 / Modified: 23:45:10" itemprop="dateCreated datePublished" datetime="2021-02-12T23:40:37+09:00">2021-02-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h2><ul>
+<li>Allows you to build new classes from existing classes</li>
+<li>Resues code</li>
+<li>Defines the relationship between the superclass &amp; the subclass</li>
+</ul>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>You are given two classes, Person and Student, where Person is the base class and Student is the derived class. Completed code for Person and a declaration for Student are provided for you in the editor. Observe that Student inherits all the properties of Person.</p>
+<ul>
+<li>A Student class constructor, which has  parameters</li>
+<li>A char calculate() method that calculates a Student object’s average and returns the grade character representative of their calculated average</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">	def __init__(self, firstName, lastName, idNumber):</span><br><span class="line">		self.firstName &#x3D; firstName</span><br><span class="line">		self.lastName &#x3D; lastName</span><br><span class="line">		self.idNumber &#x3D; idNumber</span><br><span class="line">	def printPerson(self):</span><br><span class="line">		print(&quot;Name:&quot;, self.lastName + &quot;,&quot;, self.firstName)</span><br><span class="line">		print(&quot;ID:&quot;, self.idNumber)</span><br><span class="line"></span><br><span class="line">class Student(Person):</span><br><span class="line">    </span><br><span class="line">    def __init__(self, firstName, lastName, idNumber, scores):</span><br><span class="line">        self.firstName &#x3D; firstName</span><br><span class="line">        self.lastName &#x3D; lastName</span><br><span class="line">        self.idNumber &#x3D; idNumber</span><br><span class="line">        self.scores &#x3D; scores</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">    def calculate(self):</span><br><span class="line">        a &#x3D; sum(self.scores)&#x2F;len(self.scores)</span><br><span class="line">        </span><br><span class="line">        if a &gt;&#x3D; 90:</span><br><span class="line">            return &#39;O&#39;</span><br><span class="line">        elif 90 &gt; a &gt;&#x3D; 80:</span><br><span class="line">            return &#39;E&#39;</span><br><span class="line">        elif 80 &gt; a &gt;&#x3D; 70:</span><br><span class="line">            return &#39;A&#39;</span><br><span class="line">        elif 70 &gt; a &gt;&#x3D; 55:</span><br><span class="line">            return &#39;P&#39;</span><br><span class="line">        elif 55 &gt; a &gt;&#x3D; 40:</span><br><span class="line">            return &#39;D&#39;</span><br><span class="line">        else:</span><br><span class="line">            return &#39;T&#39;</span><br><span class="line"></span><br><span class="line">line &#x3D; input().split()</span><br><span class="line">firstName &#x3D; line[0]</span><br><span class="line">lastName &#x3D; line[1]</span><br><span class="line">idNum &#x3D; line[2]</span><br><span class="line">numScores &#x3D; int(input()) # not needed for Python</span><br><span class="line">scores &#x3D; list( map(int, input().split()) )</span><br><span class="line">s &#x3D; Student(firstName, lastName, idNum, scores)</span><br><span class="line">s.printPerson()</span><br><span class="line">print(&quot;Grade:&quot;, s.calculate())</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -743,160 +893,6 @@
 <p>The first line contains an integer,  (the number of test cases), and the  subsequent lines each contain an integer denoting the  of a Person instance.</p>
 <h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>Complete the method definitions provided in the editor so they meet the specifications outlined above; the code to test your work is already in the editor. If your methods are implemented correctly, each test case will print  or  lines (depending on whether or not a valid  was passed to the constructor).</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    </span><br><span class="line">    def __init__(self,initialAge):</span><br><span class="line">        # Add some more code to run some checks on initialAge</span><br><span class="line">        self.age &#x3D; 0</span><br><span class="line">        self.initialAge &#x3D; initialAge</span><br><span class="line">        if initialAge &lt; 0:</span><br><span class="line">            print (&#39;Age is not valid, setting age to 0.&#39;)</span><br><span class="line">        else: </span><br><span class="line">            initialAge &#x3D; self.age</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def amIOld(self):</span><br><span class="line">        # Do some computations in here and print out the correct statement to the console</span><br><span class="line">        if self.initialAge &lt; 13:</span><br><span class="line">            print (&#39;You are young.&#39;)</span><br><span class="line">        elif 13 &lt;&#x3D; self.initialAge &lt; 18:</span><br><span class="line">            print (&#39;You are a teenager.&#39;)</span><br><span class="line">        else:</span><br><span class="line">            print (&#39;You are old.&#39;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def yearPasses(self):</span><br><span class="line">        # Increment the age of the person in here      </span><br><span class="line">        self.initialAge +&#x3D; 1</span><br><span class="line"></span><br><span class="line">t &#x3D; int(input())</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/07/til/210207/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/07/til/210207/" class="post-title-link" itemprop="url">TIL 210207</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-07 22:59:05 / Modified: 23:24:32" itemprop="dateCreated datePublished" datetime="2021-02-07T22:59:05+09:00">2021-02-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Why-class-is-needed"><a href="#Why-class-is-needed" class="headerlink" title="Why class is needed?"></a>Why class is needed?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Calculator:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.result &#x3D; 0</span><br><span class="line"></span><br><span class="line">    def add(self, num):</span><br><span class="line">        self.result +&#x3D; num</span><br><span class="line">        return self.result</span><br><span class="line"></span><br><span class="line">cal1 &#x3D; Calculator()</span><br><span class="line">cal2 &#x3D; Calculator()</span><br><span class="line"></span><br><span class="line">print(cal1.add(3))</span><br><span class="line">print(cal1.add(4))</span><br><span class="line">print(cal2.add(3))</span><br><span class="line">print(cal2.add(7))</span><br></pre></td></tr></table></figure>
-<ul>
-<li>클래스를 사용하면 계산기 대수가 늘어나더라도 객체를 생성만 하면 되기 때문에 함수를 사용하는 경우와 달리 매우 간단해진다. 만약 빼기 기능을 더하려면 Calculator 클래스에 다음과 같은 빼기 기능 함수를 추가해 주면 된다.</li>
-</ul>
-<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Book:</span><br><span class="line"></span><br><span class="line">    def setData(self, title, price, author):</span><br><span class="line">        self.title &#x3D; title</span><br><span class="line">        self.price &#x3D; price</span><br><span class="line">        self.author &#x3D; author</span><br><span class="line"></span><br><span class="line">    def printData(self):</span><br><span class="line">        print &#39;제목 : &#39;, self.title</span><br><span class="line">        print &#39;가격 : &#39;, self.price</span><br><span class="line">        print &#39;저자 : &#39;, self.author</span><br><span class="line"></span><br><span class="line">    def __init__(self):</span><br><span class="line">        print &#39;new book has arrived&#39;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>init</strong> 매서드는 초기화 메서드라고 부른다. 어떤 클래스의 객체가 만들어질 때 자동으로 호출되어서 그 객체가 갖게 될 여러 가지 성질을 정해주는 일을 한다.</li>
-</ul>
-<h2 id="del"><a href="#del" class="headerlink" title="del"></a><em>del</em></h2><ul>
-<li> 파이썬에서는 <strong>del</strong> 메서드가 소멸자의 역할을 맡고 있다.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Employee: </span><br><span class="line">  </span><br><span class="line">    # Initializing  </span><br><span class="line">    def __init__(self): </span><br><span class="line">        print(&#39;Employee created&#39;) </span><br><span class="line">  </span><br><span class="line">    # Calling destructor </span><br><span class="line">    def __del__(self): </span><br><span class="line">        print(&quot;Destructor called&quot;) </span><br><span class="line">  </span><br><span class="line">def Create_obj(): </span><br><span class="line">    print(&#39;Making Object...&#39;) </span><br><span class="line">    obj &#x3D; Employee() </span><br><span class="line">    print(&#39;function end...&#39;) </span><br><span class="line">    return obj </span><br><span class="line">  </span><br><span class="line">print(&#39;Calling Create_obj() function...&#39;) </span><br><span class="line">obj &#x3D; Create_obj() </span><br><span class="line">print(&#39;Program End...&#39;) </span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/06/til/210206-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/06/til/210206-1/" class="post-title-link" itemprop="url">TIL 210206-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-06 21:40:18 / Modified: 21:52:50" itemprop="dateCreated datePublished" datetime="2021-02-06T21:40:18+09:00">2021-02-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><ul>
-<li>map(function, iter)</li>
-<li>list의 각 element에 대해 특정한 함수를 적용</li>
-<li>map은 제너레이터를 생성해 함수와 인자를 바인딩만 하고, 필요할 때 순회하며 값을 처리</li>
-<li>for는 한번에 처리하므로 for 수행 중 다른 일을 할 수 없음</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def get_squared(num_list):</span><br><span class="line">    squared &#x3D; []</span><br><span class="line">    for num in num_list:</span><br><span class="line">        squared.append(num**2)</span><br><span class="line">    return squared</span><br></pre></td></tr></table></figure>
-<h3 id="map-used-with-lambda"><a href="#map-used-with-lambda" class="headerlink" title="map used with lambda"></a>map used with lambda</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list(map(lambda x: x**2, [1,2,3,4]))</span><br></pre></td></tr></table></figure>
-<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><ul>
-<li>filter(function, iter)</li>
-<li>특정함수를 만족하는 요소만 남기는 필터</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def even_selector(x):</span><br><span class="line">    if x % 2 &#x3D;&#x3D; 0:</span><br><span class="line">        return True</span><br><span class="line">    else:</span><br><span class="line">        return False</span><br><span class="line"></span><br><span class="line">filter(even_selector, range(1,10+1))</span><br></pre></td></tr></table></figure>
-<h3 id="filter-used-with-filter"><a href="#filter-used-with-filter" class="headerlink" title="filter used with filter"></a>filter used with filter</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter(lambda x: x%2&#x3D;&#x3D;0, range(1,10+1))</span><br></pre></td></tr></table></figure>
-
 
       
     </div>

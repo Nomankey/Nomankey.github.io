@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">85</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,152 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/31/til/210331/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/31/til/210331/" class="post-title-link" itemprop="url">TIL 210331</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-31 11:53:49 / Modified: 11:57:05" itemprop="dateCreated datePublished" datetime="2021-03-31T11:53:49+09:00">2021-03-31</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Runnting-Time-amp-Complexity"><a href="#Runnting-Time-amp-Complexity" class="headerlink" title="Runnting Time &amp; Complexity"></a>Runnting Time &amp; Complexity</h3><p><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/30-running-time-and-complexity/problem">https://www.hackerrank.com/challenges/30-running-time-and-complexity/problem</a></p>
+<h4 id="My-Function"><a href="#My-Function" class="headerlink" title="My Function"></a>My Function</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">trial &#x3D; int(input(&#39;How many numbers do you want to input?:  &#39;))</span><br><span class="line">p_num &#x3D; int(input(&#39;Enter the number you want:  &#39;))</span><br><span class="line">divisor_container &#x3D; []</span><br><span class="line"></span><br><span class="line">def prime_number_debugger(p_num):</span><br><span class="line">    for i in range(1, p_num+1):</span><br><span class="line">        proto_divisor &#x3D; p_num&#x2F;i</span><br><span class="line">        if proto_divisor - int(proto_divisor) &#x3D;&#x3D; 0:</span><br><span class="line">            divisor_container.append(proto_divisor)</span><br><span class="line">    </span><br><span class="line">    if len(divisor_container) &gt; 2:</span><br><span class="line">        print(&#39;The number &#123;&#125; is not a prime number&#39;.format(p_num))</span><br><span class="line">    else:</span><br><span class="line">        print(&#39;The number &#123;&#125; is a prime number&#39;.format(p_num))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        prime_number_debugger(p_num)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Other’s-code"><a href="#Other’s-code" class="headerlink" title="Other’s code"></a>Other’s code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">for _ in range(int(input())):</span><br><span class="line">    num &#x3D; int(input())</span><br><span class="line">    if(num &#x3D;&#x3D; 1):</span><br><span class="line">        print(&quot;Not prime&quot;)</span><br><span class="line">    else:</span><br><span class="line">        if(num % 2 &#x3D;&#x3D; 0 and num &gt; 2):</span><br><span class="line">            print(&quot;Not prime&quot;)</span><br><span class="line">        else:</span><br><span class="line">            for i in range(3, int(num**(1&#x2F;2))+1, 2):</span><br><span class="line">                if num % i &#x3D;&#x3D; 0:</span><br><span class="line">                    print(&quot;Not prime&quot;)</span><br><span class="line">                    break</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;Prime&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="Self-Evaluation"><a href="#Self-Evaluation" class="headerlink" title="Self Evaluation"></a>Self Evaluation</h3><ul>
+<li>using a formula is better in time complexity than my own algorithm</li>
+<li>primality algorithm int(num**(1/2))+1</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/30/til/210330/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/30/til/210330/" class="post-title-link" itemprop="url">TIL 210330</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-30 21:38:39 / Modified: 21:57:19" itemprop="dateCreated datePublished" datetime="2021-03-30T21:38:39+09:00">2021-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Timer"><a href="#Timer" class="headerlink" title="Timer"></a>Timer</h3><p>함수를 일정 시간이 경과된 이후에 호출되도록 함수 호출을 예약하려면 타이머 함수를 이용하며 이를 호출 스케줄링(Scheduling a call)이라고 한다.</p>
+<p>자바스크립트 엔진은 단 하나의 실행 컨텍스트 스택을 갖기 때문에 두가지 이상의 태스크를 동시에 실행할 수 없다. 즉 자바스크립트 엔진은 Single Thread 방식으로  동작한다. setTimeout 과 setInterval은 비동기(asynchronous)방식으로 동작한다.</p>
+<h4 id="setTimeout-clearTimeout"><a href="#setTimeout-clearTimeout" class="headerlink" title="setTimeout/ clearTimeout"></a>setTimeout/ clearTimeout</h4><p>setTimeout 함수는 두번째 인수로 전달받은 시간으로 단 한 번 동작하는 타이머를 생성한다.<br>이후 타이머가 만료되면 첫 번째 인수로 전달받은 콜백 함수가 호출된다. 즉, setTimeout 함수의 콜백함수는 두 번째 인수로 전달받은 시간 이 후 단 한 번 실행되도록 호출 스케줄링된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 1초(1000ms) 후 타이머가 만료되면 콜백 함수가 호출된다. </span><br><span class="line">setTimeout(() &#x3D;&gt; console.log(&#39;Hi!&#39;), 1000); </span><br><span class="line">&#x2F;&#x2F; 1초(1000ms) 후 타이머가 만료되면 콜백 함수가 호출된다. &#x2F;&#x2F; 이때 콜백 함수에 &#39;Lee&#39;가 인수로 전달된다. </span><br><span class="line">setTimeout(name &#x3D;&gt; console.log(&#96;Hi! $&#123;name&#125;.&#96;), 1000, &#39;Lee&#39;); </span><br><span class="line">&#x2F;&#x2F; 두 번째 인수(delay)를 생략하면 기본값 0이 지정된다. </span><br><span class="line">setTimeout(() &#x3D;&gt; console.log(&#39;Hello!&#39;));</span><br></pre></td></tr></table></figure>
+<h4 id="setInterval-clearInterval"><a href="#setInterval-clearInterval" class="headerlink" title="setInterval/clearInterval"></a>setInterval/clearInterval</h4><p>setInterval 함수는 두번째 인수로 전달받은 시간으로 반복 동작하는 타이머를 생성한다. 타이머가 만료될때 마다 첫번째 인수로 전달받은 콜백 함수가 반복 호출된다. 이건 타이머가 취소될 때까지 계속된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let count &#x3D; 1;</span><br><span class="line"> &#x2F;&#x2F; 1초(1000ms) 후 타이머가 만료될 때마다 콜백 함수가 호출된다. </span><br><span class="line">&#x2F;&#x2F; setInterval 함수는 생성된 타이머를 식별할 수 있는 고유한 타이머 id를 반환한다. </span><br><span class="line">const timeoutId &#x3D; setInterval(() &#x3D;&gt; &#123; console.log(count); </span><br><span class="line">&#x2F;&#x2F; 1 2 3 4 5 </span><br><span class="line">&#x2F;&#x2F; count가 5이면 setInterval 함수가 반환한 타이머 id를 clearInterval 함수의 인수로 전달하여 &#x2F;&#x2F; 타이머를 취소한다. 타이머가 취소되면 setInterval 함수의 콜백 함수가 실행되지 않는다.</span><br><span class="line"> if (count++ &#x3D;&#x3D;&#x3D; 5) clearInterval(timeoutId); &#125;, 1000);</span><br></pre></td></tr></table></figure>
+<h4 id="Debounce"><a href="#Debounce" class="headerlink" title="Debounce"></a>Debounce</h4><p>짧은 시간 간격으로 이벤트가 연속적으로 발생하면 이벤트 핸들러를 호출하지 않다가 일정 시간이 경과된 이후에 이벤트 핸들러가 한 번만 호출되도록 한다.<br>즉 짧은 시간 간격으로 발생하는 이벤트를 그룹화해서 마지막에 한 번만 이벤트 핸들러가 호출되도록 한다.</p>
+<p>Input 이벤트는 사용자가 텍스트 입력필드에 값을 입력할 때마다 연속해서 발생한다. 서버에 부담을 주지않기 위해 입력을 완료했을때만 요청을 전송하는 것이 바람직하다.</p>
+<p>하지만 사용자가 입력을 완료했는지는 알기가 어렵기때문에 일정 시간동안 텍스트 입력필드에 값을 입력하지 않으면 입력이 완료된 것으로 간주한다.</p>
+<h4 id="Throttle"><a href="#Throttle" class="headerlink" title="Throttle"></a>Throttle</h4><p>짧은 시간 간격으로 이벤트가 연속해서 발생하더라도 일정 시간 간격으로 이벤트 헨들러가 최대 한번 호출되도록 한다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -781,169 +927,6 @@ Object.getPrototypeOf(arr) === Array.prototype // true</code></pre>
 <li> 1+max(height(leftSubtree), height(rightSubtree))</li>
 </ul>
 </li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/17/til/210317/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/17/til/210317/" class="post-title-link" itemprop="url">TIL 210317</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-17 21:40:15 / Modified: 21:51:01" itemprop="dateCreated datePublished" datetime="2021-03-17T21:40:15+09:00">2021-03-17</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="How-to-Call-a-Function"><a href="#How-to-Call-a-Function" class="headerlink" title="How to Call a Function"></a>How to Call a Function</h3><p>일반 함수로 호출 가능<br>New 연사자로 생성자 함수도 가능<br>객체 바인등 메서드화도 가능</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">var foo &#x3D; function() &#123;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">일반 함수인지 생성자 함수인지는 호출 방법에 달려있다.</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;Ex)</span><br><span class="line">&#x2F;&#x2F;foo(); 일반적인 함수로서 호출</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;new foo()l 생성자 함수로서 호출</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; var obj &#x3D; &#123;foo: foo&#125;; 메서드로서 호출</span><br><span class="line">	Obj.foo();</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#x2F;&#x2F;More ex)</span><br><span class="line">	Var obj &#x3D; &#123;</span><br><span class="line">		X: 10,</span><br><span class="line">		F: function() &#123;return this.x;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;메서드로 호출</span><br><span class="line">	Console.log(obj.f()); &#x2F;&#x2F; 10</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;일반 함수로서 호출</span><br><span class="line">	Var bar &#x3D; obj.f;</span><br><span class="line">	Console.log(bar()); &#x2F;&#x2F;undefined</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;생성자 함수로서 호출</span><br><span class="line">	Console.log(new obj.f()); &#x2F;&#x2F; f&#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>ES6 사양에서 정의한 메서드는 인스턴스를 생성할 수 없는 non-constructor이다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;ex)</span><br><span class="line">		const obj &#x3D;&#123;</span><br><span class="line">			x: 1,</span><br><span class="line">			foo() &#123;return this.x;&#125; &#x2F;&#x2F; foo는 메서드이다.</span><br><span class="line">			</span><br><span class="line">			bar: function() &#123;return this. X;&#125; &#x2F;&#x2F; bar는 메서드가 아니라 일반 함수이다. 아마 표현식이기 때문에</span><br><span class="line">			</span><br><span class="line">		&#125;;</span><br><span class="line">		</span><br><span class="line">		console.log(obj.foo()); &#x2F;&#x2F; 1</span><br><span class="line">		console.log(obj.bar()); &#x2F;&#x2F; 1</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		new obj.foo(); &#x2F;&#x2F;TypeError: obj.foo is not a constructor</span><br><span class="line">new obj.bar(); &#x2F;&#x2F; bar &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Arrow-Function"><a href="#Arrow-Function" class="headerlink" title="Arrow Function"></a>Arrow Function</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function add(a, b) &#123;</span><br><span class="line">	return a + b;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line">const add &#x3D; (a,b) &#x3D;&gt; a + b;</span><br></pre></td></tr></table></figure>
-<p>화살표 함수는 일반 함수로만 호출이 가능하며 생성자 함수는 아니된다.<br>화살표 함수는 인스턴스를 생성할 수 없는 non-constructor<br>중복된 매개변수 이름을 선언할 수 없다<br>화살표 함수는 함수 자체의 this, arguments, super, new.target 바인딩을 가지지 않는다.</p>
-<h3 id="Rest-Parameter"><a href="#Rest-Parameter" class="headerlink" title="Rest Parameter"></a>Rest Parameter</h3><p>매개변수 이름앞에 …을 붙혀서 정의한 매개변수. Rest파라미터는 함수에 전달된 인수들의 목록을 배열로 전달받는다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function foo(…rest) &#123;</span><br><span class="line">	console.log(rest); &#x2F;&#x2F;[1, 2, 3, 4, 5]</span><br><span class="line">&#125;; </span><br><span class="line">	</span><br><span class="line">foo(1, 2, 3, 4, 5);</span><br></pre></td></tr></table></figure>
-<h3 id="Rest-Parameters-and-arguments-object"><a href="#Rest-Parameters-and-arguments-object" class="headerlink" title="Rest Parameters and arguments object"></a>Rest Parameters and arguments object</h3><p>ES5에서는 매개변수의 개수를 정의할때 매개변수의 개수를 확정할 수 없는 가변 인자 함수의 경우 매개변수를 통해 인수를 전달받는게 불가능 하므로 arguments 객체를 이용해서 전달을 받았다.</p>
-<p>Arguments 객체는 함수 호출 시 전달 된 인수(argument)들의 정보를 담고 있는 순회 가능한(iterable) 유사 배열 객체이며 함수 내부에서 지역변수처럼 활용 가능하다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function sum() &#123;</span><br><span class="line">	console.log(arguments);</span><br><span class="line">&#125;;</span><br><span class="line">	</span><br><span class="line">sum(1, 2);</span><br></pre></td></tr></table></figure>
-<h3 id="배열-array"><a href="#배열-array" class="headerlink" title="배열(array)"></a>배열(array)</h3><p>여러 값을 순차적으로 나열한 구조<br>array는 element와 element의 갯수를 나타내는 length 프로퍼티를 갖는다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const arr &#x3D; [&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;];</span><br><span class="line">arr.length &#x2F;&#x2F; &#x3D;&gt; 3</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">for (let i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">	console.log(arr[i]);  &#x2F;&#x2F; &#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;</span><br><span class="line">&#125;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">typeof arr &#x2F;&#x2F; &#x3D;&gt; object</span><br></pre></td></tr></table></figure>
-<p>일반 객체와 배열을 구분하는 가장 명확한 차이는 값의 순서와 length 프로퍼티이다. 인덱스로 표현되는 값의 순서와 length 프로퍼티를 갖는 배열은 반복문을 통해 순차적으로 값에 접근하기 적합한 구조 이다.</p>
-<p>배열의 장점은 순차적으로 element에 접근할 수 있다는 점이다.</p>
-<p>왜 array를 만드는기?<br>Loop를 돌려서 같은 처리를 하기 위해서 만든다.<br>그렇기 위해서는 array내의 element들은 같은 타입을 가져야 수월하다.</p>
-<p>자바스크립트에서의 배열은 일반적인 배열의 동작을 흉내 낸 특수한 객체이다. 배열 요소를 위한 각각의 메모리 공간은 동일한 크기를 갖지 않아도 되며, 연속적으로 이어져 있지 않을 수 도 있다. 배열의 요소가 연속적으로 이어져 있지 않는 배열은 희소 배열(sparse array)라 한다.</p>
-<p>자바스크립트는 문법적으로 희소배열을 허용하지만 연속적인 값이라는 배열의 기본적인 개념과도 맞지 않고 성능에도 좋지않은 영향을 주기 때문에 하지 않는것이 좋다.<br>모던 자바스크립트는 타입이 일치하는 배열을 생성할때 일반적인 의미의 배열처럼 연속된 메모리 공간을 확보하는것으로 알려져 있다.<br>배열을 생성할때는 희소배열을 생성하지 않도록 하며 같은 타입의 요소를 연속적으로 배치하자</p>
-<h3 id="Array-Method"><a href="#Array-Method" class="headerlink" title="Array Method"></a>Array Method</h3><p>Array 생성자 함수는 정적 메소드를 제공하며, 배열 객체의 프로토타입인 array.prototype은 프로토타입 메서드를 제공한다. 배열은 사용 빈도가 높은 자료 구조이므로 배열 메서드의 사용법을 잘 알아둘 필요가 있다.</p>
-<p>array에는  원본 array를 직접 변경하는 method와 원본 array를 변경하지 않고 새로운 배열을 생성하여 반환하는 method가 있다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/16/til/210316/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/16/til/210316/" class="post-title-link" itemprop="url">TIL 210316</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-16 13:08:01 / Modified: 13:09:38" itemprop="dateCreated datePublished" datetime="2021-03-16T13:08:01+09:00">2021-03-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Bubble-Sorting"><a href="#Bubble-Sorting" class="headerlink" title="Bubble Sorting"></a>Bubble Sorting</h3><p><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/30-sorting/problem">https://www.hackerrank.com/challenges/30-sorting/problem</a></p>
-<h4 id="What-is-Bubble-sort"><a href="#What-is-Bubble-sort" class="headerlink" title="What is Bubble sort?"></a>What is Bubble sort?</h4><p>Sorting Algorithm that works by repeatedly swapping adjacent element if they are in wrong order</p>
-<p>My Function:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">n &#x3D; int(input().strip())</span><br><span class="line">a &#x3D; list(map(int, input().strip().split(&#39; &#39;)))</span><br><span class="line">number_of_swaps &#x3D; 0</span><br><span class="line"></span><br><span class="line">for i in range(n):</span><br><span class="line">	for j in range(n-1):</span><br><span class="line">		if a[j] &gt; a[j + 1]:</span><br><span class="line">			a[j], a[j + 1] &#x3D; a[j + 1], a[j]</span><br><span class="line">			number_of_swaps +&#x3D; 1</span><br><span class="line"></span><br><span class="line">if number_of_swaps &#x3D;&#x3D; 0:</span><br><span class="line">continue;</span><br><span class="line"></span><br><span class="line">print(&#39;Array is sorted in &#123;&#125; swaps.&#39;.format(number_of_swaps))</span><br><span class="line">print(&#39;First Element: &#123;&#125;&#39;.format(a[0]))</span><br><span class="line">print(&#39;Last Element: &#123;&#125;&#39;.format(a[len(a)-1]))</span><br></pre></td></tr></table></figure>
-
-
-
-<p>Other’s Function:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">	n &#x3D; int(input().strip())</span><br><span class="line">a &#x3D; list(map(int, input().strip().split(&#39; &#39;)))</span><br><span class="line"># Write Your Code Here</span><br><span class="line">	swaps &#x3D; 0</span><br><span class="line">is_sorted &#x3D; False</span><br><span class="line">	while not is_sorted:</span><br><span class="line">    is_sorted &#x3D; True</span><br><span class="line">    i &#x3D; 0</span><br><span class="line">    for i in range(0, len(a)):</span><br><span class="line">        if i &lt; len(a) - 1:</span><br><span class="line">            if a[i] &gt; a[i+1]:</span><br><span class="line">                a[i], a[i+1] &#x3D; a[i+1], a[i]</span><br><span class="line">                is_sorted &#x3D; False</span><br><span class="line">                swaps +&#x3D; 1</span><br><span class="line">	print(&#39;Array is sorted in &#123;&#125; swaps.&#39;.format(swaps))</span><br><span class="line">print(&#39;First Element: &#123;&#125;&#39;.format(a[0]))</span><br><span class="line">print(&#39;Last Element: &#123;&#125;&#39;.format(a[len(a)-1]))</span><br></pre></td></tr></table></figure>
-
-<h4 id="Self-Evaluation"><a href="#Self-Evaluation" class="headerlink" title="Self Evaluation"></a>Self Evaluation</h4><ul>
-<li>Need Better Understanding about Scope</li>
-<li>Don’t get distracted between Python and JavaScript grammar</li>
 </ul>
 
       
