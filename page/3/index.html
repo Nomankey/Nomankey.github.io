@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-count">86</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,80 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/08/til/210308/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/08/til/210308/" class="post-title-link" itemprop="url">TIL 210308</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-08 11:32:38 / Modified: 11:40:14" itemprop="dateCreated datePublished" datetime="2021-03-08T11:32:38+09:00">2021-03-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Why-Error-Happens"><a href="#Why-Error-Happens" class="headerlink" title="Why Error Happens"></a>Why Error Happens</h3><p>error가 발생하는 이유는 프로그램이 잘못 작동하는 것을 막기위한 파이썬의 배려이나 때때로 오류를 피하고 싶을때가 있다. 이를 위해 파이썬은 try, except를 사용해서 예외적으로 오류를 처리할 수 있게 해준다.</p>
+<h3 id="Error-Avoid-Techniques"><a href="#Error-Avoid-Techniques" class="headerlink" title="Error Avoid Techniques"></a>Error Avoid Techniques</h3><h4 id="Basic-ex"><a href="#Basic-ex" class="headerlink" title="Basic ex)"></a>Basic ex)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">	…</span><br><span class="line">excpet [발생 오류[as 오류 메세지 변수]]:</span><br><span class="line">	…</span><br></pre></td></tr></table></figure>
+<p>Try 블록 도중에 오류가 발생하면 except 블록이 수행된다. 하지만 try 블록에서 오류가 발생하지 않으면 except 블록은 수행되지 않는다.</p>
+<h4 id="발생-오류와-오류-메세지-변수까지-포함한-except-문-ex"><a href="#발생-오류와-오류-메세지-변수까지-포함한-except-문-ex" class="headerlink" title="발생 오류와 오류 메세지 변수까지 포함한 except 문 ex)"></a>발생 오류와 오류 메세지 변수까지 포함한 except 문 ex)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">S &#x3D; input(&#39;Enter your Number: &#39;).strip()</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">try:</span><br><span class="line">	print(int(S))</span><br><span class="line">	</span><br><span class="line">except ValueError as e:</span><br><span class="line">	print(e)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	Input:</span><br><span class="line">		pineapple</span><br><span class="line">	</span><br><span class="line">	Output:</span><br><span class="line">		invalid literal for int() with base 10: &#39;pineapple&#39;</span><br><span class="line">		</span><br></pre></td></tr></table></figure>
+<h4 id="Try-Finally-ex"><a href="#Try-Finally-ex" class="headerlink" title="Try.. Finally ex)"></a>Try.. Finally ex)</h4><p>또 try 문에는 finally 절을 사용할 수 있는데 finally 절은 try 절과는 관계없이 항상 수행된다. 보통 finally절은 사용한 리소를 close해야 할때에 많이 사용한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">F &#x3D; open(&#39;foo.txt&#39;, &#39;w&#39;)</span><br><span class="line">Try:</span><br><span class="line">	#something</span><br><span class="line">		</span><br><span class="line">Finally:</span><br><span class="line">	F.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="오류를-일부러-발생시키기"><a href="#오류를-일부러-발생시키기" class="headerlink" title="오류를 일부러 발생시키기"></a>오류를 일부러 발생시키기</h3><p>except문에 pass를 써서 오류를 피할 수 있지만 raise로 일부러 발생시키는 이유도 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class Bird:</span><br><span class="line">	def fly(self):</span><br><span class="line">		raise NotImplementedError</span><br></pre></td></tr></table></figure>
+<p>**** NotImplementedError: 파이썬 내장 오류로서, 꼭 작성해야하는 부분이 구현되지 않았을 경우 일부러 오류를 일으키기위해 사용된다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -830,72 +904,6 @@ sum each hourglasses and print out the biggest sum
 
 </code></pre>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/25/til/210225/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/25/til/210225/" class="post-title-link" itemprop="url">TIL 210225</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-25 10:57:35 / Modified: 11:00:11" itemprop="dateCreated datePublished" datetime="2021-02-25T10:57:35+09:00">2021-02-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h3><p><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/30-binary-numbers/problem">https://www.hackerrank.com/challenges/30-binary-numbers/problem</a></p>
-<h3 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h3><p>nd and print the base- integer denoting the maximum number of consecutive ‘s in ‘s binary representation.</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">binary &#x3D; []</span><br><span class="line"></span><br><span class="line">def converter(decimal):</span><br><span class="line">  if decimal &gt;&#x3D; 1:</span><br><span class="line">    converter(decimal&#x2F;&#x2F;2)</span><br><span class="line">    binary.append(decimal%2)</span><br><span class="line">  return binary</span><br><span class="line"></span><br><span class="line">n &#x3D; int(input())</span><br><span class="line"></span><br><span class="line">counter &#x3D; 0</span><br><span class="line">for i in range(len(converter(n))):</span><br><span class="line">  if converter(n)[i] &#x3D;&#x3D; 1:</span><br><span class="line">    counter +&#x3D; 1</span><br><span class="line">  else:</span><br><span class="line">    pass</span><br><span class="line">print(counter)</span><br></pre></td></tr></table></figure>
       
     </div>
 

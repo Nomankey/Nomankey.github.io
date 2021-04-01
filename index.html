@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-count">86</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,75 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/04/01/til/210401/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/01/til/210401/" class="post-title-link" itemprop="url">TIL 210401</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-01 23:32:03 / Modified: 23:33:53" itemprop="dateCreated datePublished" datetime="2021-04-01T23:32:03+09:00">2021-04-01</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Asynchronous-비동기화"><a href="#Asynchronous-비동기화" class="headerlink" title="Asynchronous(비동기화)"></a>Asynchronous(비동기화)</h3><p>함수를 호출하면 함수 코드가 평가되어 함수 실행 컨텍스트가 실행된다. 이때 생성된 함수 실행 컨텍스트는 실행 컨텍스트 스택(콜 스택이라고도 부른다)에 푸시되고 함수 코드가 실행된다. 함수 코드의 실행이 종료하면 함수 실행 컨텍스트는 실행 컨텍스트에서 팝되어 제거된다.</p>
+<p>실행 중인 태스크가 종료할 때까지 다음에 실행될 태스크가 대기하는 방식을 동기(synchronous)처리라고 한다. 동기 처리 방식은 태스크를 순서대로 하나씩 처리하므로 실행 순서가 보장된다는 장점이 있지만, 앞선 태스크가 종료할때까지 이후 태스크들이 blocking 되는 단점이 있다.</p>
+<p>반대로 현재 실행 중인 태스크가 종료되지 않은 상태라 해도 다음 태스크를 곧바로 실행하는 방식을 비동기(asynchronous)처리라고 한다. =&gt; blocking은 안하지만 task의 실행 순서가 보장되지 않는 단점이 있다.<br>비동기 처리를 위한 콜백 패턴은 call back hell을 발생시켜서 가독성을 나쁘게 하고, 비동기 처리 중 발생한 에러의 예외 처리가 곤란하며, 여러 개의 비동기 처리를 한번에 처리하는 데도 한계가 있다.</p>
+<p>비동기 함수는 task que에 push되어 대기하다가 call stack이 비게 되면, 다시 말해서 전역 코드 및 명시적으로 호출된 함수가 종료되면 비로소 call stack에 push되어 실행된다.</p>
+<p> JavaScript는 single thread 방식으로 동적한다. Single thread로 동작하는 것은 browser가 아니라 browser에 내장된 JavaScript Engine이라는 것에 주의하기 바란다. 만약 모든 JavaScript코드가 Javascript Engine에서 single thread 방식으로 동작한다면 비동기적 방법으로 동작할 수 없다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -852,83 +921,6 @@ Object.getPrototypeOf(arr) === Array.prototype // true</code></pre>
     
     <div class="post-body" itemprop="articleBody">
           
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/18/til/210318/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/18/til/210318/" class="post-title-link" itemprop="url">TIL 210318</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-18 11:34:19 / Modified: 11:38:40" itemprop="dateCreated datePublished" datetime="2021-03-18T11:34:19+09:00">2021-03-18</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Binary-Tree"><a href="#Binary-Tree" class="headerlink" title="Binary Tree"></a>Binary Tree</h3><p>기본적으로 Binary Tree는 edges로 연결되어있는 node들로 구성되어있다.</p>
-<p>Binary Tree t가 있다고 가정을 해보자.<br>이 tree는 비어있거나 2개의 자식요소 (left subtree, right subtree)를 가진 단일 root 요소를 가질 것이다.<br>Binary라는 이름에서 알 수 있듯이 , binary tree에서는 최대 2개의 자식을 가질 수 있다.</p>
-<ul>
-<li>Binday Tree Diagram에서  root는 맨 위에 있고 subtrees는 아래로 갈라져 나온다</li>
-<li> Node의 left subtree 와 right subtree는 자식이며 node는 sub tree들의 부모이다.</li>
-<li> root도 아니며 자식도 없는 node는 leaf라고 불린다.</li>
-<li> Binary tree의 root node는 모든 node들의 조상이다.</li>
-<li> 어떠한 node a 가 어떠한 node b의 조상이라면, a로부터 b까지의 경로는 a에서 b까지의 혈육 사슬을 따른 길이다.</li>
-<li>tree의 높이는 root와 가장 멀리있는 leaf 사이의 edge 수이다. 더 기술적으로 표기를 하자면 <ul>
-<li> 1+max(height(leftSubtree), height(rightSubtree))</li>
-</ul>
-</li>
-</ul>
-
       
     </div>
 
