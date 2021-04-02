@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-count">87</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,79 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/16/til/210216/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/16/til/210216/" class="post-title-link" itemprop="url">TIL 210216</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-16 23:44:06 / Modified: 23:50:54" itemprop="dateCreated datePublished" datetime="2021-02-16T23:44:06+09:00">2021-02-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="How-to-make-decoration-with-class"><a href="#How-to-make-decoration-with-class" class="headerlink" title="How to make decoration with class"></a>How to make decoration with class</h2><ul>
+<li>인스턴스를 함수처럼 호출하게 해주는 <strong>call</strong> 메소드를 구현해야한다.<br>밑은 함수의 시작과 끝을 출력하는 데코레이션이다.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Trace:</span><br><span class="line">    def __init__(self, func):    # 호출할 함수를 인스턴스의 초깃값으로 받음</span><br><span class="line">        self.func &#x3D; func         # 호출할 함수를 속성 func에 저장</span><br><span class="line"> </span><br><span class="line">    def __call__(self):</span><br><span class="line">        print(self.func.__name__, &#39;함수 시작&#39;)    # __name__으로 함수 이름 출력</span><br><span class="line">        self.func()                               # 속성 func에 저장된 함수를 호출</span><br><span class="line">        print(self.func.__name__, &#39;함수 끝&#39;)</span><br><span class="line"> </span><br><span class="line">@Trace    # @데코레이터</span><br><span class="line">def hello():</span><br><span class="line">    print(&#39;hello&#39;)</span><br><span class="line"> </span><br><span class="line">hello()    # 함수를 그대로 호출</span><br></pre></td></tr></table></figure>
+<h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello 함수 시작</span><br><span class="line">hello</span><br><span class="line">hello 함수 끝</span><br></pre></td></tr></table></figure>
+<p>클래스로 만든 데코레이터도 매개변수와 변환값을 처리할 수 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">lass Trace:</span><br><span class="line">    def __init__(self, func):    # 호출할 함수를 인스턴스의 초깃값으로 받음</span><br><span class="line">        self.func &#x3D; func         # 호출할 함수를 속성 func에 저장</span><br><span class="line"> </span><br><span class="line">    def __call__(self, *args, **kwargs):    # 호출할 함수의 매개변수를 처리</span><br><span class="line">        r &#x3D; self.func(*args, **kwargs) # self.func에 매개변수를 넣어서 호출하고 반환값을 변수에 저장</span><br><span class="line">        print(&#39;&#123;0&#125;(args&#x3D;&#123;1&#125;, kwargs&#x3D;&#123;2&#125;) -&gt; &#123;3&#125;&#39;.format(self.func.__name__, args, kwargs, r))</span><br><span class="line">                                            # 매개변수와 반환값 출력</span><br><span class="line">        return r                            # self.func의 반환값을 반환</span><br><span class="line"> </span><br><span class="line">@Trace    # @데코레이터</span><br><span class="line">def add(a, b):</span><br><span class="line">    return a + b</span><br><span class="line"> </span><br><span class="line">print(add(10, 20))</span><br><span class="line">print(add(a&#x3D;10, b&#x3D;20))</span><br></pre></td></tr></table></figure>
+<h4 id="output-1"><a href="#output-1" class="headerlink" title="output"></a>output</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">add(args&#x3D;(10, 20), kwargs&#x3D;&#123;&#125;) -&gt; 30</span><br><span class="line">30</span><br><span class="line">add(args&#x3D;(), kwargs&#x3D;&#123;&#39;a&#39;: 10, &#39;b&#39;: 20&#125;) -&gt; 30</span><br><span class="line">30</span><br></pre></td></tr></table></figure>
+<p>클래스로 매개변수와 반환값을 처리하는 데코레이터를 만들 때는 <strong>call</strong>  메서드에 매개변수를 지정하고, self.func에 매개변수를 넣어서 호출한뒤 반환값을 반환해준다.<br>단 여기서는 매개변수를  *args, **kwargs로 지정했으므로 self.func에 넣을 때는 언패킹하여 넣어준다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def __call__(self, *args, **kwargs):    # 호출할 함수의 매개변수를 처리</span><br><span class="line">        r &#x3D; self.func(*args, **kwargs) # self.func에 매개변수를 넣어서 호출하고 반환값을 변수에 저장</span><br><span class="line">        print(&#39;&#123;0&#125;(args&#x3D;&#123;1&#125;, kwargs&#x3D;&#123;2&#125;) -&gt; &#123;3&#125;&#39;.format(self.func.__name__, args, kwargs, r))</span><br><span class="line">                                            # 매개변수와 반환값 출력</span><br><span class="line">        return r                            # self.func의 반환값을 반환</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -834,71 +907,6 @@
 <li>vector cross product formula</li>
 </ul>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/08/til/210208-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/08/til/210208-1/" class="post-title-link" itemprop="url">TIL 210208-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-08 23:25:51 / Modified: 23:39:51" itemprop="dateCreated datePublished" datetime="2021-02-08T23:25:51+09:00">2021-02-08</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="class-variable-Not-for-Mutable"><a href="#class-variable-Not-for-Mutable" class="headerlink" title="class variable: Not for Mutable"></a>class variable: Not for Mutable</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Hero: # class</span><br><span class="line">    health &#x3D; 100 # class variable</span><br><span class="line">    inventory &#x3D; []</span><br><span class="line"></span><br><span class="line">    def __init__(self, name, weapon):</span><br><span class="line">        self.name &#x3D; name # instance variable</span><br><span class="line">        self.weapon &#x3D; weapon</span><br><span class="line"></span><br><span class="line">    def attack(self): # instance method</span><br><span class="line">        print(&quot;attack with &#123;&#125;&quot;.format(self.weapon))</span><br><span class="line">    def save_item(self, item):</span><br><span class="line">        self.inventory.append(item)</span><br></pre></td></tr></table></figure>
-<h2 id="Way-to-use-Mutable-Object"><a href="#Way-to-use-Mutable-Object" class="headerlink" title="Way to use Mutable Object"></a>Way to use Mutable Object</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Hero: # class</span><br><span class="line">    health &#x3D; 100 # class variable</span><br><span class="line"></span><br><span class="line">    def __init__(self, name, weapon, inventory):</span><br><span class="line">        self.name &#x3D; name # instance variable</span><br><span class="line">        self.weapon &#x3D; weapon</span><br><span class="line">        self.inventory &#x3D; []</span><br><span class="line"></span><br><span class="line">    def attack(self): # instance method</span><br><span class="line">        print(&quot;attack with &#123;&#125;&quot;.format(self.weapon))</span><br><span class="line">    def save_item(self, item):</span><br><span class="line">        self.inventory.append(item)</span><br></pre></td></tr></table></figure>
       
     </div>
 
