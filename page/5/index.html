@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-count">88</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,85 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/17/til/210217/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/17/til/210217/" class="post-title-link" itemprop="url">TIL 210217</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-02-17 11:44:51 / Modified: 11:45:53" itemprop="dateCreated datePublished" datetime="2021-02-17T11:44:51+09:00">2021-02-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-First-Class-Function"><a href="#What-is-First-Class-Function" class="headerlink" title="What is First Class Function?!"></a>What is First Class Function?!</h2><p>프로그래밍 언어가 함수를 first-class-citizen으로 취급하는것!<br>쉽게 얘기하면 함수 자체를 인자(argument)로써 다른 함수에 전달하거나 다른 함수의 값으로 리턴 할수도 있고, 함수를 변수에 할당하거나 데이터 구조 안에서 저장할 수 있는 함수를 뜻한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def square(x):</span><br><span class="line">    return x * x</span><br><span class="line"></span><br><span class="line">print(square(5)) ### 25</span><br><span class="line"></span><br><span class="line">f &#x3D; square</span><br><span class="line"></span><br><span class="line">print(square) ### &lt;function square at 0x10521a280&gt;</span><br><span class="line">print(f) ### &lt;function square at 0x10521a280&gt;</span><br></pre></td></tr></table></figure>
+<p>프로그래밍 언어가 퍼스트클래스 함수를 지원하면, 금방 해본 것처럼 변수에 함수를 할당할 수 있을뿐만 아니라, 인자(argument)로써 다른 함수에 전달하거나, 함수의 리턴값으로도 사용할 수가 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def square(x):</span><br><span class="line">    return x * x</span><br><span class="line"></span><br><span class="line">def my_map(func, arg_list): ### </span><br><span class="line">    result &#x3D; []</span><br><span class="line">    for i in arg_list:</span><br><span class="line">        result.append(func(i)) ###</span><br><span class="line">    return result</span><br><span class="line"></span><br><span class="line">num_list &#x3D; [1,2,3,4,5]</span><br><span class="line">squares &#x3D; my_map(square, num_list)</span><br><span class="line"></span><br><span class="line">print(squares) ### [1, 4, 9, 16, 25]</span><br></pre></td></tr></table></figure>
+<p>하지만 위처럼 쓰지않고 더 간단하게 아래와 같이 쓸수도 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num_list &#x3D; [1,2,3,4,5]</span><br><span class="line"></span><br><span class="line">def simple_square(arg_list):</span><br><span class="line">    result &#x3D; []</span><br><span class="line">    for i in arg_list:</span><br><span class="line">        result.append(i*i) ###</span><br><span class="line">    return result</span><br><span class="line"></span><br><span class="line">simple_squares &#x3D; simple_square(num_list)</span><br><span class="line"></span><br><span class="line">print(simple_squares) ### [1, 4, 9, 16, 25]</span><br></pre></td></tr></table></figure>
+<p>위 두 코드를 비교해보았을때는 두번째 코드가 더 간단하지만 퍼스트클래스 함수를 사용하면 이미 정의된 여러함수들을 간단히 재활용할 수 있다는 장점이 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">def square(x):</span><br><span class="line">    return x*x</span><br><span class="line">    </span><br><span class="line">def cube(x):</span><br><span class="line">    return x*x*x</span><br><span class="line"></span><br><span class="line">def quad(x):</span><br><span class="line">    return x*x*x*x</span><br><span class="line"></span><br><span class="line">def my_map(func, arg_list):</span><br><span class="line">    result &#x3D; []</span><br><span class="line">    for i in arg_list:</span><br><span class="line">        result.append(func(i))</span><br><span class="line">    return result</span><br><span class="line"></span><br><span class="line">num_list &#x3D; [1, 2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">squares &#x3D; my_map(square, num_list)</span><br><span class="line">cubes &#x3D; my_map(cube, num_list)</span><br><span class="line">quads &#x3D; my_map(quad, num_list)</span><br><span class="line"></span><br><span class="line">print(squares) ### [1, 4, 9, 16, 25]</span><br><span class="line">print(cubes) ### [1, 8, 27, 64, 125]</span><br><span class="line">print(quads) ### [1, 16, 81, 256, 625]</span><br></pre></td></tr></table></figure>
+<p>위의 예제와 같이 이미 정의되어있는 함수 square, cube, quad와 같이 여러개의 함수나 모듈이 있다고 가정할때 my_map과 같은 wrapper 함수를 하나만 정의하여 기존의 함수나 모듈을 수정할 필요가 없이 편리하게 사용할 수 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def logger(msg):</span><br><span class="line">    </span><br><span class="line">    def log_message():</span><br><span class="line">        print(&#39;Log:&#39;, msg)</span><br><span class="line">    return log_message</span><br><span class="line"></span><br><span class="line">log_hi &#x3D; logger(&#39;hi&#39;)</span><br><span class="line">print(log_hi) ### &lt;function logger.&lt;locals&gt;.log_message at 0x10521a820&gt;</span><br><span class="line">log_hi() ### Log: hi</span><br></pre></td></tr></table></figure>
+<p>위에서 정의된 log_message라는 함수를 logger 함수의 리턴값으로 리턴하여 log_hi라는 변수에 할당한 후 호출한것을 볼 수 있다. 그런데 msg와 같은 함수의 지역변수값은 함수가 호출된 이후에는 메모리상에서 사라지기 떄문에  다시 참조를 할수가 없는데, msg 변수에 할당되었던 ‘Hi’값이 logger 함수가 종료된 이후에도 참조가 되었다. 이러한 log_message와 같은 함수를 클로저(closure)라고 부른다. 클로저는 다른 함수의 지역변수를 그 함수가 종료된 이후에도 기억을 할 수가 있다. log_message가 정말 기억을 하고 있는지 msg 변수를 지역변수로 가지고 있는 logger 함수를 글로벌 네임스페이스에서 온전히 지운 후, log_message를 호출해보자.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">def logger(msg):</span><br><span class="line">    </span><br><span class="line">    def log_message():</span><br><span class="line">        print(&#39;Log:&#39;, msg)</span><br><span class="line">        </span><br><span class="line">    return log_message</span><br><span class="line"></span><br><span class="line">log_hi &#x3D; logger(&#39;Hi&#39;)</span><br><span class="line">print(log_hi) ### &lt;function logger.&lt;locals&gt;.log_message at 0x10521a820&gt;</span><br><span class="line">log_hi() ### Log: Hi</span><br><span class="line"></span><br><span class="line">del logger</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    print(logger)</span><br><span class="line">except NameError:</span><br><span class="line">    print(&#39;NameError: logger는 존재하지 않습니다.&#39;) ### logger는 존재하지 않습니다.</span><br><span class="line">    </span><br><span class="line">log_hi() ### Log:  Hi</span><br></pre></td></tr></table></figure>
+<p>logger가 지워진 뒤에도 log_hi()를 실행하여 log_message가 실행되었다.<br>logger 함수를 삭제한 뒤에도 log_message 함수는 Hi를 기억한것을 확인했다. 이런식으로 closure는 편하게 사용된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def simple_html_tag(tag, msg):</span><br><span class="line">    print(&#39;&lt;&#123;0&#125;&gt;&lt;&#123;1&#125;&gt;&lt;&#123;0&#125;&gt;&#39;.format(tag, msg))</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">simple_html_tag(&#39;h1&#39;, &#39;심플 헤딩 타이틀&#39;) ### &lt;h1&gt;&lt;심플 헤딩 타이틀&gt;&lt;h1&gt;</span><br><span class="line"></span><br><span class="line">print(&#39;-&#39;*30) ### ------------------------------</span><br><span class="line"></span><br><span class="line">def html_tag(tag):</span><br><span class="line">    def wrap_text(msg):</span><br><span class="line">        print(&#39;&lt;&#123;0&#125;&gt;&lt;&#123;1&#125;&gt;&lt;&#123;0&#125;&gt;&#39;.format(tag, msg))</span><br><span class="line">        </span><br><span class="line">    return wrap_text</span><br><span class="line"></span><br><span class="line">print_h1 &#x3D; html_tag(&#39;h1&#39;) #1</span><br><span class="line">print(print_h1) ### &lt;function html_tag.&lt;locals&gt;.wrap_text at 0x10531d3a0&gt; #2</span><br><span class="line">print_h1(&#39;첫 번째 헤딩 타이틀&#39;) ### &lt;h1&gt;&lt;첫 번째 헤딩 타이틀&gt;&lt;h1&gt; #3</span><br><span class="line">print_h1(&#39;두 번째 헤딩 타이틀&#39;) ### &lt;h1&gt;&lt;두 번째 헤딩 타이틀&gt;&lt;h1&gt; #4</span><br><span class="line"></span><br><span class="line">print_p &#x3D; html_tag(&#39;p&#39;)</span><br><span class="line">print_p(&#39;이것은 패러그래프 입니다.&#39;) ### &lt;p&gt;&lt;이것은 패러그래프 입니다.&gt;&lt;p&gt;</span><br></pre></td></tr></table></figure>
+<p>#1에서 html_tag 함수를 print_h1 변수에 할당한 후, #2에서 변수의 값을 출력하니 wrap_text 함수 오브젝트가 할당되어 있는 것을 볼 수 있다. 그리고 #3과 #4에서 간단히 문자열을 전달하여 wrap_text 함수를 호출한 것을 볼 수 가 있다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -832,81 +911,6 @@
 <h2 id="Self-and-Instance"><a href="#Self-and-Instance" class="headerlink" title="Self and Instance"></a>Self and Instance</h2><p>클래스 내에서 메소드를 생성할 때 인자(arguments)의 첫 번째 꼭 들어가야하는 것이 있는데, 바로 self다. 이 self는 인스턴스 자신을 가리키는 것으로,인스턴스에 저장되어 있는 멤버 변수에 접근 가능하게 한다. 다만 위의 jm.say_hello()처럼 메소드를 실행할 때 인자 자리에 self가 안들어가는 이유는 메소드의 첫번째 인수로 전달되는 ‘인스턴트 자신’의 값은 Python 시스템에 의해 자동으로 넘어가게 되기 때문이다. 그러므로 메소드를 호출할 때는 두 번째 인수부터 작성한다.</p>
 <h2 id="inheritance"><a href="#inheritance" class="headerlink" title="inheritance"></a>inheritance</h2><p>상속이란 이미 만들어진 클래스를 통째로 이어 받아 새로운 클래스를 만드는 기능이다. 클래스의 가장 큰 장점 중 하나는 재사용이 가능하다라는 것인데, 상속은 이를 더 강화하는 역할을 한다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[예시]</span><br><span class="line">class Person: # &quot;Person&quot; 이라는 클래스 생성</span><br><span class="line">  name &#x3D; &quot;&quot;</span><br><span class="line">  # 변수를 초기화하기 위해 &quot;__init__&quot; 생성자함수 사용</span><br><span class="line">  def __init__(self, name): </span><br><span class="line">    </span><br><span class="line">    self.name &#x3D; name</span><br><span class="line">  </span><br><span class="line">  def say_hello(self): # say_hello라는 메소드 생성</span><br><span class="line">    print(&quot;Hello, &quot; + self.name)</span><br><span class="line"></span><br><span class="line">class AcademyPerson(Person): # Person을 상속받은 AcademyPerson 클래스 생성</span><br><span class="line">  school &#x3D; &quot;&quot; # name은 Person에서 상속받으므로, school 변수만 생성</span><br><span class="line">  </span><br><span class="line">  def __init__(self, name, school):</span><br><span class="line">    self.name &#x3D; name</span><br><span class="line">    self.school &#x3D; school</span><br><span class="line">    </span><br><span class="line">  def say_school(self):</span><br><span class="line">    print(&quot;My school is &quot; + self.school)</span><br><span class="line">    </span><br><span class="line">jm &#x3D; AcademyPerson(&quot;jm&quot;,&quot;wecode&quot;)</span><br><span class="line">jm.say_hello() # Person에 있는 메소드를 그대로 사용 가능</span><br><span class="line">jm.say_school()</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; Hello, jm</span><br><span class="line">&gt;&gt;&gt; My school is wecode</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/02/09/til/210209/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/09/til/210209/" class="post-title-link" itemprop="url">TIL 210209</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-02-09 16:14:26 / Modified: 16:25:17" itemprop="dateCreated datePublished" datetime="2021-02-09T16:14:26+09:00">2021-02-09</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="description"><a href="#description" class="headerlink" title="description"></a>description</h2><p>Points are given a,b,c,d in a 3-dimensional cartesian coordinate system.<br>Its required to print the angle between the plane made by the points a,b,c and b,c,d in degrees.</p>
-<ul>
-<li>cos(PHI) = (x.y)|x||y|</li>
-<li>x = ab x bc</li>
-<li>y = bc x cd</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">class Points(object):</span><br><span class="line">    def __init__(self, x, y, z):</span><br><span class="line">        self.x &#x3D; x</span><br><span class="line">        self.y &#x3D; y</span><br><span class="line">        self.z &#x3D; z</span><br><span class="line"></span><br><span class="line">    def __sub__(self, no):</span><br><span class="line">        return Points((self.x - no.x), (self.y - no.y), (self.z - no.z))</span><br><span class="line">             </span><br><span class="line">    def dot(self, no):</span><br><span class="line">        return (self.x*no.x)+(self.y*no.y)+(self.z*no.z)</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    def cross(self, no):</span><br><span class="line">        return Points((self.y*no.z - self.z*no.y),(self.z*no.x - self.x*no.z),(self.x*no.y - self.y*no.x))</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    def absolute(self):</span><br><span class="line">        return pow((self.x ** 2 + self.y ** 2 + self.z ** 2), 0.5)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    points &#x3D; list()</span><br><span class="line">    for i in range(4):</span><br><span class="line">        a &#x3D; list(map(float, input().split()))</span><br><span class="line">        points.append(a)</span><br><span class="line"></span><br><span class="line">    a, b, c, d &#x3D; Points(*points[0]), Points(*points[1]), Points(*points[2]), Points(*points[3])</span><br><span class="line">    x &#x3D; (b - a).cross(c - b)</span><br><span class="line">    y &#x3D; (c - b).cross(d - c)</span><br><span class="line">    angle &#x3D; math.acos(x.dot(y) &#x2F; (x.absolute() * y.absolute()))</span><br><span class="line"></span><br><span class="line">    print(&quot;%.2f&quot; % math.degrees(angle))</span><br></pre></td></tr></table></figure>
-<h2 id="formula-used"><a href="#formula-used" class="headerlink" title="formula used"></a>formula used</h2><ul>
-<li>dot product formula</li>
-<li>vector cross product formula</li>
-</ul>
-
       
     </div>
 

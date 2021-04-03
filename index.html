@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-count">88</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,83 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/04/03/til/210403/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/03/til/210403/" class="post-title-link" itemprop="url">til-210403</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-03 20:27:00 / Modified: 21:42:49" itemprop="dateCreated datePublished" datetime="2021-04-03T20:27:00+09:00">2021-04-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="What-is-URL"><a href="#What-is-URL" class="headerlink" title="What is URL?"></a>What is URL?</h3><p>URL(Uniform Resource Locator)<br>웹에 퍼블리시된 리소스를 반환하기 위해 브라우저에 의해 사용되는 구조(메커니즘)이다.</p>
+<p>URL은 웹상에서의 리소스의 고유한 주소 그이상도 그이하도 아니다. 이러한 리소스들은 HTML 페이지, CSS 문서, 이미지… 일 수가 있다.<br>URL의 예외 사항에는 URL이 가리키는 리소스가 더이상 존재하지 않거나 이동될 경우이다.</p>
+<p>리소스들은 URL로 대표되며, URL 그자체는 웹 서버에 의해 다루어진다. 따라서 리소스와 이에 연관된 URL을 다루는 건 웹 서버 주인의 몫이다.</p>
+<h3 id="URL의-구조"><a href="#URL의-구조" class="headerlink" title="URL의 구조"></a>URL의 구조</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;developer.mozilla.org</span><br><span class="line">https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Learn&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;search?q&#x3D;URL</span><br></pre></td></tr></table></figure>
+<p>URL은 scheme, Domain Name, Port, Path to the file, Parameter, Anchor로 이루어져있다</p>
+<h4 id="Scheme"><a href="#Scheme" class="headerlink" title="Scheme"></a>Scheme</h4><p>브라우저가 리소스를 불러오기 위해 사용해야할 protocol(통신 규약)을 의미하며 이중에는 주로 HTTP와 HTTPS가 쓰인다.</p>
+<ul>
+<li>protocold은 컴퓨터 네트워크에서의 데이터를 교환하거나 전달할때 사용하는 method들이다.)</li>
+</ul>
+<h4 id="Authority"><a href="#Authority" class="headerlink" title="Authority"></a>Authority</h4><p>Authority는 Domain Name과 Port로 나누어져 있다.<br>Port는 web server로 접근하기 위한 기술적인 관문을 의미한다.</p>
+<h4 id="Path-to-resource"><a href="#Path-to-resource" class="headerlink" title="Path to resource"></a>Path to resource</h4><p>Web server위에서 resource로의 길을 의미한다.</p>
+<h4 id="Parameter"><a href="#Parameter" class="headerlink" title="Parameter"></a>Parameter</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...html?key1&#x3D;value1&amp;key2&#x3D;value2#Some...</span><br></pre></td></tr></table></figure>
+<p>?key1=value1&amp;key2=value2는 web server에 제공된 추가 parameter이다.  Parameter들은 &amp; symbol로 나누어진 key/value 쌍들을 가진 list이다.<br>웹 서버는 이러한 parameter들을 리소스를 실행하기 전에 추가적 기능을 할 때 사용할 수 있다. 각각의 웹서버들은  parameter에 따라 고유한 규칙들이 있으며 웹서버가 parameter들을 관리하는지 알기위해서는 web server 주인을 물어보는게 옳다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -830,99 +907,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h3 id="Array-HOF-연습-문제"><a href="#Array-HOF-연습-문제" class="headerlink" title="Array HOF 연습 문제"></a>Array HOF 연습 문제</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; EX 9. id 프로퍼티의 값 중에서 최대값 구하기</span><br><span class="line">&#x2F;&#x2F; todos의 id 프로퍼티의 값 중에서 최대값을 구하는 함수를 작성하라.</span><br><span class="line">&#x2F;&#x2F; 단, for 문, Array#forEach는 사용하지 않도록 하자.</span><br><span class="line">let todos &#x3D; [</span><br><span class="line">  &#123; id: 3, content: &#39;HTML&#39;, completed: false &#125;,</span><br><span class="line">  &#123; id: 2, content: &#39;CSS&#39;, completed: true &#125;,</span><br><span class="line">  &#123; id: 1, content: &#39;Javascript&#39;, completed: false &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">function getMaxId() &#123;</span><br><span class="line">	const container &#x3D; [];</span><br><span class="line">	todos.map((todo) &#x3D;&gt; container.push(todo.id)); &#x2F;&#x2F; 화살표 끝에 있는 것들은 자동으로 리턴~ </span><br><span class="line">	return Math.max(...container);   &#x2F;&#x2F;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(getMaxId()); &#x2F;&#x2F; 3</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/20/til/210320/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/20/til/210320/" class="post-title-link" itemprop="url">TIL 210320</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-20 21:39:42 / Modified: 21:56:17" itemprop="dateCreated datePublished" datetime="2021-03-20T21:39:42+09:00">2021-03-20</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="What-is-Array"><a href="#What-is-Array" class="headerlink" title="What is Array?"></a>What is Array?</h3><p>배열(array)는 여러개의 값을 순차적으로 나열한 자료 구조(Data Structure).</p>
-<p>ex)    const arr = [‘apple’, ‘banana’, ‘orange’]</p>
-<p>배열이 가지고 있는 값은 요소(element)이다. 자바스크립트에서 모든 값은 배열이 될 수 있다.</p>
-<p>ex)<br>    arr[0] // apple<br>    arr[1] // banana<br>    arr[2] // orange</p>
-<p>위와 같이 element에 접근할때는 대괄호 표기법을 갖는다.</p>
-<p>ex)<br>    arr.length // 3</p>
-<p>배열은 또한 요소의 개수, 즉 배열의 길이를 나타내는 length 프로퍼티를 갖는다.</p>
-<p>ex)<br>    for (let i = 0; I &lt; arr.length; i++){<br>            console.log(arr[i]);<br>        }</p>
-<p>배열은 인덱스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 요소에 접근할 수 있다.</p>
-<p>또한 자바스크립트는 배열(array)라는 타입이 없기 때문에 배열은 객체 타입이다.</p>
-<p>ex)<br>    const arr = [1, 2, 3];</p>
-<pre><code>arr.constructor === Array // true
-Object.getPrototypeOf(arr) === Array.prototype // true</code></pre>
-<p>배열은 배열 리터럴, array 생성자 함수, array.of, array.from 메서드로 생성가능<br>배열의 프로토타입 객체는 array.prototype</p>
-<h3 id="Array-in-JavaScript-is-not-an-Array"><a href="#Array-in-JavaScript-is-not-an-Array" class="headerlink" title="Array in JavaScript is not an Array!"></a>Array in JavaScript is not an Array!</h3><p>자료 구조(data structure)에서 배열이란 동일한 크기의 메모리 공간이 빈틈이 없이 연속적으로 나열된 구조<br>    =&gt; 밀집 배열(dense array)</p>
-<p>인덱스를 통해 단 한번의 연산으로 임의의 요소에 접근(random access) 하여 효율적으로 고속으로 동작한다.</p>
-<p>검색 대상의 메모리 주소 = 배열의 시작 메모리 주소 + 인덱스*요소의 바이트 수<br>    • 인덱스가 0인 요소의 메모리 주소: 1000 + 0 * 8 = 1000<br>    • 인덱스가 1인 요소에 메모리 주소: 1000 + 1 * 8 = 1008<br>    • 인덱스가 2인 요소에 메모리 주소: 1000 + 2 * 8 = 1016</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function linearSearch(array, target) &#123;</span><br><span class="line">	const length &#x3D; array.length;</span><br><span class="line">			</span><br><span class="line">		for (let i &#x3D; 0; i &lt; length; i++) &#123;</span><br><span class="line">			if(array[i] &#x3D;&#x3D;&#x3D; target) return i;</span><br><span class="line">		&#125;</span><br><span class="line">		return -1;</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	console.log(linearSearch([1, 2, 3, 4, 5, 6], 3)); &#x2F;&#x2F; 2 </span><br><span class="line">	console.log(linearSearch([1, 2, 3, 4, 5, 6], 0)); &#x2F;&#x2F; -1</span><br></pre></td></tr></table></figure>
-<p>인덱스를 통해 효율적으로 요소에 접근할 수 있지만 정렬되지 않은 배열에서 특정한 요소를 검색할때는 array의 모든 요소를 처음부터 특정 요소를 발견할 때까지 차례대로 검색(linear search)를 해야한다.<br>array에 element를 삽입하거나 삭제할때 element를 연속적으로 유지하기 위해서는 element를 이동시켜야 한다        </p>
-<p>자바스크립트의 배열은 지금까지와의 배열과는 다르게 array의 element를 위한 각각 메모리 공간의 크기가 동일하지 않아도 되고 연속적으로 이어져 있지도 않다.<br>    =&gt; 배열의 요소가 연속적으로 이어져 있지 않은 배열을 희소 배열(sparse array)이라 한다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">console.log(Object.getOwnPropertyDescriptors([1, 2, 3]));</span><br><span class="line">		</span><br><span class="line">&#x2F;*</span><br><span class="line">&#123;</span><br><span class="line">	&#39;0&#39;: &#123;value: 1, writable: true, enumerable: true, configurable: true&#125;</span><br><span class="line">	&#39;1&#39;: &#123;value: 2, writable: true, enumerable: true, configurable: true&#125;</span><br><span class="line">	&#39;2&#39;: &#123;value: 3, writable: true, enumerable: true, configurable: true&#125;</span><br><span class="line">	length: &#123;value: 3, writable: true, enumerable: false, configurable: false&#125;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>위처럼 자바스크립 배열은 인덱스를 나타내는 문자열을 프로퍼티 키로 가지며, length 값을 프로퍼티로 갖는 특수한 객체이다. 자바스크립트 array elements 는 사실상 property value 이다.</p>
-<p>일반적인 배열(array list)과 자바스크립트 배열(linked list)의 장단점</p>
-<ul>
-<li><p> 일반적인 배열은 인덱스로 요소에 빠르게 접근이 가능하며 특정 요소를 검색하거나 요소를 삽입 삭제할때는 효율적이지 않다</p>
-</li>
-<li><p>자바스크립트 배열은 해시 테이블로 구현된 객체이기에 인덱스로 요소에 접근하는 경우에는 일반적인 배열보다 성능이 느릴 수 밖에 없지만, 특정 요소를 검색하거나 요소를 삽입 또는 삭제하는 경우에는 일반적인 배열보다는 빠른 성능을 기대할 수 있다.</p>
-</li>
-</ul>
-
       
     </div>
 
