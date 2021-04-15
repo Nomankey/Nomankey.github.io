@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,76 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/04/15/til/210415/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/15/til/210415/" class="post-title-link" itemprop="url">til-210415</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-15 21:29:11 / Modified: 21:34:26" itemprop="dateCreated datePublished" datetime="2021-04-15T21:29:11+09:00">2021-04-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h3><p>canvas element is dynamic, scriptable, render of 2D and 3D shapes and bitmap image</p>
+<p>itprovides empty graphic zone on which specific JavaScript APIs can draw</p>
+<h4 id="HTMLCanvasElement-getContext"><a href="#HTMLCanvasElement-getContext" class="headerlink" title="HTMLCanvasElement.getContext()"></a>HTMLCanvasElement.getContext()</h4><p>returns a drawing context on the canvas or null if the context identifier is not supported</p>
+<h3 id="Window-devicePixelRatio"><a href="#Window-devicePixelRatio" class="headerlink" title="Window.devicePixelRatio"></a>Window.devicePixelRatio</h3><p>returns the ratio of the resolution in physical pixels to the resolution in css pixels for the current display device</p>
+<h3 id="Function-prototype-bind"><a href="#Function-prototype-bind" class="headerlink" title="Function.prototype.bind()"></a>Function.prototype.bind()</h3><p>creates a new function that, when called, has, its keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</p>
+<h3 id="window-requestAnimationFrame"><a href="#window-requestAnimationFrame" class="headerlink" title="window.requestAnimationFrame()"></a>window.requestAnimationFrame()</h3><p>tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the nex repaint</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -797,76 +867,6 @@
     <div class="post-body" itemprop="articleBody">
           <h3 id="Sticky-Note-using-JavaScript"><a href="#Sticky-Note-using-JavaScript" class="headerlink" title="Sticky Note using JavaScript"></a>Sticky Note using JavaScript</h3><h4 id="JS-Code"><a href="#JS-Code" class="headerlink" title="JS Code"></a>JS Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const jsTodos &#x3D; document.querySelector(&#39;.jsTodos&#39;);</span><br><span class="line">const jsBox &#x3D; document.querySelector(&#39;.box&#39;);</span><br><span class="line">const initialMousePos &#x3D; &#123;x:0, y:0&#125;;</span><br><span class="line">const offset &#x3D; &#123;x:0, y:0&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;sticky note</span><br><span class="line">const move &#x3D; e &#x3D;&gt; &#123;</span><br><span class="line">    offset.x &#x3D; e.clientX - initialMousePos.x;</span><br><span class="line">    offset.y &#x3D; e.clientY - initialMousePos.y;</span><br><span class="line"></span><br><span class="line">    jsBox.style.transform &#x3D; &#96;translate3d($&#123;offset.x&#125;px, $&#123;offset.y&#125;px, 0)&#96;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">jsBox.addEventListener(&#39;mousedown&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">    initialMousePos.x &#x3D; e.clientX - offset.x;</span><br><span class="line">    initialMousePos.y &#x3D; e.clientY - offset.y;</span><br><span class="line"></span><br><span class="line">    document.addEventListener(&#39;mousemove&#39;, move);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">document.addEventListener(&#39;mouseup&#39;, () &#x3D;&gt; &#123;</span><br><span class="line">    document.removeEventListener(&#39;mousemove&#39;, move);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;todo</span><br><span class="line">let todos &#x3D; [];</span><br><span class="line"></span><br><span class="line">const render &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    jsTodos.innerHTML &#x3D; todos.map((&#123;id, content, completed&#125;) &#x3D;&gt; &#123;</span><br><span class="line">        return &#96;&lt;li id &#x3D; &quot;$&#123;id&#125;&quot;&gt;</span><br><span class="line">        &lt;input type &#x3D; &quot;checkbox&quot; $&#123;completed ? &#39;checked&#39;: &#39;&#39;&#125;&#x2F;&gt;</span><br><span class="line">        &lt;span&gt;$&#123;content&#125;&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;button&gt;x&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;&#x2F;li&gt;&#96;</span><br><span class="line">    &#125;).join(&#39;&#39;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const getTodos &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    todos &#x3D; [</span><br><span class="line">    &#123; id: 3, content: &#39;HTML&#39;, completed: false &#125;,</span><br><span class="line">    &#123; id: 2, content: &#39;CSS&#39;, completed: true &#125;,</span><br><span class="line">    &#123; id: 1, content: &#39;Javascript&#39;, completed: false &#125;</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">    render();</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;getTodos();</span><br><span class="line">document.addEventListener(&#39;DOMContentLoaded&#39;,getTodos);</span><br></pre></td></tr></table></figure>
 <h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;style.css&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class &#x3D; &quot;box&quot;&gt;</span><br><span class="line">        &lt;h1&gt;Sticky Note&lt;&#x2F;h1&gt;</span><br><span class="line">        &lt;ul class&#x3D;&quot;jsTodos&quot;&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line">        &lt;canvas class&#x3D;&quot;jsCanvas&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">        &lt;!--&lt;script src&#x3D;&quot;app.js&quot;&gt;&lt;&#x2F;script&gt;--&gt;</span><br><span class="line">        &lt;script src&#x3D;&quot;todo.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/25/til/210325/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/25/til/210325/" class="post-title-link" itemprop="url">TIL 210325</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-25 10:34:21 / Modified: 10:41:13" itemprop="dateCreated datePublished" datetime="2021-03-25T10:34:21+09:00">2021-03-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Garbage-Collection"><a href="#Garbage-Collection" class="headerlink" title="Garbage Collection"></a>Garbage Collection</h3><p>설명하자면 자동화 메모리 관리이다.</p>
-<ul>
-<li>더이상 사용되지 않는 메모리 공간을 비운다.</li>
-</ul>
-<p>프로그램이 메모리 공간을 점유할때, 프로그램은 그 공간을 in-use 상태로 표기하고 참조값을 반환한다.</p>
-<h3 id="Deleting-Nodes-from-Linked-Lists"><a href="#Deleting-Nodes-from-Linked-Lists" class="headerlink" title="Deleting Nodes from Linked Lists"></a>Deleting Nodes from Linked Lists</h3><p>자동 garbage collection을 가지고 있는 언어들은<br>다음 참조값을 바꾸는 것 만으로 nodes로 이루어진linked list안의 element들을 지운다.</p>
-
       
     </div>
 
