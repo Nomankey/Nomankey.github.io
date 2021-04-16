@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nomankey.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+<meta name="description" content="How to Draw a Figure on CanvasCanvasRenderingContext2D.fillRect()현재 fillStyle에 따라 채워진 rectangle(직사각형)을 그린다. 이 method는 현재의 경로를 수정하지 않고 canvas에 직접적으로 그린다. 1234567void ctx.fillRect(x, y, width, height);c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL 210416">
+<meta property="og:url" content="https://nomankey.github.io/2021/04/16/til/210416/index.html">
+<meta property="og:site_name" content="CK&#39;s Blog">
+<meta property="og:description" content="How to Draw a Figure on CanvasCanvasRenderingContext2D.fillRect()현재 fillStyle에 따라 채워진 rectangle(직사각형)을 그린다. 이 method는 현재의 경로를 수정하지 않고 canvas에 직접적으로 그린다. 1234567void ctx.fillRect(x, y, width, height);c">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-16T12:31:31.000Z">
+<meta property="article:modified_time" content="2021-04-16T12:38:31.245Z">
+<meta property="article:author" content="Nomankey">
+<meta property="article:tag" content="til">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://nomankey.github.io/2021/04/16/til/210416/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>TIL 210416 | CK's Blog</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">CK's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Same Dev Different Day</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Draw-a-Figure-on-Canvas"><span class="nav-number">1.</span> <span class="nav-text">How to Draw a Figure on Canvas</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CanvasRenderingContext2D-fillRect"><span class="nav-number">1.1.</span> <span class="nav-text">CanvasRenderingContext2D.fillRect()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CanvasRenderingContext2D-clearRect"><span class="nav-number">1.2.</span> <span class="nav-text">CanvasRenderingContext2D.clearRect()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CanvasRenderingContext2D-strokeRect"><span class="nav-number">1.3.</span> <span class="nav-text">CanvasRenderingContext2D.strokeRect()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CanvasRenderingContext2D-beginPath"><span class="nav-number">1.4.</span> <span class="nav-text">CanvasRenderingContext2D.beginPath()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CanvasRenderingContext2D-closePath"><span class="nav-number">1.5.</span> <span class="nav-text">CanvasRenderingContext2D.closePath()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CanvasRenderingContext2D-arc"><span class="nav-number">1.6.</span> <span class="nav-text">CanvasRenderingContext2D.arc()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CanvasRenderingContext2D-bezierCurveTo"><span class="nav-number">1.7.</span> <span class="nav-text">CanvasRenderingContext2D.bezierCurveTo()</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nomankey</p>
+  <div class="site-description" itemprop="description">Developer</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">93</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/04/16/til/210416/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          TIL 210416
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-16 21:31:31 / Modified: 21:38:31" itemprop="dateCreated datePublished" datetime="2021-04-16T21:31:31+09:00">2021-04-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="How-to-Draw-a-Figure-on-Canvas"><a href="#How-to-Draw-a-Figure-on-Canvas" class="headerlink" title="How to Draw a Figure on Canvas"></a>How to Draw a Figure on Canvas</h3><h4 id="CanvasRenderingContext2D-fillRect"><a href="#CanvasRenderingContext2D-fillRect" class="headerlink" title="CanvasRenderingContext2D.fillRect()"></a>CanvasRenderingContext2D.fillRect()</h4><p>현재 fillStyle에 따라 채워진 rectangle(직사각형)을 그린다. 이 method는 현재의 경로를 수정하지 않고 canvas에 직접적으로 그린다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void ctx.fillRect(x, y, width, height);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line">ctx.fillStyle &#x3D; &#39;green&#39;;</span><br><span class="line">ctx.fillRect(20, 10, 150, 100);&#x2F;&#x2F; 좌표(20, 10)에 있는 너비 140px 높이 100px 짜리 초록 직사각형이 만들어진다.</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-clearRect"><a href="#CanvasRenderingContext2D-clearRect" class="headerlink" title="CanvasRenderingContext2D.clearRect()"></a>CanvasRenderingContext2D.clearRect()</h4><p>CanvasRenderingContext2D.clearRect()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void ctx.clearRect(x, y, width, height);</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-strokeRect"><a href="#CanvasRenderingContext2D-strokeRect" class="headerlink" title="CanvasRenderingContext2D.strokeRect()"></a>CanvasRenderingContext2D.strokeRect()</h4><p>fillRect()와는 다르게 fillStyle로 꽉채운 방식이 아닌 선으로 직사각형을 그린다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void ctx.strokeRect(x, y, width, height);</span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line">ctx.strokeStyle &#x3D; &#39;green&#39;;</span><br><span class="line">ctx.strokeRect(20, 10, 160, 100); &#x2F;&#x2F; 좌표(20, 10)에 있는 너비 160px 높이 100px 짜리 초록 테두리의 직사각형이 그려진다.</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-beginPath"><a href="#CanvasRenderingContext2D-beginPath" class="headerlink" title="CanvasRenderingContext2D.beginPath()"></a>CanvasRenderingContext2D.beginPath()</h4><p>본격적으로 그리기에 앞서서 새로운 경로를 시작한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void ctx.beginPath();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.strokeStyle &#x3D; &#39;blue&#39;;</span><br><span class="line">ctx.moveTo(20, 20); &#x2F;&#x2F; 좌표(20, 20) 경로 시작</span><br><span class="line">ctx.lineTo(200, 20); &#x2F;&#x2F;좌표(200, 20)으로 선을 긋는다</span><br><span class="line">ctx.stroke();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Second path</span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.strokeStyle &#x3D; &#39;green&#39;;</span><br><span class="line">ctx.moveTo(20, 20); &#x2F;&#x2F; 좌표(20, 20) 경로 시작</span><br><span class="line">ctx.lineTo(120, 120); &#x2F;&#x2F;좌표(120, 120)으로 선을 긋는다.</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-closePath"><a href="#CanvasRenderingContext2D-closePath" class="headerlink" title="CanvasRenderingContext2D.closePath()"></a>CanvasRenderingContext2D.closePath()</h4><p>현재의 지점에서 현재 부수 경로의 시작까지의 직선을 추가한다. 만약에 도형이 이미 닫혀졌다면 closePath 메서드는 아무것도 하지 않는다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void ctx.closePath();</span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F;삼각형을 그린다.</span><br><span class="line"></span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.moveTo(20, 140);</span><br><span class="line">ctx.lineTo(120, 10);</span><br><span class="line">ctx.lineTo(220, 140);</span><br><span class="line">ctx.closePath();</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-arc"><a href="#CanvasRenderingContext2D-arc" class="headerlink" title="CanvasRenderingContext2D.arc()"></a>CanvasRenderingContext2D.arc()</h4><p>현재의 부수 경로에 원형 아치를 그린다.</p>
+<p>arc 함수는 (x, y)좌표를 기준으로 radius로 아치를 그린다. 경로는 startAngle에서 시작하고 endAngle에서 끝난다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);</span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.arc(100, 75, 50, 0, 2 * Math.PI); &#x2F;&#x2F;중심점 (100, 75)를 기준으로 반지름 50인 원이 생성된다.</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-bezierCurveTo"><a href="#CanvasRenderingContext2D-bezierCurveTo" class="headerlink" title="CanvasRenderingContext2D.bezierCurveTo()"></a>CanvasRenderingContext2D.bezierCurveTo()</h4><p>배지어 곡선을 그린다. 3가지 지점을 요구하면 첫번째와 두번째 점들은 컨트롤 지점이고 마지막 하나는 종점이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y) &#x2F;&#x2F;cp aka control point</span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.moveTo(30, 30); &#x2F;&#x2F;시작점은 (30, 30)</span><br><span class="line">ctx.bezierCurveTo(120, 160, 180, 10, 220, 140);&#x2F;&#x2F;cp1(120, 160) cp2(180, 10) endpoint(220, 140)</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/til/" rel="tag"># til</a>
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/15/til/210415/" rel="prev" title="til-210415">
+                  <i class="fa fa-chevron-left"></i> til-210415
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nomankey</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

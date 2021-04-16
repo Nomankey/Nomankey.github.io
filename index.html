@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-count">93</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,85 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/04/16/til/210416/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nomankey">
+      <meta itemprop="description" content="Developer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CK's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/16/til/210416/" class="post-title-link" itemprop="url">TIL 210416</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-16 21:31:31 / Modified: 21:38:31" itemprop="dateCreated datePublished" datetime="2021-04-16T21:31:31+09:00">2021-04-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="How-to-Draw-a-Figure-on-Canvas"><a href="#How-to-Draw-a-Figure-on-Canvas" class="headerlink" title="How to Draw a Figure on Canvas"></a>How to Draw a Figure on Canvas</h3><h4 id="CanvasRenderingContext2D-fillRect"><a href="#CanvasRenderingContext2D-fillRect" class="headerlink" title="CanvasRenderingContext2D.fillRect()"></a>CanvasRenderingContext2D.fillRect()</h4><p>현재 fillStyle에 따라 채워진 rectangle(직사각형)을 그린다. 이 method는 현재의 경로를 수정하지 않고 canvas에 직접적으로 그린다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void ctx.fillRect(x, y, width, height);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line">ctx.fillStyle &#x3D; &#39;green&#39;;</span><br><span class="line">ctx.fillRect(20, 10, 150, 100);&#x2F;&#x2F; 좌표(20, 10)에 있는 너비 140px 높이 100px 짜리 초록 직사각형이 만들어진다.</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-clearRect"><a href="#CanvasRenderingContext2D-clearRect" class="headerlink" title="CanvasRenderingContext2D.clearRect()"></a>CanvasRenderingContext2D.clearRect()</h4><p>CanvasRenderingContext2D.clearRect()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void ctx.clearRect(x, y, width, height);</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-strokeRect"><a href="#CanvasRenderingContext2D-strokeRect" class="headerlink" title="CanvasRenderingContext2D.strokeRect()"></a>CanvasRenderingContext2D.strokeRect()</h4><p>fillRect()와는 다르게 fillStyle로 꽉채운 방식이 아닌 선으로 직사각형을 그린다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void ctx.strokeRect(x, y, width, height);</span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line">ctx.strokeStyle &#x3D; &#39;green&#39;;</span><br><span class="line">ctx.strokeRect(20, 10, 160, 100); &#x2F;&#x2F; 좌표(20, 10)에 있는 너비 160px 높이 100px 짜리 초록 테두리의 직사각형이 그려진다.</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-beginPath"><a href="#CanvasRenderingContext2D-beginPath" class="headerlink" title="CanvasRenderingContext2D.beginPath()"></a>CanvasRenderingContext2D.beginPath()</h4><p>본격적으로 그리기에 앞서서 새로운 경로를 시작한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void ctx.beginPath();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.strokeStyle &#x3D; &#39;blue&#39;;</span><br><span class="line">ctx.moveTo(20, 20); &#x2F;&#x2F; 좌표(20, 20) 경로 시작</span><br><span class="line">ctx.lineTo(200, 20); &#x2F;&#x2F;좌표(200, 20)으로 선을 긋는다</span><br><span class="line">ctx.stroke();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Second path</span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.strokeStyle &#x3D; &#39;green&#39;;</span><br><span class="line">ctx.moveTo(20, 20); &#x2F;&#x2F; 좌표(20, 20) 경로 시작</span><br><span class="line">ctx.lineTo(120, 120); &#x2F;&#x2F;좌표(120, 120)으로 선을 긋는다.</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-closePath"><a href="#CanvasRenderingContext2D-closePath" class="headerlink" title="CanvasRenderingContext2D.closePath()"></a>CanvasRenderingContext2D.closePath()</h4><p>현재의 지점에서 현재 부수 경로의 시작까지의 직선을 추가한다. 만약에 도형이 이미 닫혀졌다면 closePath 메서드는 아무것도 하지 않는다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void ctx.closePath();</span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F;삼각형을 그린다.</span><br><span class="line"></span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.moveTo(20, 140);</span><br><span class="line">ctx.lineTo(120, 10);</span><br><span class="line">ctx.lineTo(220, 140);</span><br><span class="line">ctx.closePath();</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-arc"><a href="#CanvasRenderingContext2D-arc" class="headerlink" title="CanvasRenderingContext2D.arc()"></a>CanvasRenderingContext2D.arc()</h4><p>현재의 부수 경로에 원형 아치를 그린다.</p>
+<p>arc 함수는 (x, y)좌표를 기준으로 radius로 아치를 그린다. 경로는 startAngle에서 시작하고 endAngle에서 끝난다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);</span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.arc(100, 75, 50, 0, 2 * Math.PI); &#x2F;&#x2F;중심점 (100, 75)를 기준으로 반지름 50인 원이 생성된다.</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure>
+<h4 id="CanvasRenderingContext2D-bezierCurveTo"><a href="#CanvasRenderingContext2D-bezierCurveTo" class="headerlink" title="CanvasRenderingContext2D.bezierCurveTo()"></a>CanvasRenderingContext2D.bezierCurveTo()</h4><p>배지어 곡선을 그린다. 3가지 지점을 요구하면 첫번째와 두번째 점들은 컨트롤 지점이고 마지막 하나는 종점이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y) &#x2F;&#x2F;cp aka control point</span><br><span class="line"></span><br><span class="line">const canvas &#x3D; document.querySelector(&#39;.canvas&#39;);</span><br><span class="line">const ctx &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line">ctx.beginPath();</span><br><span class="line">ctx.moveTo(30, 30); &#x2F;&#x2F;시작점은 (30, 30)</span><br><span class="line">ctx.bezierCurveTo(120, 160, 180, 10, 220, 140);&#x2F;&#x2F;cp1(120, 160) cp2(180, 10) endpoint(220, 140)</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -802,71 +881,6 @@
 <p>하지만 사용자가 입력을 완료했는지는 알기가 어렵기때문에 일정 시간동안 텍스트 입력필드에 값을 입력하지 않으면 입력이 완료된 것으로 간주한다.</p>
 <h4 id="Throttle"><a href="#Throttle" class="headerlink" title="Throttle"></a>Throttle</h4><p>짧은 시간 간격으로 이벤트가 연속해서 발생하더라도 일정 시간 간격으로 이벤트 헨들러가 최대 한번 호출되도록 한다.</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nomankey.github.io/2021/03/26/til/210326/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nomankey">
-      <meta itemprop="description" content="Developer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CK's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/26/til/210326/" class="post-title-link" itemprop="url">TIL 210326</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-26 15:58:58 / Modified: 16:01:55" itemprop="dateCreated datePublished" datetime="2021-03-26T15:58:58+09:00">2021-03-26</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Sticky-Note-using-JavaScript"><a href="#Sticky-Note-using-JavaScript" class="headerlink" title="Sticky Note using JavaScript"></a>Sticky Note using JavaScript</h3><h4 id="JS-Code"><a href="#JS-Code" class="headerlink" title="JS Code"></a>JS Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const jsTodos &#x3D; document.querySelector(&#39;.jsTodos&#39;);</span><br><span class="line">const jsBox &#x3D; document.querySelector(&#39;.box&#39;);</span><br><span class="line">const initialMousePos &#x3D; &#123;x:0, y:0&#125;;</span><br><span class="line">const offset &#x3D; &#123;x:0, y:0&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;sticky note</span><br><span class="line">const move &#x3D; e &#x3D;&gt; &#123;</span><br><span class="line">    offset.x &#x3D; e.clientX - initialMousePos.x;</span><br><span class="line">    offset.y &#x3D; e.clientY - initialMousePos.y;</span><br><span class="line"></span><br><span class="line">    jsBox.style.transform &#x3D; &#96;translate3d($&#123;offset.x&#125;px, $&#123;offset.y&#125;px, 0)&#96;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">jsBox.addEventListener(&#39;mousedown&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">    initialMousePos.x &#x3D; e.clientX - offset.x;</span><br><span class="line">    initialMousePos.y &#x3D; e.clientY - offset.y;</span><br><span class="line"></span><br><span class="line">    document.addEventListener(&#39;mousemove&#39;, move);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">document.addEventListener(&#39;mouseup&#39;, () &#x3D;&gt; &#123;</span><br><span class="line">    document.removeEventListener(&#39;mousemove&#39;, move);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;todo</span><br><span class="line">let todos &#x3D; [];</span><br><span class="line"></span><br><span class="line">const render &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    jsTodos.innerHTML &#x3D; todos.map((&#123;id, content, completed&#125;) &#x3D;&gt; &#123;</span><br><span class="line">        return &#96;&lt;li id &#x3D; &quot;$&#123;id&#125;&quot;&gt;</span><br><span class="line">        &lt;input type &#x3D; &quot;checkbox&quot; $&#123;completed ? &#39;checked&#39;: &#39;&#39;&#125;&#x2F;&gt;</span><br><span class="line">        &lt;span&gt;$&#123;content&#125;&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;button&gt;x&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;&#x2F;li&gt;&#96;</span><br><span class="line">    &#125;).join(&#39;&#39;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const getTodos &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    todos &#x3D; [</span><br><span class="line">    &#123; id: 3, content: &#39;HTML&#39;, completed: false &#125;,</span><br><span class="line">    &#123; id: 2, content: &#39;CSS&#39;, completed: true &#125;,</span><br><span class="line">    &#123; id: 1, content: &#39;Javascript&#39;, completed: false &#125;</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">    render();</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;getTodos();</span><br><span class="line">document.addEventListener(&#39;DOMContentLoaded&#39;,getTodos);</span><br></pre></td></tr></table></figure>
-<h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;style.css&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class &#x3D; &quot;box&quot;&gt;</span><br><span class="line">        &lt;h1&gt;Sticky Note&lt;&#x2F;h1&gt;</span><br><span class="line">        &lt;ul class&#x3D;&quot;jsTodos&quot;&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line">        &lt;canvas class&#x3D;&quot;jsCanvas&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">        &lt;!--&lt;script src&#x3D;&quot;app.js&quot;&gt;&lt;&#x2F;script&gt;--&gt;</span><br><span class="line">        &lt;script src&#x3D;&quot;todo.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
 
